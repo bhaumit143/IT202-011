@@ -5,16 +5,16 @@ $a3 = [0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01];
 $a4 = [10.01, -12.22, 0.23, 19.20, -5.13, 3.12];
 function getTotal($arr) {
     echo "<br>Processing Array:<br><pre>" . var_export($arr, true) . "</pre>";
-    $total = 0.00;
+    $value = 0.00;
     //TODO do adding here
-    foreach ($arr as $x){        //loop to go through each element of passed in array and calculate total (stored in variable total){
-    $total = $x + $total;}
+    foreach ($arr as $p){        //loop to go through each element of passed in array and calculate total (stored in variable total){
+    $value = $p + $value;}
 
 
 
     //TODO do rounding stuff here
-    $total = round($total, 2);
-    echo "The total is " . var_export($total, true);
+    $value = round($value, 2);
+    echo "The total is " . var_export($value, true);
 }
 echo "Problem 2: Adding Floats<br>";
 ?>

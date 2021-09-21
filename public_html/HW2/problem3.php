@@ -8,11 +8,12 @@ function bePositive($arr) {
     echo "<br>Processing Array:<br><pre>" . var_export($arr, true) . "</pre>";
     echo "<br>Positive output:<br>";
     //TODO use echo to output all of the values as positive (even if they were originally positive)
+    
     for($x=0;$x<sizeof($arr);$x++)
-    {
-        echo abs($arr[$x])." ";//print positive value
-    }
-
+    {
+        $digits = abs($arr[$x])." ";//print positive value
+        echo " ".$digits;
+    }
 }
 echo "Problem 3: Be Positive<br>";
 ?>
