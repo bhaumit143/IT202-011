@@ -1,10 +1,9 @@
-<?php
-
-require(__DIR__ . "/../lib/db.php");
-
-$query = "SELECT 'test' from dual";
-$db = getDB();//this is accessible via the db.php require above
-$stmt = $db->query($query);//tells the DB to run the query defined above
-$result = $stmt->fetch();
-echo "<pre>" . var_export($result, true) . "</pre>";
-?>
+CREATE TABLE IF NOT EXISTS `Users` (
+    `id` INT NOT NULL AUTO_INCREMENT
+    ,`email` VARCHAR(100) NOT NULL
+    ,`password` VARCHAR(60) NOT NULL
+    ,`created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `modified` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    ,PRIMARY KEY (`id`)
+    ,UNIQUE (`email`)
+)
