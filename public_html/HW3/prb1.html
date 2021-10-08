@@ -1,25 +1,60 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<head>
+<head>  
     <title>Problem 1</title>
     <meta charset="utf-8" />
     <script>
         window.addEventListener("load", () => {
             console.log("loaded via javascript");
             //TODO: add any extra onload processing you may need here
+        
+        
         });
-        function getCurrentSelection() {
-            setTimeout(() => {
-                //added this delay here as some solutions may require it to update properly (i.e., click code may complete before the navigation changes)
-                //TODO: add code for processing the current selection 
-
-                //Note: likely you'll want to call updateCurrentPage towards the end
-            }, 100);
+        /*
+        function updateCurrentPage(page) {
+            let h1 = document.getElementsByTagName("h1")[0]; // Ram Edit
+            let title = document.getElementsByTagName("title")[0]; // Ram Edit
+            h1.innerText = page; // Ram Edit
+            title.innerText = page[0].toUpperCase() + page.slice(1); // Ram Edit
+            
         }
-    </script>
+        
+        //console.log(document.getAttribute('li')); // Ram Edit
+        */
+        function getCurrentSelection() { // Ram Edit
+            setTimeout(() => { // Ram Edit
+                
+
+            
+            }, 1000);
+        }
+
+            window.addEventListener("click", () => {
+                    var link = window.location.href.split('#');
+                    console.log(link[1]);
+                    let header = document.querySelector("h1");
+                    header.innerText = link[1];
+        
+            });
+        
+
+    </script> 
+    
     <style>
         /* TODO: make edits here */
+        nav{
+            display: flex;
+            justify-content: space-between;
+        }
+        nav ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+
+        }
+
     </style>
     <!-- make the necessary edits above this line -->
 
@@ -34,7 +69,8 @@
 <body onload="check();updateCurrentPage('start');">
     <header>
         <h2>Problem 1</h2>
-    </header>
+    </header> 
+
     <nav>
         <ul>
             <li><a href="#login">login</a></li>
@@ -79,4 +115,4 @@
     <footer></footer>
 </body>
 
-</html> 
+</html>  
