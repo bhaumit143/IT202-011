@@ -23,7 +23,7 @@
         //console.log(document.getAttribute('li')); // Ram Edit
         */
         function getCurrentSelection() { // Ram Edit
-            setTimeout(() => { // Ram Edit
+            setTimeout(() => { 
                 
 
             
@@ -47,12 +47,32 @@
             display: flex;
             justify-content: space-between;
         }
-        nav ul li{
-            list-style: none;
+        nav li{
             display: inline-block;
             padding: 8px 12px;
             position: relative;
+        }
+        ul{
+            list-style-type: none;
+        }
+        li::before{
+            content: "✓"
+        }
 
+        a:hover{
+            background-color: greenyellow;
+        }
+
+        body {
+            background-color: rgb(187, 102, 147);
+        }
+
+        ul{
+            text-transform: capitalize;
+        }
+
+        a{
+            text-transform: capitalize;
         }
 
     </style>
