@@ -30,7 +30,7 @@ if(isset($_POST["submit"])){
             if($user){
                 $upass = $user["password"];
                 if(password_verify($password, $upass)){
-                    se("Yay we logged in");
+                    se("Yay we logged in"); 
                     unset($user["password"]);
                     $_SESSION["user"] = $user;
                     echo "<pre>" .var_export($_SESSION, true) . "</pre>";
