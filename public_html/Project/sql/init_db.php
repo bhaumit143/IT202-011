@@ -58,7 +58,7 @@ try {
             foreach ($row as $key => $value) {
                 array_push($t, $value);
             }
-        }
+        } 
         foreach ($sql as $key => $value) {
 ?>
             <details>
