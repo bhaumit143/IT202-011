@@ -1,4 +1,4 @@
-<?php
+<?php 
 require_once(__DIR__ ."/db.php");
 
 function se($v, $k = null, $default = "", $isEcho = true) {
@@ -8,7 +8,7 @@ function se($v, $k = null, $default = "", $isEcho = true) {
         $returnValue = $v->$k;
     } else {
         $returnValue = $v;
-        
+    
        
     }
     if (!isset($returnValue)) {
