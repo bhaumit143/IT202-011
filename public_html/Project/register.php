@@ -1,94 +1,105 @@
 <?php
-require(__DIR__ . "/../../partials/nav.php");
-?>
-<form onsubmit="return validate(this)" method="POST">
-    <div>
-        <label for="email">Email</label>
-        <input type="email" name="email" required />
-    </div>
-    <div>
-        <label for="username">Username</label>
-        <input type="text" name="username" required maxlength="30" />
-    </div> 
-    <div>
-        <label for="pw">Password</label>
-        <input type="password" id="pw" name="password" required minlength="8" />
-    </div>
-    <div>
-        <label for="confirm">Confirm</label>
-        <input type="password" name="confirm" required minlength="8" />
-    </div>
-    <input type="submit" value="Register" />
-</form>
-<script>
-    function validate(form) {
-        //TODO 1: implement JavaScript validation
-        //ensure it returns false for an error and true for success
+require_once(__DIR__ . "/../../partials/nav.php");
 
-        return true;
+if(isset($_POST["submit"])){
+    $email = se($_POST, "email", null, false);
+    $password = trim(se($_POST, "password", null, false));   
+    $confirm = trim(se($_POST, "confirm", null, false));
+    
+    $isValid = true;
+    if(!isset($email) || !isset($password) || !isset($confirm) || !isset($username)) {
+        flash("Must provide email,username, password, and confirm password", "warning");
+        $isValid =false;
+
     }
-</script>
-<?php
-//TODO 2: add PHP Code
-if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm"])) {
-    $email = se($_POST, "email", "", false);
-    $password = se($_POST, "password", "", false);
-    $confirm = se($_POST, "confirm", "", false);
-    $username = se($_POST, "username", "", false);
-    //TODO 3
 
-
-    //$errors = [];
-    $hasError = false;
-    if (empty($email)) {
-        flash("Email must not be empty");
-        $hasError = true;
+    if ($password !== $confirm){
+        flash("password don't match", "warning");
+        $isValid = false;
+    } 
+    if (strlen($password) < 3) {
+        flash("Password must be 3 or more characters", "warning");
+        $isValid = false; 
     }
-    //$email = filter_var($email, FILTER_SANITIZE_EMAIL);
+    
     $email = sanitize_email($email);
-    //validate
-    //if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    if (!is_valid_email($email)) {
-        flash("Invalid email");
-        $hasError = true;
+    if(!is_valid_email($email)){
+        flash("Invalid email", "warning");
+        $isValid = false;
     }
-    if (!preg_match('/^[a-z0-9_-]{3,16}$/', $username)) {
-        flash("Username must only be alphanumeric and can only contain - or _");
-        $hasError = true;
-    }
-    if (empty($password)) {
-        flash("password must not be empty");
-        $hasError = true;
-    }
-    if (empty($confirm)) {
-        flash("Confirm password must not be empty");
-        $hasError = true;
-    }
-    if (strlen($password) < 8) {
-        flash("Password too short");
-        $hasError = true;
-    }
-    if (strlen($password) > 0 && $password !== $confirm) {
-        flash("Passwords must match");
-        $hasError = true;
-    }
-    if ($hasError) {
-        //flash("<pre>" . var_export($errors, true) . "</pre>");
-    } else {
-        flash("Welcome, $email"); //will show on home.php
-        $hash = password_hash($password, PASSWORD_BCRYPT);
+    if($isValid){
+        //do our registration
         $db = getDB();
-        $stmt = $db->prepare("INSERT INTO Users (email, password, username) VALUES(:email, :password, :username)");
+        $stmt = $db->prepare("INSERT INTO Users (email, password) VALUES (:email, :password)");
+        $hash = password_hash($password, PASSWORD_BCRYPT);
         try {
-            $stmt->execute([":email" => $email, ":password" => $hash, ":username" => $username]);
-            flash("You've registered, yay...");
-        } catch (Exception $e) {
-            flash("There was a problem registering");
-            flash("<pre>" . var_export($e, true) . "</pre>");
-        }
-    }
+
+            $stmt->execute([":email" => $email, ":password" => $hash]);
+        } catch(PDOException $e) {
+            $code = se($e->errorInfo, 0, "00000", false);
+            if ($code === "23000") {
+                flash("An account with this email already exists", "danger");
+            } else {
+                echo "<pre>" . var_export($e->errorInfo, true) . "</pre>";
+            }    
+        
+        
+        }    
+    } 
 }
+
 ?>
+<div> 
+    <h1>Register</h1>
+    <form method="POST" onsubmit="return validate(this);">
+        <div>
+            <lable for="email">Email: </lable>
+            <input type="email" id="email" name="email" required />
+        </div>
+        <div>
+            <lable for="pw">Password: </lable>
+            <input type="password" id="pw" name="password" required />
+        </div>
+        <div>
+            <lable for="cpw">Confirm Password: </lable>
+            <input type="password" id="cpw" name="confirm" required />   
+        </div>
+        <div>
+            <input type="submit" name="submit" value="Register" />
+        </div>
+    </form>
+<div>
+<script>
+    function validate(form){
+        let email = form.email.value;
+        let password = form.password.value;
+        let confirm = form.confirm.value;
+        let isValid = true; 
+        if (email){
+            email = email.trim();
+        }
+        if(password){
+            password = password.trim();
+        }
+        if(confirm ){
+            confirm = confirm.trim();
+        }
+        if(email.indexOf("@") === -1){
+            isValid = false;
+            alert("Invalid email");
+        }
+        if(password != confirm){
+            isValid = false; 
+            alert("password don't match");
+        }
+        if(password.length < 3){
+            isValid = false;
+            alert("password must be 3 or more characters");     
+        }
+        return isValid;
+    }
+
+</script> 
 <?php
-require(__DIR__ . "/../../partials/flash.php");
+require_once(__DIR__ . "/../../partials/flash.php");
 ?>
