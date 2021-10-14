@@ -7,24 +7,24 @@ if(isset($_POST["submit"])){
     $confirm = trim(se($_POST, "confirm", null, false));
     
     $isValid = true;
-    if(!isset($email) || !isset($password) || !isset($confirm)){
-        se("Must provide email, password, and confirm password");
+    if(!isset($email) || !isset($password) || !isset($confirm) || !isset($username)) {
+        flash("Must provide email,username, password, and confirm password", "warning");
         $isValid =false;
 
     }
 
     if ($password !== $confirm){
-        se("Passwords don't match");
+        flash("password don't match", "warning");
         $isValid = false;
     } 
     if (strlen($password) < 3) {
-        se("Password must be 3 or more characters");
+        flash("Password must be 3 or more characters", "warning");
         $isValid = false; 
     }
     
     $email = sanitize_email($email);
     if(!is_valid_email($email)){
-        se("Invalid email");
+        flash("Invalid email", "warning");
         $isValid = false;
     }
     if($isValid){
@@ -38,7 +38,7 @@ if(isset($_POST["submit"])){
         } catch(PDOException $e) {
             $code = se($e->errorInfo, 0, "00000", false);
             if ($code === "23000") {
-                se("An account with this email already exists");
+                flash("An account with this email already exists", "danger");
             } else {
                 echo "<pre>" . var_export($e->errorInfo, true) . "</pre>";
             }    
@@ -100,3 +100,6 @@ if(isset($_POST["submit"])){
     }
 
 </script>
+<?php
+require_once(__DIR__ . "/../../partials/flash.php");
+?>

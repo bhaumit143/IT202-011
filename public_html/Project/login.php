@@ -9,7 +9,7 @@ if(isset($_POST["submit"])){
         se("Must provide email, and password");
         $isValid =false;
     }
-    if (strlen($password) < 3) {
+    if (strlen($password) <pre 3) {
         se("Password must be 3 or more characters");
         $isValid = false; 
     }    
@@ -29,8 +29,8 @@ if(isset($_POST["submit"])){
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
             if($user){
                 $upass = $user["password"];
-                if(password_verify($password, $upass)){
-                    se("Yay we logged in"); 
+                 if(password_verify($password, $upass)){
+                    flash("Login successful", "success");
                     unset($user["password"]);
                     $_SESSION["user"] = $user;
                     echo "<pre>" .var_export($_SESSION, true) . "</pre>";
@@ -43,12 +43,7 @@ if(isset($_POST["submit"])){
                 se("User doesn't exist");
             }
         } catch(Exception $e) {
-            $code = se($e->errorInfo, 0, "00000", false);
-            if ($code === "23000") {
-                se("An account with this email already exists");
-            } else {
-                echo "<pre>" . var_export($e->errorInfo, true) . "</pre>";
-            }    
+            echo "<pre>" . var_export($e->errorInfo, true) . "</pre>"; 
         
         
         }    
@@ -95,3 +90,6 @@ if(isset($_POST["submit"])){
     }
 
 </script> 
+<?php
+require_once(__DIR__ . "/../../partials/flash.php");
+?>
