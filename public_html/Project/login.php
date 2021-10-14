@@ -6,16 +6,16 @@ if(isset($_POST["submit"])){
     
     $isValid = true;
     if(!isset($email) || !isset($password)){
-        se("Must provide email, and password");
+        flash("Must provide email, and password", "warning");
         $isValid =false;
     }
-    if (strlen($password) <pre 3) {
-        se("Password must be 3 or more characters");
+    if (strlen($password) < 3) {
+        flash("Password must be 3 or more characters", "warning");
         $isValid = false; 
     }    
     $email = sanitize_email($email);
     if(!is_valid_email($email)){
-        se("Invalid email");
+        flash("Invalid email", "warning");
         $isValid = false;
     }
     if($isValid){
@@ -33,7 +33,7 @@ if(isset($_POST["submit"])){
                     flash("Login successful", "success");
                     unset($user["password"]);
                     $_SESSION["user"] = $user;
-                    echo "<pre>" .var_export($_SESSION, true) . "</pre>";
+                   // echo "<pre>" .var_export($_SESSION, true) . "</pre>";
                     die(header("Location: home.php"));
                 } else {
                     se("Password don't match");
@@ -86,7 +86,7 @@ if(isset($_POST["submit"])){
             isValid = false;
             alert("password must be 3 or more characters");     
         }
-        return isValid;
+        return isValid; 
     }
 
 </script> 
