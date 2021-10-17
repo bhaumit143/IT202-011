@@ -54,9 +54,9 @@ function get_user_id(){
     return false;
 }
 // falsh message system
-function flash($msg = "", $color="info")
+function flash($msg = "", $color="info") 
 {
-    $message = ["text"=>$msg, "color"=>$color]; 
+    $message = ["text"=>$msg, "color" => $color]; 
     if (isset($_SESSION['flash'])){
         array_push($_SESSION['flash'], $message);
     } else {

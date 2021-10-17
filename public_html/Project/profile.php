@@ -104,7 +104,7 @@ $username = get_username();
     <div class="mb-3">
         <label for="np">New Password</label>
         <input type="password" name="newPassword" id="np" />
-    </div>
+    </div> 
     <div class="mb-3">
         <label for="conp">Confirm Password</label>
         <input type="password" name="confirmPassword" id="conp" /> 
@@ -130,7 +130,7 @@ $username = get_username();
             let innerDiv = document.createElement("div");
 
             //apply the CSS (these are bootstrap classes which we'll learn later)
-            innerDiv.className = "alert alert-warning";
+            innerDiv.className = "ale rt alert-warning";
             //set the content
             innerDiv.innerText = "Password and Confirm password must match";
 

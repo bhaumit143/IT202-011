@@ -3,7 +3,7 @@
  populate the flash variable and then display at the proper timing*/
 ?>
 <div class="container" id="flash">
-    <?php $messages = getMessage();?>
+    <?php $messages = getMessage(); ?> 
     <?php if ($messages) : ?>
         <?php foreach ($messages as $msg) : ?>
             <div class="row justify-content-center">
@@ -11,7 +11,7 @@
             </div>
         <?php endforeach; ?>
     <?php endif; ?>
-</div> 
+</div>
 <script>
     //used to pretend the flash messages are below the first nav element
     function moveMeUp(ele) {
@@ -22,4 +22,4 @@
     }
 
     moveMeUp(document.getElementById("flash"));
-</script> 
+</script>

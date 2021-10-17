@@ -7,3 +7,4 @@ require_once(__DIR__ . "/../../partials/nav.php");
 flash("You have been logged out", "success");
 die(header("Location: login.php"));
 
+ 

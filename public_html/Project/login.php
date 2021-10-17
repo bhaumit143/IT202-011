@@ -75,14 +75,14 @@ if(isset($_POST["submit"])){
             email = email.trim();
         }
         if(password){
-            password = password.trim();
+            password = password.trim(); 
         }
         
         if(email.indexOf("@") === -1){
             isValid = false;
             alert("Invalid email");
-        }
-        if(password.length < 3){
+        }   
+        if(password.length < 3){ 
             isValid = false;
             alert("password must be 3 or more characters");     
         }
@@ -93,3 +93,4 @@ if(isset($_POST["submit"])){
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>
+
