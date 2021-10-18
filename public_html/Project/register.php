@@ -40,7 +40,7 @@ if(isset($_POST["submit"])){
             $code = se($e->errorInfo, 0, "00000", false); 
             if ($code === "23000") {
                 flash("An account with this email already exists", "danger");
-            } else {
+            } else { 
                 echo "<pre>" . var_export($e->errorInfo, true) . "</pre>";
             }    
         
@@ -48,7 +48,7 @@ if(isset($_POST["submit"])){
         }    
     } 
 }
-
+ 
 ?>
 <div> 
     <h1>Register</h1> 
