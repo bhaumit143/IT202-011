@@ -1,4 +1,4 @@
-<h1>Database Helper  Tool</h1>
+<h1>Database Helper Tool</h1>
 <details>
     <summary>Info (About the tool)</summary>
     <p>The scope of this tool is to help us separate our structural queries into separate files for better organization.</p>
@@ -58,7 +58,7 @@ try {
             foreach ($row as $key => $value) {
                 array_push($t, $value);
             }
-        } 
+        }
         foreach ($sql as $key => $value) {
 ?>
             <details>
@@ -85,7 +85,7 @@ try {
                     echo "<p style=\"margin-left: 3em\">Blocked from running, table found in 'show tables' results. [This is ok, it reduces redundant DB calls]</p><br>";
                     continue;
                 }
-            } 
+            }
             $stmt = $db->prepare($value);
             try {
                 $result = $stmt->execute();

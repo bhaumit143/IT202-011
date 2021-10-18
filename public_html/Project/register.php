@@ -6,10 +6,10 @@ if(isset($_POST["submit"])){
     $confirm = trim(se($_POST, "confirm", null, false));
     $username = trim(se($_POST, "username", null, false));  
     
-    $isValid = true;
+    $isValid = true; 
     if(!isset($email) || !isset($password) || !isset($confirm) || !isset($username)) {
         flash("Must provide email, username, password, and confirm password", "warning");
-        $isValid =false;
+        $isValid =false; 
 
     } 
 
@@ -27,16 +27,17 @@ if(isset($_POST["submit"])){
         flash("Invalid email", "warning");
         $isValid = false;
     }
-    if($isValid){
+    if($isValid){ 
         //do our registration
         $db = getDB(); 
-        $stmt = $db->prepare("INSERT INTO Users (email, username, password) VALUES (:email, :username :password)");
-        $hash = password_hash($password, PASSWORD_BCRYPT);
+        $stmt = $db->prepare("INSERT INTO Users (email, username, password) VALUES (:email, :username, :password)");
+        flash("You Registered!");
+        $hash = password_hash($password, PASSWORD_BCRYPT); 
         try {
 
             $stmt->execute([":email" => $email, ":password" => $hash, ":username" =>$username]);
         } catch(PDOException $e) {
-            $code = se($e->errorInfo, 0, "00000", false);
+            $code = se($e->errorInfo, 0, "00000", false); 
             if ($code === "23000") {
                 flash("An account with this email already exists", "danger");
             } else {
@@ -116,4 +117,4 @@ if(isset($_POST["submit"])){
 </script> 
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
-?>
+?> 
