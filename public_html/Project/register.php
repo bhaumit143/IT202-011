@@ -23,18 +23,18 @@ if(isset($_POST["submit"])){
     }
     
     $email = sanitize_email($email);
-    if(!is_valid_email($email)){
+    if(!is_valid_email($email)){ 
         flash("Invalid email", "warning");
         $isValid = false;
     }
+        flash("You Registered!");
+    //TODO add validation for username (length? disalllow special chars? etc) 
     if($isValid){ 
         //do our registration
-        $db = getDB(); 
-        $stmt = $db->prepare("INSERT INTO Users (email, username, password) VALUES (:email, :username, :password)");
-        flash("You Registered!");
+        $db = getDB();      
+        $stmt = $db->prepare("INSERT INTO Users (email, username, password) VALUES (:email, :username, :password)"); 
         $hash = password_hash($password, PASSWORD_BCRYPT); 
         try {
-
             $stmt->execute([":email" => $email, ":password" => $hash, ":username" =>$username]);
         } catch(PDOException $e) {
             $code = se($e->errorInfo, 0, "00000", false); 
@@ -43,7 +43,7 @@ if(isset($_POST["submit"])){
             } else { 
                 echo "<pre>" . var_export($e->errorInfo, true) . "</pre>";
             }    
-        
+         
         
         }    
     } 
@@ -59,9 +59,9 @@ if(isset($_POST["submit"])){
         </div>
         <div>
             <lable1 for="username">Username: </lable1>
-            <input type="text" id="username" name="username" required />
+            <input type="text" id="username" name="username" required /> 
         </div>
-        <div>
+        <div> 
 
             <lable1 for="pw">Password: </lable1>
             <input type="password" id="pw" name="password" required />
@@ -85,7 +85,7 @@ if(isset($_POST["submit"])){
         if (email){
             email = email.trim();
         }
-        if (username) {
+        if(username) {
             username = username.trim();
         }
         if(password){
@@ -94,9 +94,9 @@ if(isset($_POST["submit"])){
         if(confirm ){
             confirm = confirm.trim();
         } 
-        if (!username ||username.length === 0){
-            isValid = false;
-            alert("Must provide a username");
+        if(!username || username.length === 0){ 
+            isValid    =    false; 
+            alert("Must provide a username"); 
         } 
         if(email.indexOf("@") === -1){
             isValid = false;

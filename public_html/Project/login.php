@@ -6,30 +6,30 @@ if(isset($_POST["submit"])){
     
     $isValid = true;
     if(!isset($email) || !isset($password)){
-        flash("Must provide email, and password", "warning");
+        flash("Must provide email, and password", "warning");  
         $isValid =false;
     }
     if (strlen($password) < 3) {
         flash("Password must be 3 or more characters", "warning");
         $isValid = false; 
     }    
-    $email = sanitize_email($email);
+    $email = sanitize_email($email); 
     if(!is_valid_email($email)){
         flash("Invalid email", "warning");
         $isValid = false;
     }
-    if($isValid){
+    if($isValid){   
         //do our registration
         $db = getDB();
         //$stmt = $db->prepare("INSERT INTO Users (email, password) VALUES (:email, :password)");
         //$hash = password_hash($password, PASSWORD_BCRYPT); 
-        $stmt = $db->prepare("SELECT id, email, password from Users where email = :email LIMIT 1");
-        try {
-            $stmt->execute([":email" => $email]);
-            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        $stmt = $db->prepare("SELECT id, email, IFNULL(username, email) as `username`, password from Users where email = :email or username = :email LIMIT 1");
+        try { 
+            $stmt->execute([":email" => $email]); 
+            $user = $stmt->fetch(PDO::FETCH_ASSOC); 
             if($user){
-                $upass = $user["password"];
-                 if(password_verify($password, $upass)){
+                $upass = $user["password"]; 
+                 if(password_verify($password, $upass)){ 
                     flash("Login successful", "success");
                     unset($user["password"]);
                     $_SESSION["user"] = $user;
