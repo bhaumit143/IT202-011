@@ -39,7 +39,7 @@ $username = get_username();
         let pw = form.newPassword.value;
         let con = form.confirmPassword.value;
         let isValid = true;
-        //TODO add other client side validation....
+        //TODO add other client side validation.... 
 
         //example of using flash via javascript
         //find the flash container, create a new element, appendChild
@@ -62,7 +62,7 @@ $username = get_username();
             isValid = false;
         }
         return isValid;
-    }
+    } 
 </script>
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
