@@ -1,15 +1,15 @@
 <?php
 require_once(__DIR__ . "/../../partials/nav.php");
 if(isset($_POST["submit"])){
-    $email = se($_POST, "email", null, false);
+    $email = se($_POST, "email", null, false); 
     $password = trim(se($_POST, "password", null, false));     
     
-    $isValid = true;
+    $isValid = true; 
     if(!isset($email) || !isset($password)){
         flash("Must provide email, and password", "warning");  
-        $isValid =false;
+        $isValid =false; 
     }
-    if (strlen($password) < 3) {
+    if (strlen($password) < 3) { 
         flash("Password must be 3 or more characters", "warning");
         $isValid = false; 
     }    
@@ -19,7 +19,7 @@ if(isset($_POST["submit"])){
         $isValid = false;
     }
     if($isValid){   
-        //do our registration
+        //do our registration  
         $db = getDB();
         //$stmt = $db->prepare("INSERT INTO Users (email, password) VALUES (:email, :password)");
         //$hash = password_hash($password, PASSWORD_BCRYPT); 
@@ -47,7 +47,7 @@ if(isset($_POST["submit"])){
         
         
         }    
-    } 
+    }  
 }
 ?>
 <div> 

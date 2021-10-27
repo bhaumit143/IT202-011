@@ -3,8 +3,8 @@ require_once(__DIR__ . "/../../partials/nav.php");
 if (!is_logged_in()) {
     die(header("Location: login.php"));
 } 
-?> 
-<?php
+?>  
+<?php 
 $email = get_user_email();
 $username = get_username();
 ?>
@@ -43,7 +43,7 @@ $username = get_username();
 
         //example of using flash via javascript
         //find the flash container, create a new element, appendChild
-        if (pw !== con) {
+        if (pw !== con) { 
             //find the container
             let flash = document.getElementById("flash");
             //create a div (or whatever wrapper we want)
@@ -64,6 +64,6 @@ $username = get_username();
         return isValid;
     } 
 </script>
-<?php
+<?php 
 require_once(__DIR__ . "/../../partials/flash.php");
 ?> 
