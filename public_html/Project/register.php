@@ -6,16 +6,16 @@ if(isset($_POST["submit"])){
     $password = trim(se($_POST, "password", null, false));   
     $confirm = trim(se($_POST, "confirm", null, false));
     
-    $isValid = true;
+    $isValid = true; 
     if(!isset($email) || !isset($password) || !isset($confirm)){
         se("Must provide email, password, and confirm password");
         $isValid =false; 
-
+ 
     }  
  
-    if ($password !== $confirm){
+    if ($password !== $confirm){ 
         se("Passwords don't match");
-        $isValid = false;
+        $isValid = false; 
     } 
     if (strlen($password) < 3) {
         se("Password must be 3 or more characters");
@@ -42,7 +42,7 @@ if(isset($_POST["submit"])){
             } else {
                 echo "<pre>" . var_export($e->errorInfo, true) . "</pre>";
             }    
-        
+         
         
         }    
     } 
@@ -80,7 +80,7 @@ if(isset($_POST["submit"])){
         }
         if(password){
             password = password.trim();
-        }
+        } 
         if(confirm ){
             confirm = confirm.trim();
         }
@@ -99,6 +99,6 @@ if(isset($_POST["submit"])){
         return isValid;
     }
 
-</script>
+</script>  
 
 
