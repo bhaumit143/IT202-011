@@ -1,32 +1,30 @@
 <?php
 require_once(__DIR__ . "/../../partials/nav.php");
-
 if(isset($_POST["submit"])){
     $email = se($_POST, "email", null, false);
     $password = trim(se($_POST, "password", null, false));   
     $confirm = trim(se($_POST, "confirm", null, false));
+    $username = trim(se($_POST, "username", null, false)); 
     
     $isValid = true; 
-    if(!isset($email) || !isset($password) || !isset($confirm)){
+    if(!isset($email) || !isset($password) || !isset($confirm) || !isset($username))  {
         se("Must provide email, password, and confirm password");
         $isValid =false; 
- 
     }  
- 
-    if ($password !== $confirm){ 
+    if ($password !== $confirm){  
         se("Passwords don't match");
         $isValid = false; 
     } 
     if (strlen($password) < 3) {
         se("Password must be 3 or more characters");
         $isValid = false; 
-    } 
-    
+    }   
     $email = sanitize_email($email);
     if(!is_valid_email($email)){
         se("Invalid email");
         $isValid = false;
     }
+    //TODO add validation for username (length? disallow special chars? etc)
     if($isValid){
         //do our registration
         $db = getDB();
@@ -72,11 +70,15 @@ if(isset($_POST["submit"])){
 <script>
     function validate(form){
         let email = form.email.value;
+        let username  = form.username.value;
         let password = form.password.value;
         let confirm = form.confirm.value;
         let isValid = true; 
         if (email){
             email = email.trim();
+        }
+        if(username){
+            username = username.trim();
         }
         if(password){
             password = password.trim();
@@ -84,13 +86,17 @@ if(isset($_POST["submit"])){
         if(confirm ){
             confirm = confirm.trim();
         }
+        if(!username || username.length === 0){
+            isValid = false;
+            alert("Must provide username"); 
+        }
         if(email.indexOf("@") === -1){
             isValid = false;
             alert("Invalid email");
         }
         if(password != confirm){
             isValid = false; 
-            alert("password don't match");
+            alert("password don't match"); 
         }
         if(password.length < 3){
             isValid = false;
