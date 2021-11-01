@@ -1,27 +1,27 @@
 <?php
-require_once(__DIR__ . "/../../partials/nav.php");
+require_once(__DIR__ . "/../../partials/nav.php"); //flash
 if(isset($_POST["submit"])){
-    $email = se($_POST, "email", null, false);
+    $email = se($_POST, "email", null, false); 
     $password = trim(se($_POST, "password", null, false));   
-    $confirm = trim(se($_POST, "confirm", null, false));
+    $confirm = trim(se($_POST, "confirm", null, false)); 
     $username = trim(se($_POST, "username", null, false)); 
     
     $isValid = true; 
     if(!isset($email) || !isset($password) || !isset($confirm) || !isset($username))  {
-        se("Must provide email, password, and confirm password");
+        se("Must provide email, password, and confirm password"); //flash
         $isValid =false; 
-    }  
+    }   
     if ($password !== $confirm){  
-        se("Passwords don't match");
-        $isValid = false; 
+        se("Passwords don't match"); //flash
+        $isValid = false;  
     } 
     if (strlen($password) < 3) {
-        se("Password must be 3 or more characters");
+        se("Password must be 3 or more characters"); //flash
         $isValid = false; 
     }   
     $email = sanitize_email($email);
     if(!is_valid_email($email)){
-        se("Invalid email");
+        se("Invalid email"); //flash
         $isValid = false;
     }
     //TODO add validation for username (length? disallow special chars? etc)
@@ -36,7 +36,7 @@ if(isset($_POST["submit"])){
         } catch(PDOException $e) {
             $code = se($e->errorInfo, 0, "00000", false);
             if ($code === "23000") {
-                se("An account with this email already exists");
+                se("An account with this email already exists"); //flash
             } else {
                 echo "<pre>" . var_export($e->errorInfo, true) . "</pre>";
             }    
@@ -100,7 +100,7 @@ if(isset($_POST["submit"])){
         }
         if(password.length < 3){
             isValid = false;
-            alert("password must be 3 or more characters");     
+            alert("password must be 3 or more characters");      
         }
         return isValid;
     }
