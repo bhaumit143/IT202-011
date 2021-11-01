@@ -19,18 +19,18 @@ if(isset($_POST["submit"])){
         se("Password must be 3 or more characters");
         $isValid = false; 
     }   
-    $email = sanitize_email($email);
+    $email = sanitize_email($email); 
     if(!is_valid_email($email)){
         se("Invalid email");
         $isValid = false;
     }
     //TODO add validation for username (length? disallow special chars? etc)
     if($isValid){
-        //do our registration
+        //do our registration 
         $db = getDB();
         $stmt = $db->prepare("INSERT INTO Users (email, password) VALUES (:email, :password)");
         $hash = password_hash($password, PASSWORD_BCRYPT);
-        try {
+        try { 
 
             $stmt->execute([":email" => $email, ":password" => $hash]);
         } catch(PDOException $e) {
