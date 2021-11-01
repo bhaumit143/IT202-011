@@ -3,6 +3,6 @@ CREATE TABLE IF NOT EXISTS `Users` (
     ,`email` VARCHAR(100) NOT NULL
     ,`password` VARCHAR(60) NOT NULL
     ,`created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
-    ,PRIMARY KEY (`id`) 
+    ,PRIMARY KEY (`id`)  
     ,UNIQUE (`email`)
 )
