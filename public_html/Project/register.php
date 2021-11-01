@@ -2,7 +2,7 @@
 require_once(__DIR__ . "/../../partials/nav.php");
 if(isset($_POST["submit"])){
     $email = se($_POST, "email", null, false);
-    $password = trim(se($_POST, "password", null, false));   
+    $password = trim(se($_POST, "password", null, false)); // here s 
     $confirm = trim(se($_POST, "confirm", null, false));
     $username = trim(se($_POST, "username", null, false)); // do it here
     
