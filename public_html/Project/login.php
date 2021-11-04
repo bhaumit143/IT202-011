@@ -22,7 +22,7 @@ require(__DIR__ . "/../../partials/nav.php");
 </script>
 <?php
 //TODO 2: add PHP Code
-if (isset($_POST["email"]) && isset($_POST["password"])) {
+if (isset($_POST["email"]) && isset($_POST["password"])) { 
     $email = se($_POST, "email", "", false);
     $password = se($_POST, "password", "", false);
 
