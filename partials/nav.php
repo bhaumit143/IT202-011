@@ -1,5 +1,5 @@
 <?php
-//Note: this is resolve cookieissues with port numbers
+//Note: this is resolve cookieissues with port numberscg
 $domain =  $_SERVER["HTTP_HOST"];
 if(strpos($domain, ":")){
     $domain = explode(":", $domain)[0];
