@@ -13,7 +13,7 @@ require(__DIR__ . "/../../partials/nav.php");
     <div>
         <label for="pw">Password: </label>
         <input type="password" id="pw" name="password" required minlength="8" />
-    </div>
+    </div> 
     <div>
         <label for="cpw">Confirm Password: </label>
         <input type="password" id ="cpw" name="confirm" required minlength="8" />
@@ -22,7 +22,7 @@ require(__DIR__ . "/../../partials/nav.php");
 </form>
 <script>
     function validate(form) { 
-        let email = form.email
+        let email = form.email 
         let username = form.username.value;
         let password = form.password.value;
         let confirm = form.confirm.value;
