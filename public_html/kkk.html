@@ -1,17 +1,16 @@
-// Canvas Pong
 <!DOCTYPE html>
 <html>
 <head>
-    
+<h1 style="color:PaleVioletRed;"> Priyanka Pong Game </h1>
     <script>
-         var canvas;
+        var canvas;
         var context;
         var loop;
         var leftPaddle;
         var rightPaddle;
         var ball;
-        var paddleWidth = 10;
-        var paddleHeight = 50; 
+        var paddleWidth = 30;
+        var paddleHeight = 45;
         var ballSize = 10;
         var ballSpeed = 3;
         var userPaddleSpeed = 2;
@@ -22,7 +21,12 @@
         var S = 83;
         var UP = 38;
         var DOWN = 40;
-      
+
+        // define our colors for border change
+        var colors = ["#CCCCCC","#0080ff","#ba00ba", "#ff884a", "#259a00"];
+        var rand;
+
+
         // Keep track of pressed keys
         var keys = {
             W: false,
@@ -60,12 +64,12 @@
             ball.sY = ballSpeed / 2;
 
             // Randomize initial direction
-            if (Math.random() > 0.15) {
-                ball.sX *= -3;
+            if (Math.random() > 0.5) {
+                ball.sX *= -1;
             }
             // Randomize initial direction
-            if (Math.random() > 0.15) { 
-                ball.sY *= -3;
+            if (Math.random() > 0.5) {
+                ball.sY *= -1;
             }
         }
         // Bounce the ball off of a paddle
@@ -89,11 +93,12 @@
                     ball.sY += 1
                 }
             }
-            
+            changeColor();
+            ball.sX *= -1;
         }
         function changeColor(){
                 rand = Math.floor(Math.random()*colors.length);
-                canvas.style.border = "1rem solid "+ colors[rand];
+                canvas.style.border = "5px solid "+ colors[rand];
             }
         function attachKeyListeners() {
             // Listen for keydown events
@@ -130,25 +135,24 @@
                 console.log(keys);
             });
         }
-
-// Create a rectangle object - for paddles, ball, etc
-function makeRect(x, y, width, height, speed, color) {
-  if (!color) color = '#ff884a';
-  return {
-    x: x,
-    y: y,
-    w: width,
-    h: height,
-    s: speed,
-    c: color,
-    draw: function() {
-      context.fillStyle = this.c;
-      context.fillRect(this.x, this.y, this.w, this.h);
-    }
-  };
-}
-
-function doAI() {
+        // Create a rectangle object - for paddles, ball, etc
+        function makeRect(x, y, width, height, speed, color) {
+            if (!color)
+                color = '# 000000';
+            return {
+                x: x,
+                y: y,
+                w: width,
+                h: height,
+                s: speed,
+                c: color,
+                draw: function () {
+                    context.fillStyle = this.c;
+                    context.fillRect(this.x, this.y, this.w, this.h);
+                }
+            };
+        }
+        function doAI() {
             if (ball.x >= canvas.width * .6) {
                 let paddleHalf = paddleHeight / 2;
                 if (ball.y > rightPaddle.y + paddleHalf) {
@@ -214,11 +218,11 @@ function checkScore() {
     }
     if(rightScore > 10){
         leftPaddle.h = 45;
-    } 
+    }
     if(rightScore > 15){
         leftPaddle.h = 45;
     }
-    if(leftScore > 5){ 
+    if(leftScore > 5){
         rightPaddle.h = 80;
     }
     if(leftScore > 10){
@@ -237,17 +241,17 @@ function checkScore() {
         ball.sX *= -1;
             }
         }
-        function drawScores() {
+        function drawScores() { 
             // Draw the scores
-             context.fillStyle = '#0080ff';
-  context.font = '24px Arial';
-  context.textAlign = 'left';
-  context.fillText('Score: ' + leftScore, 5, 24);
-  context.textAlign = 'right';
-  context.fillText('Score: ' + rightScore, canvas.width - 5, 24); 
-        }
+            context.fillStyle = '#800000';
+            context.font = '24px Arial';
+            context.textAlign = 'left';
+            context.fillText('Score: ' + leftScore, 5, 24);
+            context.textAlign = 'right';
+            context.fillText('Score: ' + rightScore, canvas.width - 5, 25);
+        } 
         function erase() {
-            context.fillStyle = '#CCCCCC';
+            context.fillStyle = '#259a00';
             context.fillRect(0, 0, canvas.width, canvas.height);
         }
 
@@ -259,19 +263,19 @@ function checkScore() {
 
             checkPaddleCollision();
             checkScore();
-            drawScores();
+            drawScores(); 
             //draw stuff
             for (let i = 0; i < drawables.length; i++) {
-                drawables[i].draw(); 
+                drawables[i].draw();
             }
         }
     </script>
 </head>
 <body onload="init();">
 
-    <canvas id="board" width="1000px" height="600px" style="border: dashed red;"> 
+    <canvas id="board" width="600px" height="400px" style="border: 5px solid black;">
 
-    </canvas> 
+    </canvas>
 </main>
 </body>
-</html> 
+</html>
