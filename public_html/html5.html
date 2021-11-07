@@ -58,7 +58,7 @@
             ball.y = canvas.height / 2 - ball.w / 2;
             // Modify the ball object to have two speed properties, one for X and one for Y
             ball.sX = ballSpeed; 
-            ball.sY = ballSpeed / 3;
+            ball.sY = ballSpeed / 80;
 
             // Randomize initial direction
             if (Math.random() > 0.15) {
@@ -191,7 +191,7 @@ function doAI() {
             if (ball.y + ball.h > canvas.height) {
                 ball.y = 10;
             }
-            if (ball.y < 0){
+            if (ball.y < 10){
                 ball.y = canvas.height - ball.w - 2;
             }
         }
