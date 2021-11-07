@@ -189,9 +189,9 @@ function doAI() {
             ball.y += ball.sY;
             // Bounce the ball off the top/bottom
             if (ball.y + ball.h > canvas.height) {
-                ball.y = 10;
+                ball.y = 110;
             }
-            if (ball.y < 10){
+            if (ball.y < 20){
                 ball.y = canvas.height - ball.w - 2;
             }
         }
