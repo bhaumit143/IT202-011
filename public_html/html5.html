@@ -63,7 +63,7 @@
             // Randomize initial direction
             if (Math.random() > 0.15) {
                 ball.sX *= -3;
-            }
+            } 
             // Randomize initial direction
             if (Math.random() > 0.15) { 
                 ball.sY *= -6;
@@ -214,29 +214,31 @@ function checkScore() {
         leftPaddle.h = 45;
     }
     if(rightScore > 10){
-        leftPaddle.h = 45;
+        leftPaddle.h = 45; 
     } 
     if(rightScore > 15){
         leftPaddle.h = 45;
     }
     if(leftScore > 5){ 
         rightPaddle.h = 80;
-    }
+    } 
     if(leftScore > 10){
         rightPaddle.h = 75;
     }
-    if(leftScore > 15){
+    if(leftScore > 15){ 
         rightPaddle.h = 60;
     }
     if (ball.x < leftPaddle.x) {
         rightScore++;
+        ballSpeed++;
         resetBall();
         ball.sX *= -1;
-    } else if (ball.x + ball.w > rightPaddle.x + rightPaddle.w) {
+    } else if (ball.x + ball.w > rightPaddle.x + rightPaddle.w) { 
         leftScore++;
+        ballSpeed++;
         resetBall();
         ball.sX *= -1;
-            }
+            } 
         }
         function drawScores() {
             // Draw the scores
@@ -273,6 +275,6 @@ function checkScore() {
     <canvas id="board" width="1000px" height="600px" style="border: dashed red;"> 
 
     </canvas> 
-</main>
+</main> 
 </body>
 </html> 
