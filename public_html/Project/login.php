@@ -15,7 +15,7 @@ require(__DIR__ . "/../../partials/nav.php");
 <script>
     function validate(form) {
         //TODO 1: implement JavaScript validations 
-        //ensure it returns false for an error and true for successs
+        //ensure it returns false for an error and true for successs.
 
         return true;
     }
