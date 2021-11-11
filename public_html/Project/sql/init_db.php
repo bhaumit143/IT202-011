@@ -8,7 +8,7 @@
     <p>Files should be <a href="https://en.wikipedia.org/wiki/Idempotence">Idempotent</a></p>
 </details>
 <br><br>
-<?php
+<?php 
 # IMPORTANT: There should be no need to edit anything in this file
 # Simply drop new structural .sql files into this directory then access this file in the browser
 # It'll load all of the sql files and attempt to run them against the database
