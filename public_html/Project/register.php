@@ -2,22 +2,22 @@
 require(__DIR__ . "/../../partials/nav.php"); 
 ?>
 <form onsubmit="return validate(this)" method="POST">
-    <div>
-        <label for="email">Email: </label>
+    <div><br/>
+        <label for="email">Email: </label><br/>
         <input type="email" id = "email" name="email" required />
     </div> 
     <div> 
-        <label for="username">Username: </label>
+        <label for="username">Username: </label><br/>
         <input type="text" id = "username" name="username" required maxlength="30" />
     </div>
     <div>
-        <label for="pw">Password: </label>
+        <label for="pw">Password: </label><br/>
         <input type="password" id="pw" name="password" required minlength="8" />
     </div> 
     <div>
-        <label for="cpw">Confirm Password: </label>
+        <label for="cpw">Confirm Password: </label><br/>
         <input type="password" id ="cpw" name="confirm" required minlength="8" />
-    </div> 
+    </div> <br/>
     <input type="submit" name = "submit" value="Register" />
 </form>
 <script>
@@ -114,3 +114,49 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>
+
+
+<html>
+
+<head>
+
+</head>
+<body bgcolor="<?php
+if (isset($_POST['btn']))
+{
+$col=$_POST['t1'];
+if(isset($col))
+{
+echo $p=$col;
+}
+else
+{
+echo $p="#ffffff";
+}
+}
+?>">
+
+<form action="" method="post" >
+<strong> Choose Color to Change Background :- </strong>
+<select name="t1">
+<option value="">Choose Color </option>
+<option value="#000000"> Black </option>
+<option value="#0000ff"> Blue </option>
+<option value="#a52a2a"> Brown </option>
+<option value="#00ffff"> Cyan </option>
+<option value="#006400"> Dark Green </option>
+<option value="#808080"> Grey </option>
+<option value="#008000"> Green </option>
+<option value="#ffa500"> Orange </option>
+<option value="#ffc0cb"> Pink </option>
+<option value="#800080"> Purple </option>
+<option value="#ff0000"> Red </option>
+<option value="#ffffff"> White </option>
+<option value="#ffff00"> Yellow </option>
+</select>
+<br><br/>
+<input type="submit" name="btn" value="Submit">
+</form>
+
+</body>
+</html>
