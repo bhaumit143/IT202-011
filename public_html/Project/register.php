@@ -1,5 +1,55 @@
 <?php
+ Feat-UserRegistration
+require_once(__DIR__ . "/../../partials/nav.php"); //flash
+if(isset($_POST["submit"])){
+    $email = se($_POST, "email", null, false); 
+    $password = trim(se($_POST, "password", null, false));   
+    $confirm = trim(se($_POST, "confirm", null, false)); 
+    $username = trim(se($_POST, "username", null, false)); 
+    
+    $isValid = true; 
+    if(!isset($email) || !isset($password) || !isset($confirm) || !isset($username))  {
+        se("Must provide email, password, and confirm password"); //flash
+        $isValid =false; 
+    }   
+    if ($password !== $confirm){  
+        se("Passwords don't match"); //flash
+        $isValid = false;  
+    } 
+    if (strlen($password) < 3) {
+        se("Password must be 3 or more characters"); //flash
+        $isValid = false; 
+    }   
+    $email = sanitize_email($email);
+    if(!is_valid_email($email)){
+        se("Invalid email"); //flash
+        $isValid = false;
+    }
+    //TODO add validation for username (length? disallow special chars? etc)
+    if($isValid){
+        //do our registration
+        $db = getDB();
+        $stmt = $db->prepare("INSERT INTO Users (email, password) VALUES (:email, :password)");
+        $hash = password_hash($password, PASSWORD_BCRYPT);
+        try {
+
+            $stmt->execute([":email" => $email, ":password" => $hash]);
+        } catch(PDOException $e) {
+            $code = se($e->errorInfo, 0, "00000", false);
+            if ($code === "23000") {
+                se("An account with this email already exists"); //flash
+            } else {
+                echo "<pre>" . var_export($e->errorInfo, true) . "</pre>";
+            }    
+         
+        
+        }    
+    } 
+}
+
+
 require(__DIR__ . "/../../partials/nav.php"); 
+ Milestone1
 ?>
 <form onsubmit="return validate(this)" method="POST">
     <div>
@@ -48,8 +98,24 @@ require(__DIR__ . "/../../partials/nav.php");
             isValid = false;
             alert("Invalid email");
         }
+ Feat-UserRegistration
+        if(password != confirm){
+            isValid = false; 
+            alert("password don't match"); 
+        }
+        if(password.length < 3){
+            isValid = false;
+            alert("password must be 3 or more characters");      
+        }
+        return isValid;
+    }
+
+</script>  
+
+
         //TODO 1: implement JavaScript validation
         //ensure it returns false for an error and true for success
+ Milestone1
 
         return true;
     }
