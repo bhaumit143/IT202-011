@@ -1,5 +1,55 @@
 <?php
+ 
+require_once(__DIR__ . "/../../partials/nav.php");
+if(isset($_POST["submit"])){
+    $email = se($_POST, "email", null, false);
+    $password = trim(se($_POST, "password", null, false)); // here s 
+    $confirm = trim(se($_POST, "confirm", null, false));
+    $username = trim(se($_POST, "username", null, false)); // do it here
+    
+    $isValid = true; 
+    if(!isset($email) || !isset($password) || !isset($confirm) || !isset($username))  {
+        se("Must provide email, password, and confirm password"); // do it here 
+        $isValid =false; 
+    }  
+    if ($password !== $confirm){  
+        se("Passwords don't match"); //do it here  
+        $isValid = false; 
+    } 
+    if (strlen($password) < 3) {
+        se("Password must be 3 or more characters"); // do it here 
+        $isValid = false; 
+    }   
+    $email = sanitize_email($email);
+    if(!is_valid_email($email)){ 
+        se("Invalid email"); // do it here 
+        $isValid = false;
+    }
+    //TODO add validation for username (length? disallow special chars? etc)
+    if($isValid){
+        //do our registration
+        $db = getDB();
+        $stmt = $db->prepare("INSERT INTO Users (email, password) VALUES (:email, :password)");
+        $hash = password_hash($password, PASSWORD_BCRYPT);
+        try {
+
+            $stmt->execute([":email" => $email, ":password" => $hash]);
+        } catch(PDOException $e) {
+            $code = se($e->errorInfo, 0, "00000", false);
+            if ($code === "23000") {
+                se("An account with this email already exists"); // do it here 
+            } else {
+                echo "<pre>" . var_export($e->errorInfo, true) . "</pre>";
+            }    
+         
+        
+        }    
+    } 
+}
+
+
 require(__DIR__ . "/../../partials/nav.php"); 
+ 
 ?>
 <form onsubmit="return validate(this)" method="POST">
     <div>
