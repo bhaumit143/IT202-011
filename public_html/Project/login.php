@@ -15,7 +15,11 @@ require(__DIR__ . "/../../partials/nav.php");
 <script>
     function validate(form) {
         //TODO 1: implement JavaScript validation
+
+        //ensure it returns false for an error and true for the success.
+=======
         //ensure it returns false for an error and true for success
+
 
         return true;
     }
@@ -67,6 +71,9 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
                     unset($user["password"]);
                     if (password_verify($password, $hash)) {
                         flash("Welcome $email");
+
+                        $_SESSION["user"] = $user; 
+=======
                         $_SESSION["user"] = $user;
                         //lookup potential roles
                         $stmt = $db->prepare("SELECT Roles.name FROM Roles 
@@ -76,7 +83,11 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
                         $roles = $stmt->fetchAll(PDO::FETCH_ASSOC); //fetch all since we'll want multiple
                         //save roles or empty array
                         if ($roles) {
+
+                            $_SESSION["user"]["roles"] = $roles; //at least 1 role
+=======
                             $_SESSION["user"]["roles"] = $roles; //at least 1 roles.
+
                         } else {
                             $_SESSION["user"]["roles"] = []; //no roles
                         }
@@ -96,4 +107,9 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
 ?>
 <?php 
 require(__DIR__ . "/../../partials/flash.php");
+
 ?>
+
+=======
+?>
+
