@@ -3,13 +3,13 @@ require(__DIR__ . "/../../partials/nav.php");
 ?>
 <form onsubmit="return validate(this)" method="POST">
     <div>
-<<<<<<< HEAD
+
         <label for="email"><br/>Username/Email</label><br/>
         <input type="email" name="email" required />
-=======
+
         <label for="email">Username/Email</label>
         <input type="text" name="email" required />
->>>>>>> 56ffa883d6f17369be2ab4d6d0a853a594ff72b9
+
     </div>
     <div>
         <label for="pw">Password</label><br/>
@@ -22,8 +22,8 @@ require(__DIR__ . "/../../partials/nav.php");
         //TODO 1: implement JavaScript validation
 
         //ensure it returns false for an error and true for the success.
-=======
-        //ensure it returns false for an error and true for success
+
+     //ensure it returns false for an error and true for success
 
 
         return true;
@@ -78,7 +78,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
                         flash("Welcome $email");
 
                         $_SESSION["user"] = $user; 
-=======
+
                         $_SESSION["user"] = $user;
                         //lookup potential roles
                         $stmt = $db->prepare("SELECT Roles.name FROM Roles 
@@ -90,7 +90,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
                         if ($roles) {
 
                             $_SESSION["user"]["roles"] = $roles; //at least 1 role
-=======
+
                             $_SESSION["user"]["roles"] = $roles; //at least 1 roles.
 
                         } else {
@@ -115,8 +115,8 @@ require(__DIR__ . "/../../partials/flash.php");
 
 ?>
 
-=======
-?>
+
+
 
 <html>
 

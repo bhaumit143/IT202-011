@@ -10,7 +10,7 @@ if(!is_logged_in()){
 require_once(__DIR__ . "/../../partials/flash.php");
 ?> 
 
-<<<<<<< HEAD
+
 <html>
 
 <head>
