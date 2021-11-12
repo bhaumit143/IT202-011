@@ -4,7 +4,7 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-function getDB(){ 
+function getDB(){
     global $db;
     //this function returns an existing connection or creates a new one if needed
     //and assigns it to the $db variable
@@ -18,15 +18,15 @@ function getDB(){
             //using the PDO connector create a new connect to the DB
             //if no error occurs we're connected
             $db = new PDO($connection_string, $dbuser, $dbpass);
-        //the default fetch mode is FETCH_BOTH which returns the data as both an indexed array and associative array
-        //we'll override the default here so it's always fetched as an associative array
-        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-    }
-    catch(Exception $e){
+	    //the default fetch mode is FETCH_BOTH which returns the data as both an indexed array and associative array
+	    //we'll override the default here so it's always fetched as an associative array
+ 	    $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+	}
+   	catch(Exception $e){
             var_export($e);
             $db = null;
         }
     }
     return $db;
 }
-?> 
+?>
