@@ -27,7 +27,7 @@ require(__DIR__ . "/../../partials/nav.php");
 
 
         return true;
-    }
+    } 
 </script>
 <?php
 //TODO 2: add PHP Code
@@ -163,7 +163,7 @@ echo $p="#ffffff";
 
 </body>
 </html>
-
+<?php
 require_once(__DIR__ . "/../../partials/nav.php");
 if(isset($_POST["submit"])){
     $email = se($_POST, "email", null, false);
