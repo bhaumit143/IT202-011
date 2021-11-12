@@ -1,4 +1,4 @@
-<h1>Database Helper Tool</h1>
+<h1>Database Helper  Tool</h1>
 <details>
     <summary>Info (About the tool)</summary>
     <p>The scope of this tool is to help us separate our structural queries into separate files for better organization.</p>
@@ -8,7 +8,7 @@
     <p>Files should be <a href="https://en.wikipedia.org/wiki/Idempotence">Idempotent</a></p>
 </details>
 <br><br>
-<?php 
+<?php
 # IMPORTANT: There should be no need to edit anything in this file
 # Simply drop new structural .sql files into this directory then access this file in the browser
 # It'll load all of the sql files and attempt to run them against the database
@@ -85,7 +85,7 @@ try {
                     echo "<p style=\"margin-left: 3em\">Blocked from running, table found in 'show tables' results. [This is ok, it reduces redundant DB calls]</p><br>";
                     continue;
                 }
-            }
+            } 
             $stmt = $db->prepare($value);
             try {
                 $result = $stmt->execute();
