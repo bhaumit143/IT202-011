@@ -1,4 +1,5 @@
 <?php
+
 require_once(__DIR__ . "/../../partials/nav.php");
 if(isset($_POST["submit"])){
     $email = se($_POST, "email", null, false);
@@ -8,15 +9,64 @@ if(isset($_POST["submit"])){
     if(!isset($email) || !isset($password)){
         se("Must provide email, and password");
         $isValid =false;
+=======
+require(__DIR__ . "/../../partials/nav.php");
+?>
+<form onsubmit="return validate(this)" method="POST"> 
+    <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" required />
+    </div>
+    <div> 
+        <label for="pw">Password</label>
+        <input type="password" id="pw" name="password" required minlength="8" />
+    </div>
+    <input type="submit" value="Login" />
+</form>
+<script>
+    function validate(form) {
+        //TODO 1: implement JavaScript validations 
+        //ensure it returns false for an error and true for successs.
+
+        return true;
+    }
+</script>
+<?php
+//TODO 2: add PHP Code
+if (isset($_POST["email"]) && isset($_POST["password"])) { 
+    $email = se($_POST, "email", "", false);
+    $password = se($_POST, "password", "", false);
+
+    //TODO 3
+    $hasError = false;
+    if (empty($email)) {
+        flash("Email must not be empty", "danger");
+        $hasError = true;
+
     }
     if (strlen($password) < 3) {
         se("Password must be 3 or more characters");
         $isValid = false; 
     }    
     $email = sanitize_email($email);
+
     if(!is_valid_email($email)){
         se("Invalid email");
         $isValid = false;
+=======
+    //validate
+    if (!is_valid_email($email)) { 
+        flash("Invalid email address", "danger");
+        $hasError = true;
+    }
+    if (empty($password)) {
+        flash("password must not be empty", "danger");
+        $hasError = true;
+    }
+    if (strlen($password) < 8) {
+        flash("Password too short", "danger");
+        $hasError = true;
+
     }
     if($isValid){
         //do our registration
