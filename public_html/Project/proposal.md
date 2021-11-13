@@ -158,7 +158,11 @@
 
 
 
+
 - [ ] \(mm/dd/yyyy of completion) User will be able to edit their profile (from the proposal bullet point, if it's a sub-point indent it properly)
+=======
+- [ ] \(mm/dd/yyyy of completion) Users will be able to edit their profile (from the proposal bullet point, if it's a sub-point indent it properly)
+
   -  List of Evidence of Feature Completion
     - Status: Completed
     - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
@@ -189,7 +193,7 @@
 
 
 
-
+======
 - Milestone 2
 - Milestone 3
 - Milestone 4
