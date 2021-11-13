@@ -160,7 +160,10 @@
 
 
 - [ ] \(mm/dd/yyyy of completion) User will be able to edit their profile (from the proposal bullet point, if it's a sub-point indent it properly)
-=======
+
+- [ ] \(mm/dd/yyyy of completion) Users will be able to edit their profile (from the proposal bullet point, if it's a sub-point indent it properly)
+
+
 - [ ] \(mm/dd/yyyy of completion) Users will be able to edit their profile (from the proposal bullet point, if it's a sub-point indent it properly)
 
   -  List of Evidence of Feature Completion
@@ -178,22 +181,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-======
 - Milestone 2
 - Milestone 3
 - Milestone 4
