@@ -1,9 +1,9 @@
 # Project Name: Simple Bank
 ## Project Summary: This project will create a bank simulation for users. They’ll be able to have various accounts, do standard bank functions like deposit, withdraw, internal (user’s accounts)/external(other user’s accounts) transfers, and creating/closing accounts.
 
-## Github Link: (Prod Branch of Project Folder)
-## Project Board Link: 
-## Website Link: (Heroku Prod of Project folder)
+## Github Link: https://github.com/bhaumit143/IT202-011/blob/bpv6-prod/public_html/Project/proposal.md
+## Project Board Link: https://github.com/bhaumit143/IT202-011/projects/1
+## Website Link: (https://bpv6-prod.herokuapp.com)
 ## Your Name: Bhaumit Viradiya
 
 <!--
@@ -24,7 +24,7 @@
 ### Proposal Checklist and Evidence
 
 - Milestone 1
-- [ ] \(31/1/2021 of completion) User will be able to register a new account (from the proposal bullet point, if it's a sub-point indent it properly)
+- [x] \(31/1/2021 of completion) User will be able to register a new account (from the proposal bullet point, if it's a sub-point indent it properly)
   -  List of Evidence of Feature Completion
     - Status: Completed 
     - Direct Link: https://bpv6-prod.herokuapp.com//Project/register.php
@@ -50,7 +50,7 @@
         - Screenshot #6 Password Must Match  
 
 
-- [ ] \(11/10/2021 of completion) User will be able to login to their account (given they enter the correct credentials) (from the proposal bullet point, if it's a sub-point indent it properly)
+- [x] \(11/10/2021 of completion) User will be able to login to their account (given they enter the correct credentials) (from the proposal bullet point, if it's a sub-point indent it properly)
   -  List of Evidence of Feature Completion
     - Status: Completed 
     - Direct Link: https://bpv6-prod.herokuapp.com//Project/login.php
@@ -66,8 +66,7 @@
       - Screenshot #3 <img width="929" alt="Screen Shot 2021-11-11 at 5 55 29 PM" src="https://user-images.githubusercontent.com/90281155/141380684-76a2e94e-5047-42ca-b0bc-8b7cff8afefb.png">
         - Screenshot #3 Invalid Password
 
-
-- [ ] \(11/10/2021 of completion) User will be able to logout (from the proposal bullet point, if it's a sub-point indent it properly)
+- [x] \(11/10/2021 of completion) User will be able to logout (from the proposal bullet point, if it's a sub-point indent it properly)
   -  List of Evidence of Feature Completion
     - Status: Completed
     - Direct Link: https://bpv6-prod.herokuapp.com//Project/login.php
@@ -78,7 +77,7 @@
         - Screenshot #1 User can sucessfull log out
 
 
-- [ ] \(10/20/2021 of completion) Basic security rules implemented (from the proposal bullet point, if it's a sub-point indent it properly)
+- [x] \(10/20/2021 of completion) Basic security rules implemented (from the proposal bullet point, if it's a sub-point indent it properly)
   -  List of Evidence of Feature Completion
     - Status: completed 
     - Direct Link: https://bpv6-prod.herokuapp.com//Project/login.php
@@ -95,7 +94,7 @@
       - Screenshot #3 Password Must be 8 or more 8 characters
 
 
-- [ ] \(11/11/2021 of completion) Basic Roles implemented (from the proposal bullet point, if it's a sub-point indent it properly)
+- [x] \(11/11/2021 of completion) Basic Roles implemented (from the proposal bullet point, if it's a sub-point indent it properly)
   -  List of Evidence of Feature Completion
     - Status: Completed
     - Direct Link: https://bpv6-prod.herokuapp.com//Project/login.php
@@ -113,7 +112,7 @@
 
 
 
-- [ ] \(11/11/2021 of completion) Site should have basic styles/theme applied; everything should be styled (from the proposal bullet point, if it's a sub-point indent it properly)
+- [x] \(11/11/2021 of completion) Site should have basic styles/theme applied; everything should be styled (from the proposal bullet point, if it's a sub-point indent it properly)
   -  List of Evidence of Feature Completion
     - Status: Completed 
     - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
@@ -131,7 +130,7 @@
 
 
 
-- [ ] \(10/20/2021 of completion) Any output messages/errors should be “user friendly” (from the proposal bullet point, if it's a sub-point indent it properly)
+- [x] \(10/20/2021 of completion) Any output messages/errors should be “user friendly” (from the proposal bullet point, if it's a sub-point indent it properly)
   -  List of Evidence of Feature Completion
     - Status: Completed
     - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
@@ -146,7 +145,7 @@
 
 
 
-- [ ] \(11/18/2021 of completion) User will be able to see their profile (from the proposal bullet point, if it's a sub-point indent it properly)
+- [x] \(11/18/2021 of completion) User will be able to see their profile (from the proposal bullet point, if it's a sub-point indent it properly)
   -  List of Evidence of Feature Completion
     - Status: Completed
     - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
@@ -158,7 +157,7 @@
 
 
 
-- [ ] \(mm/dd/yyyy of completion) User will be able to edit their profile (from the proposal bullet point, if it's a sub-point indent it properly)
+- [x] \(mm/dd/yyyy of completion) User will be able to edit their profile (from the proposal bullet point, if it's a sub-point indent it properly)
   -  List of Evidence of Feature Completion
     - Status: Completed
     - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
@@ -167,26 +166,6 @@
     - Screenshots
       - Screenshot #1 <img width="924" alt="Screen Shot 2021-11-11 at 7 19 11 PM" src="https://user-images.githubusercontent.com/90281155/141387718-964eb0a4-5dea-4eda-b12d-562273bd29a8.png">
         - Screenshot #1 User can edit their profile after login, they can log out and login again. Also, they can change the color of background. They also can registernew user. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
