@@ -1,5 +1,5 @@
 # Project Name: Simple Bank
-## Project Summary: This project will create a bank simulation for users. They’ll be able to have various accounts, do standard bank functions like deposit, withdraw, internal (user’s accounts)/external(other user’s accounts) transfers, and creating/closing accountsss.
+## Project Summary: This project will create a bank simulation for users. They’ll be able to have various accounts, do standard bank functions like deposit, withdraw, internal (user’s accounts)/external(other user’s accounts) transfers, and creating/closing accounts.
 
 ## Github Link: (Prod Branch of Project Folder)
 ## Project Board Link: 
@@ -168,11 +168,7 @@
       - Screenshot #1 <img width="924" alt="Screen Shot 2021-11-11 at 7 19 11 PM" src="https://user-images.githubusercontent.com/90281155/141387718-964eb0a4-5dea-4eda-b12d-562273bd29a8.png">
         - Screenshot #1 User can edit their profile after login, they can log out and login again. Also, they can change the color of background. They also can registernew user. 
 
-
-
-
-
-- - Milestone 2
+- Milestone 2
   - [ ] \(mm/dd/yyyy of completion) Create the Accounts table (id, account_number [unique, always 12 characters], user_id, balance (default 0), account_type, created, modified)
   -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
@@ -252,9 +248,7 @@
     - Screenshots
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
-
-
-
+  
 - Milestone 3
 - Milestone 4
 ### Intructions
