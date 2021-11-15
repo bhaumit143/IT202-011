@@ -1,5 +1,4 @@
 <?php
-
 require(__DIR__ . "/../../partials/nav.php");
 ?>
 <form onsubmit="return validate(this)" method="POST">
@@ -23,12 +22,12 @@ require(__DIR__ . "/../../partials/nav.php");
         //TODO 1: implement JavaScript validation
 
         //ensure it returns false for an error and true for the success.
-=======
+
         //ensure it returns false for an error and true for success
 
 
         return true;
-    }
+    } 
 </script>
 <?php
 //TODO 2: add PHP Code
@@ -79,8 +78,8 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
                         flash("Welcome $email");
 
                         $_SESSION["user"] = $user; 
-=======
-                        $_SESSION["user"] = $user;
+
+                       $_SESSION["user"] = $user;
                         //lookup potential roles
                         $stmt = $db->prepare("SELECT Roles.name FROM Roles 
                         JOIN UserRoles on Roles.id = UserRoles.role_id 
@@ -91,7 +90,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
                         if ($roles) {
 
                             $_SESSION["user"]["roles"] = $roles; //at least 1 role
-=======
+
                             $_SESSION["user"]["roles"] = $roles; //at least 1 roles.
 
                         } else {
@@ -116,7 +115,7 @@ require(__DIR__ . "/../../partials/flash.php");
 
 ?>
 
-=======
+
 ?>
 
 <html>
@@ -164,7 +163,7 @@ echo $p="#ffffff";
 
 </body>
 </html>
-=======
+<?php
 require_once(__DIR__ . "/../../partials/nav.php");
 if(isset($_POST["submit"])){
     $email = se($_POST, "email", null, false);
