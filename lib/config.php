@@ -1,5 +1,4 @@
 <?php
-
 $ini = @parse_ini_file(".env");
 if($ini && isset($ini["DB_URL"])){
     //load local .env file
