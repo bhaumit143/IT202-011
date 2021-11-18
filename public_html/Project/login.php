@@ -7,7 +7,7 @@ require(__DIR__ . "/../../partials/nav.php");
         <input type="email" name="email" required />
     </div>
     <div>
-        <label for="pw">Password</label>
+        <label for="pw"><br/>Password</label>
         <input type="password" id="pw" name="password" required minlength="8" />
     </div><br/>
     <input type="submit" value="Login" />
