@@ -160,7 +160,7 @@
 
 
 - [ ] \(mm/dd/yyyy of completion) User will be able to edit their profile (from the proposal bullet point, if it's a sub-point indent it properly)
-=======
+
 - [ ] \(mm/dd/yyyy of completion) Users will be able to edit their profile (from the proposal bullet point, if it's a sub-point indent it properly)
 
   -  List of Evidence of Feature Completion
@@ -170,26 +170,7 @@
       - PR link #1 https://github.com/bhaumit143/IT202-011/pull/20
     - Screenshots
       - Screenshot #1 <img width="924" alt="Screen Shot 2021-11-11 at 7 19 11 PM" src="https://user-images.githubusercontent.com/90281155/141387718-964eb0a4-5dea-4eda-b12d-562273bd29a8.png">
-        - Screenshot #1 User can edit their profile after login, they can log out and login again. Also, they can change the color of background. They also can registernew user. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        - Screenshot #1 User can edit their profile after login, they can log out and login again. Also, they can change the color of background. They also can register new user. 
 
 
 
