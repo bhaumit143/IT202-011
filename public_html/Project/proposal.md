@@ -202,12 +202,12 @@
   - [ ] \(mm/dd/yyyy of completion) User’s profile page should record/show First and Last name
   -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link: (Direct link to the files or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
       - PR link #1 (repeat as necessary)
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1 (paste the images so it uploads to github) (repeats as necessary)
+        - Screenshot #1 description explaining what you're trying to shows
 
 
   - [ ] \(mm/dd/yyyy of completion) User will be able to transfer funds to another user’s account
