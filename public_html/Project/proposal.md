@@ -19,7 +19,7 @@
     - Screenshots
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
-### End Line item / Feature Template
+### End Line item / Features Templates
 --> 
 ### Proposal Checklist and Evidence
 
@@ -171,8 +171,6 @@
     - Screenshots
       - Screenshot #1 <img width="924" alt="Screen Shot 2021-11-11 at 7 19 11 PM" src="https://user-images.githubusercontent.com/90281155/141387718-964eb0a4-5dea-4eda-b12d-562273bd29a8.png">
         - Screenshot #1 User can edit their profile after login, they can log out and login again. Also, they can change the color of background. They also can register new user. 
-
-
 
 
 - Milestone 2
