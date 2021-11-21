@@ -33,7 +33,7 @@ if(isset($_POST["search"]) && !empty($query)){
 
 ?>
 <form method="POST">
-    <input name="query" placeholder="Search" value="<?php safer_echo($query); ?>"/>
+    <input name="query" placeholder="Search" value="<?php se($query); ?>"/>
     <input type="submit" value="Search" name="search"/>
 </form>
 <div class="results">
@@ -43,23 +43,23 @@ if(isset($_POST["search"]) && !empty($query)){
                 <div class="list-group-item">
                     <div>
                         <div>Account Number:</div>
-                        <div><?php safer_echo($r["account_number"]); ?></div>
+                        <div><?php se($r["account_number"]); ?></div>
                     </div>
                     <div>
                         <div>Account Type :</div>
-                        <div><?php safer_echo($r["account_type"]); ?></div>
+                        <div><?php se($r["account_type"]); ?></div>
                     </div>
                     <div>
                         <div>Balance:</div>
-                        <div><?php safer_echo($r["balance"]); ?></div>
+                        <div><?php se($r["balance"]); ?></div>
                     </div>
                     <div>
                         <div>Owner Id:</div>
-                        <div><?php safer_echo($r["id"]); ?></div>
+                        <div><?php se($r["id"]); ?></div>
                     </div>
                     <div>
-                        <a type="button" href="test_edit_account.php?id=<?php safer_echo($r['id']); ?>">Edit</a>
-                        <a type="button" href="test_view_account.php?id=<?php safer_echo($r['id']); ?>">View</a>
+                        <a type="button" href="test_edit_account.php?id=<?php se($r['id']); ?>">Edit</a>
+                        <a type="button" href="test_view_account.php?id=<?php se($r['id']); ?>">View</a>
                     </div>
                 </div>
             <?php endforeach; ?>

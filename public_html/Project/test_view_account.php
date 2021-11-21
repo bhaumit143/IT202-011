@@ -38,10 +38,10 @@ if (isset($id)) {
             <div class="card-body">
             <div>
                 <p>Stats</p>
-                <div> ID: <?php safer_echo($result["id"]); ?></div>
-                <div>Account Number: <?php safer_echo($result["account_number"]); ?></div>
-                <div>Balance: <?php safer_echo($result["balance"]); ?></div>
-                <div>Owned by: <?php safer_echo($result["username"]); ?></div>
+                <div> ID: <?php se($result["id"]); ?></div>
+                <div>Account Number: <?php se($result["account_number"]); ?></div>
+                <div>Balance: <?php se($result["balance"]); ?></div>
+                <div>Owned by: <?php se($result["username"]); ?></div>
             </div>
         </div>
     </div>
@@ -57,10 +57,10 @@ if (isset($id)) {
        </div>
               <div class="card-body">
                      <div>
-                        <div> Transaction Type: <?php safer_echo($result2["action_type"]); ?></div>
-                        <div> SourceID: <?php safer_echo($result2["act_src_id"]); ?></div>
-                        <div> DestID: <?php safer_echo($result2["act_dest_id"]); ?></div>
-                        <div> Created: <?php safer_echo($result2["created"]); ?></div>
+                        <div> Transaction Type: <?php se($result2["action_type"]); ?></div>
+                        <div> SourceID: <?php se($result2["act_src_id"]); ?></div>
+                        <div> DestID: <?php se($result2["act_dest_id"]); ?></div>
+                        <div> Created: <?php se($result2["created"]); ?></div>
                     </div>
               </div>
        </div>

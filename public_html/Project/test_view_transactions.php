@@ -48,9 +48,9 @@ if (isset($id)) {
         <div class="card-body">
             <div>
                 <p><b>Information</b></p> <!-- match with SELECT ^^^^^^ -->
-                <div>Account Number: <?php safer_echo($result2["account_number"]); ?> </div>
-                <div>Amount:<?php safer_echo($result["amount"]); ?></div>
-                <div>Action: Type <?php safer_echo($result["action_type"]); ?> </div>
+                <div>Account Number: <?php se($result2["account_number"]); ?> </div>
+                <div>Amount:<?php se($result["amount"]); ?></div>
+                <div>Action: Type <?php se($result["action_type"]); ?> </div>
             </div>
         </div>
     </div>

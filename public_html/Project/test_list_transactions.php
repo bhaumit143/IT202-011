@@ -41,7 +41,7 @@ if (isset($_POST["query"])) {
 
 <h3>List Transcations</h3>
 <form method="POST">
-    <input name="query" placeholder="Search" value="<?php safer_echo($query); ?>"/>
+    <input name="query" placeholder="Search" value="<?php se($query); ?>"/>
     <input type="submit" value="Search" name="search"/>
 </form>
 <div class="results">
@@ -52,31 +52,31 @@ if (isset($_POST["query"])) {
                 <div class="list-group-item">
                     <div>
                         <div>Account Number:</div>
-                        <div><?php safer_echo($r["account_number"]); ?></div>
+                        <div><?php se($r["account_number"]); ?></div>
                     </div> 
                     <div>
                         <div>Action Type:</div>
-                        <div><?php safer_echo($r["action_type"]); ?></div>
+                        <div><?php se($r["action_type"]); ?></div>
                     </div>
                     <div>
                         <div>Source:</div>
-                        <div><?php safer_echo($r["act_src_id"]); ?></div>
+                        <div><?php se($r["act_src_id"]); ?></div>
                     </div>
                     <div>
                         <div>Destination:</div>
-                        <div><?php safer_echo($r["act_dest_id"]); ?></div>
+                        <div><?php se($r["act_dest_id"]); ?></div>
                     </div>
                     <div>
                         <div>amount:</div>
-                        <div><?php safer_echo($r["amount"]); ?></div>
+                        <div><?php se($r["amount"]); ?></div>
                     </div>
                     <div>
                         <div>Transaction ID:</div>
-                        <div><?php safer_echo($r["tranID"]); ?></div>
+                        <div><?php se($r["tranID"]); ?></div>
                     </div>
                     <div>
-                        <a type="button" href="test_edit_transactions.php?id=<?php safer_echo($r['tranID']); ?>">Edit</a>
-                        <a type="button" href="test_view_transactions.php?id=<?php safer_echo($r['tranID']); ?>">View</a>
+                        <a type="button" href="test_edit_transactions.php?id=<?php se($r['tranID']); ?>">Edit</a>
+                        <a type="button" href="test_view_transactions.php?id=<?php se($r['tranID']); ?>">View</a>
                     </div>
                 </div>
             <?php endforeach; ?>

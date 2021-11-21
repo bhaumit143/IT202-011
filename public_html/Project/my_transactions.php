@@ -8,7 +8,7 @@ if(isset($_GET["id"])){ // ASK PROFFESOR
   $user = $_GET["id"];
 }
 else{
-  safer_echo("The id was not pulled");
+    se("The id was not pulled");
 }
 ?>
 
@@ -28,7 +28,6 @@ if (isset($user) && !empty($user)) {
 }
 ?>
 
-
 <h3>List Transcations</h3>
 <div class="results">
         <?php if (count($results) > 0): ?>
@@ -37,19 +36,19 @@ if (isset($user) && !empty($user)) {
                     <div class="list-group-item">
                         <div>
                             <div><strong>Action Type:</strong></div>
-                            <div><?php safer_echo($r["action_type"]); ?></div>
+                            <div><?php se($r["action_type"]); ?></div>
                         </div>
                         <div>
                             <div><strong>Source:</strong></div>
-                            <div><?php safer_echo($r["act_src_id"]); ?></div>
+                            <div><?php se($r["act_src_id"]); ?></div>
                         </div>
                         <div>
                             <div><strong>Destination:</strong></div>
-                            <div><?php safer_echo($r["act_dest_id"]); ?></div>
+                            <div><?php se($r["act_dest_id"]); ?></div>
                         </div>
                         <div>
                             <div><strong>Amount:</strong></div>
-                            <div><?php safer_echo($r["amount"]); ?></div>
+                            <div><?php se($r["amount"]); ?></div>
                         </div>
                         <div>
                             <a type="button" href="<?php echo getURL("accounts/view_transactions.php?id=" . $r["tranID"]); ?>">More Details</a>

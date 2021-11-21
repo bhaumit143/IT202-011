@@ -28,13 +28,13 @@ if (!empty($email)) {
         <label>From</label>
         <select name="accountsrc">
 		<?php foreach ($accResults as $ar): ?>
-		<option value="<?php safer_echo($ar["account_number"]); ?>"><?php safer_echo($ar["account_number"]); ?></option>
+		<option value="<?php se($ar["account_number"]); ?>"><?php se($ar["account_number"]); ?></option>
 		<?php endforeach; ?>
 	</select>
 	<label>To</label>
         <select name="accountdest">
 		<?php foreach ($accResults as $ar): ?>
-		<option value="<?php safer_echo($ar["account_number"]); ?>"><?php safer_echo($ar["account_number"]); ?></option>
+		<option value="<?php se($ar["account_number"]); ?>"><?php se($ar["account_number"]); ?></option>
 		<?php endforeach; ?>
 	</select>
 	<label>Amount</label>

@@ -1,5 +1,6 @@
-<?php require_once(__DIR__ . "/partials/nav.php"); ?>
 <?php
+require(__DIR__ . "/../../partials/nav.php");
+
 if (!is_logged_in()) {
     //this will redirect to login and kill the rest of this script (prevent it from executing)
     flash("You must be signed in to access this page");
@@ -32,7 +33,7 @@ if (!empty($email)) {
         <label>Account</label>
         <select name="account">
 		<?php foreach ($accResults as $ar): ?>
-		<option value="<?php safer_echo($ar["account_number"]); ?>"><?php safer_echo($ar["account_number"]); ?></option>
+		<option value="<?php se($ar["account_number"]); ?>"><?php se($ar["account_number"]); ?></option>
 		<?php endforeach; ?>
 	</select>
 	<label>Amount</label>
@@ -139,5 +140,6 @@ if (isset($_POST["save"])) {
 	 flash("Error updating your account balance");
     }
 }
+
+require_once(__DIR__ . "/../../partials/flash.php");
 ?>
-<?php require(__DIR__ . "/partials/flash.php");
