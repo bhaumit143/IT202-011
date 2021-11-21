@@ -6,7 +6,7 @@ if(!is_logged_in()){
 } 
 ?>
 <h1>Home</h1> 
-<h5>Welcome, <?php se(get_user_email()); ?>!</h5> 
+<h5>Welcome, <?php se(get_user_email()); ?>!</h5>
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
 ?> 
@@ -32,7 +32,7 @@ echo $p="#ffffff";
 }
 ?>">
 
-<form action="" method="post" >
+<form action="" method="post">
 <strong> Choose Color to Change Background :- </strong>
 <select name="t1">
 <option value="">Choose Color </option>
@@ -50,7 +50,7 @@ echo $p="#ffffff";
 <option value="#ffffff"> White </option>
 <option value="#ffff00"> Yellow </option>
 </select>
-<br>
+<br><br/>
 <input type="submit" name="btn" value="Submit">
 </form>
 
