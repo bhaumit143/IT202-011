@@ -5,8 +5,22 @@ if(!is_logged_in()){
     die(header("Location: login.php")); 
 } 
 ?>
-<h1></h1> 
-<h5> <?php se(get_user_email()); ?>!</h5><br/>
+<style>
+form {
+width:100%;
+height:280px;
+margin:auto;
+position:relative;
+}
+
+ input {
+width:100%;
+size:500px;
+height: 25px;
+}
+</style> 
+<h1>Home</h1> 
+<h5>Welcome, <?php se(get_user_email()); ?>!</h5><br/>
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
 ?> 

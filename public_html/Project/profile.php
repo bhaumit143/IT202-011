@@ -8,6 +8,7 @@ if (!is_logged_in()) {
 if (isset($_POST["save"])) {
     $email = se($_POST, "email", null, false);
     $username = se($_POST, "username", null, false);
+    
 
     $params = [":email" => $email, ":username" => $username, ":id" => get_user_id()];
     $db = getDB();
