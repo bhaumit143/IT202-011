@@ -4,13 +4,13 @@ require(__DIR__ . "/../../partials/nav.php");
 <form onsubmit="return validate(this)" method="POST"> 
     <div>
         <label for="email"><br/>Email</label>
-        <input type="email" name="email" required />
+        <input type="email" name="email" required /><br/>
     </div>
     <div>
-        <label for="pw">Password</label>
-        <input type="password" id="pw" name="password" required minlength="8" />
-    </div><br/>
-    <input type="submit" value="Login" />
+        <label for="pw"><br/>Password</label>
+        <input type="password" id="pw" name="password" required minlength="8" /><br/>
+    </div>
+    <br/><input type="submit" value="Login" />
 </form>
 <script>
     function validate(form) {
@@ -124,5 +124,3 @@ echo $p="#ffffff";
 
 </body>
 </html>
-
-
