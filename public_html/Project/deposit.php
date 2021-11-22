@@ -1,8 +1,8 @@
 <?php
+error_reporting(0);
 require(__DIR__ . "/../../partials/nav.php");
 
 if (!is_logged_in()) {
-    //this will redirect to login and kill the rest of this script (prevent it from executing)
     flash("You must be signed in to access this page");
     die(header("Location: login.php"));
 }
@@ -33,7 +33,7 @@ if (!empty($email)) {
         <label>Account</label>
         <select name="account">
 		<?php foreach ($accResults as $ar): ?>
-		<option value="<?php se($ar["account_number"]); ?>"><?php se($ar["account_number"]); ?></option>
+		<option value="<?php flash($ar["account_number"]); ?>"><?php flash($ar["account_number"]); ?></option>
 		<?php endforeach; ?>
 	</select>
 	<label>Amount</label>

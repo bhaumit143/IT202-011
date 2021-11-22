@@ -190,7 +190,7 @@ function dobankAction($acc1, $acc2, $amount, $action, $memo)
         
 }
 
-function getURL($path) {
+function url($path) {
     if (substr($path, 0, 1) == "/") {
         return $path;
     }

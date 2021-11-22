@@ -1,5 +1,6 @@
-<?php require_once(__DIR__ . "/partials/nav.php"); ?>
 <?php
+require(__DIR__ . "/../../partials/nav.php");
+
 $query = "";
 $results = [];
 $results2 = [];
@@ -51,7 +52,7 @@ if (isset($user) && !empty($user)) {
                             <div><?php se($r["amount"]); ?></div>
                         </div>
                         <div>
-                            <a type="button" href="<?php echo getURL("accounts/view_transactions.php?id=" . $r["tranID"]); ?>">More Details</a>
+                            <a type="button" href="<?php url("accounts/view_transactions.php?id=" . $r["tranID"]); ?>">More Details</a>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -60,4 +61,7 @@ if (isset($user) && !empty($user)) {
             <p>No results</p>
         <?php endif; ?>
 </div>
-<?php require(__DIR__ . "/partials/flash.php");
+
+<?php
+require_once(__DIR__ . "/../../partials/flash.php");
+?>
