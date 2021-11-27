@@ -1,18 +1,17 @@
-<?php require_once(__DIR__ . "/partials/nav.php"); ?>
 <?php
+require(__DIR__ . "/../../partials/nav.php");
+
+
 if (!has_role("Admin")) {
-    //this will redirect to login and kill the rest of this script (prevent it from executing)
     flash("You don't have permission to access this page");
     die(header("Location: login.php"));
 }
 ?>
 <?php
-//we'll put this at the top so both php block have access to it
 if (isset($_GET["id"])) {
     $id = $_GET["id"];
 }
 ?>
-
 <?php
 $accounts = getDropDown();
 ?>
@@ -47,14 +46,17 @@ if (isset($id)) {
         </div>
         <div class="card-body">
             <div>
-                <p><b>Information</b></p> <!-- match with SELECT ^^^^^^ -->
-                <div>Account Number: <?php se($result2["account_number"]); ?> </div>
-                <div>Amount:<?php se($result["amount"]); ?></div>
-                <div>Action: Type <?php se($result["action_type"]); ?> </div>
+                <p><b>Information</b></p> 
+                <div>Account Number: <?php flash($result2["account_number"]); ?> </div>
+                <div>Amount:<?php flash($result["amount"]); ?></div>
+                <div>Action: Type <?php flash($result["action_type"]); ?> </div>
             </div>
         </div>
     </div>
 <?php else: ?>
     <p>Error looking up id...</p>
 <?php endif; ?>
-<?php require(__DIR__ . "/partials/flash.php");
+
+<?php
+require_once(__DIR__ . "/../../partials/flash.php");
+?>

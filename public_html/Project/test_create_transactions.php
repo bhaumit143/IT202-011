@@ -1,9 +1,10 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
+
 $accounts = getDropDown();
 ?>
 
-   <h3 class="text-center"><strong>Create Transaction</strong></h3> 
+   <h3 class="text-center"><strong>Create Transaction for Bank</strong></h3> 
     <hr>
     <form method="POST">     
         <label>Source Account</label placeholder="0">
@@ -54,11 +55,11 @@ $accounts = getDropDown();
 
 <?php
     if(isset($_POST["save"])){
-        //$account_type = $_POST["account_type"];
-        $source = $_POST["s_id"]; //ACCOUNT 1 
-        $destination = $_POST["d_id"]; //ACCOUNT 2 
+       
+        $source = $_POST["s_id"]; 
+        $destination = $_POST["d_id"]; 
         $amount = $_POST["amount"];
-        $action  = $_POST["action"];// WITHDRAWAL, DESPOIT, TRANSFER
+        $action  = $_POST["action"];
         $memo = $_POST["memo"];
         $user = get_user_id();
         $db = getDB();
@@ -81,26 +82,23 @@ $accounts = getDropDown();
 
         switch($action){
             case "deposit":
-                dobankAction($world_id, $source, ($amount * -1), $action, $memo);
+                bank($world_id, $source, ($amount * -1), $action, $memo);
             break;
             case "withdrawl":
                 if($amount <= $balance){
-                dobankAction($source, $world_id, ($amount * -1), $action, $memo);
+                bank($source, $world_id, ($amount * -1), $action, $memo);
                 }
                 elseif($amount > $balance){
                     flash("Balance Too Low");
                 }
             break;
             case "transfer":
-                dobankAction($source,$destination,($amount *-1), $action, $memo);
+                bank($source,$destination,($amount *-1), $action, $memo);
             break;
         }
           
     }
    
-
-
-
 
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>

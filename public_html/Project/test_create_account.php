@@ -1,9 +1,7 @@
-<?php require_once(__DIR__ . "/partials/nav.php"); ?>
 <?php
-
+require(__DIR__ . "/../../partials/nav.php");
   if (!has_role("Admin")) {
-    //this will redirect to login and kill the rest of this script (prevent it from executing)
-    flash("You don't have permission to access this page");
+    flash("You do not have a permission to access this page");
     die(header("Location: login.php"));  
 }
 ?>
@@ -15,11 +13,9 @@
   <select name="account_type">
     <option value = "checking">checking</option>
     <option value =  "saving">saving</option>
-    <option value = "loan">loan</option>
-    <option value = "world">world</option>
    
   </select>
-  <label>Balance</label>
+  <label> Account Balance</label>
   <input type="number" min="10.00" name="balance" value="<?php echo $result["balance"];?>" />
 	<input type="submit" name="save" value="Create"/>
 </form>
@@ -50,5 +46,6 @@ if(isset($_POST["save"])){
 
 }   
 
-?> 
-<?php require(__DIR__ . "/partials/flash.php");
+
+require_once(__DIR__ . "/../../partials/flash.php");
+?>

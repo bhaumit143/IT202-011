@@ -1,18 +1,15 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
-
 $query = "";
 $results = [];
 $results2 = [];
-
-if(isset($_GET["id"])){ // ASK PROFFESOR 
+if(isset($_GET["id"])){ 
   $user = $_GET["id"];
 }
 else{
-    se("The id was not pulled");
+    flash("The id is not pull");
 }
 ?>
-
 <?php
 if (isset($user) && !empty($user)) {
     $db = getDB();
@@ -28,8 +25,7 @@ if (isset($user) && !empty($user)) {
     }
 }
 ?>
-
-<h3>List Transcations</h3>
+<h3>List Transcation</h3>
 <div class="results">
         <?php if (count($results) > 0): ?>
             <div class="list-group">
@@ -37,22 +33,22 @@ if (isset($user) && !empty($user)) {
                     <div class="list-group-item">
                         <div>
                             <div><strong>Action Type:</strong></div>
-                            <div><?php se($r["action_type"]); ?></div>
+                            <div><?php flash($r["action_type"]); ?></div>
                         </div>
                         <div>
-                            <div><strong>Source:</strong></div>
-                            <div><?php se($r["act_src_id"]); ?></div>
+                            <div><strong>Sources:</strong></div>
+                            <div><?php flash($r["act_src_id"]); ?></div>
                         </div>
                         <div>
-                            <div><strong>Destination:</strong></div>
-                            <div><?php se($r["act_dest_id"]); ?></div>
+                            <div><strong>Destinations:</strong></div>
+                            <div><?php flash($r["act_dest_id"]); ?></div>
                         </div>
                         <div>
-                            <div><strong>Amount:</strong></div>
-                            <div><?php se($r["amount"]); ?></div>
+                            <div><strong>Total Amount:</strong></div>
+                            <div><?php flash($r["amount"]); ?></div>
                         </div>
                         <div>
-                            <a type="button" href="<?php url("accounts/view_transactions.php?id=" . $r["tranID"]); ?>">More Details</a>
+                            <a type="button" href="<?php url("accounts/view_transactions.php?id=" . $r["tranID"]); ?>">Details</a>
                         </div>
                     </div>
                 <?php endforeach; ?>

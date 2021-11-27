@@ -1,6 +1,5 @@
 <?php 
 require_once(__DIR__ ."/db.php");
-
 function se($v, $k = null, $default = "", $isEcho = true) {
     
     if (is_array($v) && isset($k) && isset($v[$k])) {
@@ -8,9 +7,7 @@ function se($v, $k = null, $default = "", $isEcho = true) {
     } else if (is_object($v) && isset($k) && isset($v->$k)) {
         $returnValue = $v->$k;
     } else {
-        $returnValue = $v;
-    
-       
+        $returnValue = $v;   
     }
     if (!isset($returnValue)) {
         $returnValue = $default;
@@ -18,7 +15,6 @@ function se($v, $k = null, $default = "", $isEcho = true) {
     if ($isEcho) {
         //https://www.php.net/manual/en/function.htmlspecialchars.php
         echo htmlspecialchars($returnValue, ENT_QUOTES);
-    
     } else {
         //https://www.php.net/manual/en/function.htmlspecialchars.php
         return htmlspecialchars($returnValue, ENT_QUOTES);
@@ -99,11 +95,11 @@ function getDropDown(){
         return $results; 
     }
     else{
-     flash("There was a problem fetching the accounts");
+     flash("There was a problem in the accounts");
     }
 
 }
-function dobankAction($acc1, $acc2, $amount, $action, $memo)
+function bank($acc1, $acc2, $amount, $action, $memo)
 {
     $db = getDB();
     $user = get_user_id();
@@ -124,7 +120,7 @@ function dobankAction($acc1, $acc2, $amount, $action, $memo)
 
     $stmt = $db ->prepare("INSERT INTO Transactions (act_src_id, act_dest_id, amount, action_type, memo, expected_total)
         VALUES (:s_id, :d_id, :amount, :action_type, :memo, :expected_total), (:s_id2, :d_id2, :amount2, :action_type2, :memo2, :expected_total2)" );
-        //called in create then it doesn't need to be called here
+       
             
                 $r = $stmt->execute([
                     //first part
@@ -169,11 +165,11 @@ function dobankAction($acc1, $acc2, $amount, $action, $memo)
                     $destination_total = $results["Total"]; 
 
                     if ($destination_total) {
-                        flash("Check 2 Successfull");
+                        flash("Check second successfull");
                     }
                     else {
                         $e = $stmt->errorInfo();
-                        flash("Error getting destination total: " . var_export($e, true));
+                        flash("There was error getting path total: " . var_export($e, true));
                     }
 
                             $stmt4=$db->prepare("UPDATE `Accounts` SET `balance` = :x WHERE id = :q");
@@ -195,6 +191,5 @@ function url($path) {
         return $path;
     }
 }
-
 // end flash message system
 ?> 

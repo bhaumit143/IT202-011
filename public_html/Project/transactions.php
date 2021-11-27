@@ -1,5 +1,7 @@
-<?php require_once(__DIR__ . "/partials/nav.php"); ?>
 <?php
+require(__DIR__ . "/../../partials/nav.php");
+
+
 if (!is_logged_in()) {
     //this will redirect to login and kill the rest of this script (prevent it from executing)
     flash("You must be signed in to access this page");
@@ -76,7 +78,7 @@ if (isset($_POST["save"])) {
 	flash("Cannot transfer more funds than are available in the source account. Please try again.");
 	die(header("Location: transfer.php"));
     }
-    $src = $resultSrc["id"]; //changing $src to id for inserting transaction details
+    $src = $resultSrc["id"]; 
 
     $r = $stmt->execute([":acct" => $dest]);
     $resultDest = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -101,7 +103,7 @@ if (isset($_POST["save"])) {
 	":a1total" => $a1total,
 	":created" => $created,
 
-	":p2a1" => $dest, //switched accounts
+	":p2a1" => $dest, 
         ":p2a2" => $src,
         ":p2amount" => ($amount*-1),
         ":type" => $type,
@@ -110,14 +112,14 @@ if (isset($_POST["save"])) {
 	":created" => $created
     ]);
     if ($r) {
-        //nothing
+       
     }
     else {
         $e = $stmt->errorInfo();
         flash("Error creating: " . var_export($e, true));
     }
 
-    //Updating each account
+   
     $stmt = $db->prepare("UPDATE Accounts set balance=:balance WHERE id=:id");
     $r = $stmt->execute([
 	":balance" => $a1total,
@@ -125,7 +127,7 @@ if (isset($_POST["save"])) {
     ]);
 
     $r2 = $stmt->execute([
-	":balance" => $a2total, //world account
+	":balance" => $a2total, 
 	"id" => $dest
     ]);
 
@@ -137,4 +139,7 @@ if (isset($_POST["save"])) {
     }
 }
 ?>
-<?php require(__DIR__ . "/partials/flash.php");
+
+<?php
+require_once(__DIR__ . "/../../partials/flash.php");
+?>

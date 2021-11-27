@@ -1,18 +1,17 @@
-<?php require_once(__DIR__ . "/partials/nav.php"); ?>
 <?php
+require(__DIR__ . "/../../partials/nav.php");
+
 if (!has_role("Admin")) {
-    //this will redirect to login and kill the rest of this script (prevent it from executing)
     flash("You don't have permission to access this page");
     die(header("Location: login.php"));
 ?>
 <?php
-//we'll put this at the top so both php block have access to it
+
 if (isset($_GET["id"])) {
     $id = $_GET["id"];
 }
 ?>
 <?php
-//saving
 if (isset($_POST["save"])) {
     if($transaction <= 0){
         $transaction = null; 
@@ -21,8 +20,8 @@ if (isset($_POST["save"])) {
     $user = get_user_id();
     $db = getDB();
 
-    if (isset($id)) { //balance and trasnaction type
-        $stmt = $db->prepare("UPDATE Transactions set amount where id=:id"); //check proper ID
+    if (isset($id)) { 
+        $stmt = $db->prepare("UPDATE Transactions set amount where id=:id");
         $r = $stmt->execute([
             ":amount" => $amount,
         ]);
@@ -40,7 +39,6 @@ if (isset($_POST["save"])) {
 }
 ?>
 <?php
-//fetching
 $result = [];
 if (isset($id)) {
     $id = $_GET["id"];
@@ -60,5 +58,6 @@ if (isset($id)) {
 
     </form>
 
-
- <?php require(__DIR__ . "/partials/flash.php");
+<?php
+require_once(__DIR__ . "/../../partials/flash.php");
+?>
