@@ -1,6 +1,5 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
-
 if (!has_role("Admin")) {
     flash("You don't have permission to access this page");
     die(header("Location: login.php"));
@@ -25,10 +24,6 @@ if (isset($id)) {
         $e = $stmt->errorInfo();
         flash($e[2]);
     }
-
-
-
-
 }
 ?>
 <?php if (isset($result) && !empty($result)): ?>
@@ -36,17 +31,16 @@ if (isset($id)) {
             <div class="card-body">
             <div>
                 <p>Stats</p>
-                <div> ID: <?php se($result["id"]); ?></div>
-                <div>Account Number: <?php se($result["account_number"]); ?></div>
-                <div>Balance: <?php se($result["balance"]); ?></div>
-                <div>Owned by: <?php se($result["username"]); ?></div>
+                <div> ID: <?php flash($result["id"]); ?></div>
+                <div>Account Number: <?php flash($result["account_number"]); ?></div>
+                <div>Balance: <?php flash($result["balance"]); ?></div>
+                <div>Owned by: <?php flash($result["username"]); ?></div>
             </div>
         </div>
     </div>
 <?php else: ?>
-<p>Error looking up id...</p>
+<p>Error looking up for ID</p>
 <?php endif; ?>
-
 <?php if (isset($result2) && !empty($result2)): ?>
     <br/>
     <div class ="card">
@@ -55,10 +49,10 @@ if (isset($id)) {
        </div>
               <div class="card-body">
                      <div>
-                        <div> Transaction Type: <?php se($result2["action_type"]); ?></div>
-                        <div> SourceID: <?php se($result2["act_src_id"]); ?></div>
-                        <div> DestID: <?php se($result2["act_dest_id"]); ?></div>
-                        <div> Created: <?php se($result2["created"]); ?></div>
+                        <div> Transaction Type: <?php flash($result2["action_type"]); ?></div>
+                        <div> SourceID: <?php flash($result2["act_src_id"]); ?></div>
+                        <div> ID: <?php flash($result2["act_dest_id"]); ?></div>
+                        <div> Created: <?php flash($result2["created"]); ?></div>
                     </div>
               </div>
        </div>
@@ -66,7 +60,6 @@ if (isset($id)) {
 <?php else: ?>
 <p>No transaction history</p>
 <?php endif; ?>
-
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>

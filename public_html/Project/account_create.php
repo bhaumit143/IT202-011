@@ -1,11 +1,10 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
   if (!has_role("Admin")) {
-    flash("You do not have a permission to access this page");
+    flash("You cannot access this page");
     die(header("Location: login.php"));  
 }
 ?>
-
 <form method="POST">
   <label> Account Number </label>
   <input type="number" name="account_number" value="<?php echo $result["account_number"];?>" />
@@ -13,15 +12,12 @@ require(__DIR__ . "/../../partials/nav.php");
   <select name="account_type">
     <option value = "checking">checking</option>
     <option value =  "saving">saving</option>
-   
   </select>
   <label> Account Balance</label>
   <input type="number" min="10.00" name="balance" value="<?php echo $result["balance"];?>" />
 	<input type="submit" name="save" value="Create"/>
 </form>
-
 <?php 
-
 if(isset($_POST["save"])){
     $account_number = $_POST["account_number"];
     $account_type = $_POST["account_type"]; 
@@ -45,7 +41,5 @@ if(isset($_POST["save"])){
     }
 
 }   
-
-
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>

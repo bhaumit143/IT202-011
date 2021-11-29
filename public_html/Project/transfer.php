@@ -2,11 +2,10 @@
 require(__DIR__ . "/../../partials/nav.php");
 
 if (!is_logged_in()) {
-    flash("You must be signed in to access this page");
+    flash("You have to signed in to access this page");
     die(header("Location: login.php"));
 }
 ?>
-
 <?php
 if (isset($_SESSION["user"])) {
 	$email = $_SESSION["user"]["email"];
@@ -53,15 +52,11 @@ if (isset($_POST["save"])) {
     $memo = $_POST["memo"];
     $user = get_user_id();
     $created = date('Y-m-d H:i:s');
-
     $db = getDB();
-
     if ($src == $dest){
 	flash("Please select differet accounts");
 	die(header("Location: transfer.php"));
     }
-
-   
     $stmt = $db->prepare("SELECT id, balance FROM Accounts WHERE account_number = :acct");
     $r = $stmt->execute([":acct" => $src]);
     $resultSrc = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -75,7 +70,6 @@ if (isset($_POST["save"])) {
 	die(header("Location: transfer.php"));
     }
     $src = $resultSrc["id"]; 
-
     $r = $stmt->execute([":acct" => $dest]);
     $resultDest = $stmt->fetch(PDO::FETCH_ASSOC);
     if (!$resultDest){
@@ -84,12 +78,10 @@ if (isset($_POST["save"])) {
     }
     $a2total = $resultDest["balance"];
     $dest = $resultDest["id"];
-
     $a1total -= $amount;
     $a2total += $amount;
     $amount = $amount * -1;
-
-    $stmt = $db->prepare("INSERT INTO Transactions (act_src_id, act_dest_id, amount, action_type, memo, expected_total, created) VALUES(:p1a1, :p1a2, :p1amount, :type, :memo, :a1total, :created), (:p2a1, :p2a2, :p2amount, :type, :memo, :a2total, :created)"); // TODO insert both transactions into table (p1 to p2 and p2 to p1)
+    $stmt = $db->prepare("INSERT INTO Transactions (act_src_id, act_dest_id, amount, action_type, memo, expected_total, created) VALUES(:p1a1, :p1a2, :p1amount, :type, :memo, :a1total, :created), (:p2a1, :p2a2, :p2amount, :type, :memo, :a2total, :created)"); 
     $r = $stmt->execute([
         ":p1a1" => $src,
         ":p1a2" => $dest,
@@ -98,7 +90,6 @@ if (isset($_POST["save"])) {
         ":memo" => $memo,
 	":a1total" => $a1total,
 	":created" => $created,
-
 	":p2a1" => $dest, 
         ":p2a2" => $src,
         ":p2amount" => ($amount*-1),
@@ -114,8 +105,6 @@ if (isset($_POST["save"])) {
         $e = $stmt->errorInfo();
         flash("Error creating: " . var_export($e, true));
     }
-
-  
     $stmt = $db->prepare("UPDATE Accounts set balance=:balance WHERE id=:id");
     $r = $stmt->execute([
 	":balance" => $a1total,
@@ -134,6 +123,5 @@ if (isset($_POST["save"])) {
 	 flash("Error updating your account balance");
     }
 }
-
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>

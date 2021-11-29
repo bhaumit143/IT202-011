@@ -1,19 +1,17 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
-
 $accounts = getDropDown();
 ?>
-
-   <h3 class="text-center"><strong>Create Transaction for Bank</strong></h3> 
+   <h3 class="text-center"><strong>Bank Transaction</strong></h3> 
     <hr>
     <form method="POST">     
-        <label>Source Account</label placeholder="0">
-            <select name="s_id">
-            <?php foreach($accounts as $row):?>
+        <label>Source Account</label placeholder="0"><br/>
+            <select name="s_id"><br/>
+            <?php foreach($accounts as $row):?><br/>
                 <option value="<?php echo $row["id"];?>"> 
                 <?php echo $row["account_number"];?>
                 </option>
-            <?php endforeach;?>
+            <?php endforeach;?><br/>
             </select>
         <script>
             function showTransferForm(){
@@ -25,9 +23,9 @@ $accounts = getDropDown();
                     document.getElementById('transfer').disabled = true; 
                 }
             }
-        </script> 
+        </script><br/> 
         <div id="transfer" disabled>
-            <label>Destination Account </label>
+            <label>Account </label><br/>
             <select name="d_id">
                 <?php foreach($accounts as $row):?>
                     <option value="<?php echo $row["id"];?>">
@@ -36,26 +34,21 @@ $accounts = getDropDown();
                 <?php endforeach;?>
             </select>
         </div>
-
-
-        <label>Amount</label> 
+        <label>Amount</label><br/> 
         <input type="number" min="1.00" name="amount">
-        <label>Action</label> 
-        <select name="action" id="type" placeholder="transfer" onclick="showTransferForm()">
+        <br/><label>Action</label><br/> 
+        <select name="action" id="type" placeholder="transfer" onclick="showTransferForm()"><br/>
             <option value ="transfer">transfer</option>
             <option value ="deposit">desposit</option>
             <option value ="withdrawl">withdraw</option>
-        </select>
-        <label>Memo</label>
+        </select><br/>
+        <label>Memo</label><br/>
         <input type="text" name="memo">
-        <input class="btn btn-primary" type ="submit" name="save" value="create"/>
+        <br/><input class="btn btn-primary" type ="submit" name="save" value="create"/><br/>
     <hr> 
     </form> 
-
-
 <?php
     if(isset($_POST["save"])){
-       
         $source = $_POST["s_id"]; 
         $destination = $_POST["d_id"]; 
         $amount = $_POST["amount"];
@@ -69,7 +62,6 @@ $accounts = getDropDown();
         $r = $stmt->fetch(PDO::FETCH_ASSOC);
         $world_id = $r["id"];
         
-        
         $stmt2=$db->prepare("SELECT balance FROM Accounts WHERE Accounts.id = :q");
         $results2 = $stmt2->execute(["q"=> $source]);
         $r2 = $stmt2->fetch(PDO::FETCH_ASSOC);
@@ -78,8 +70,6 @@ $accounts = getDropDown();
         if(!isset($memo) && empty($memo)){
             $memo = "empty";
         }
-        
-
         switch($action){
             case "deposit":
                 bank($world_id, $source, ($amount * -1), $action, $memo);
@@ -89,7 +79,7 @@ $accounts = getDropDown();
                 bank($source, $world_id, ($amount * -1), $action, $memo);
                 }
                 elseif($amount > $balance){
-                    flash("Balance Too Low");
+                    flash("Balance is Low");
                 }
             break;
             case "transfer":
@@ -98,7 +88,5 @@ $accounts = getDropDown();
         }
           
     }
-   
-
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>

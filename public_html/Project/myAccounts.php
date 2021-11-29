@@ -16,7 +16,6 @@ require(__DIR__ . "/../../partials/nav.php");
     }
   }
 ?>
-
 <div class="results">
     <?php if (count($results) > 0): ?>
         <div class="list-group">
@@ -44,7 +43,6 @@ require(__DIR__ . "/../../partials/nav.php");
         <p>No results</p>
     <?php endif; ?>
 </div>
-
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>

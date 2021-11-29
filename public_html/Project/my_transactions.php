@@ -17,7 +17,7 @@ if (isset($user) && !empty($user)) {
     $r = $stmt->execute([ ":q" => $user]);
     if ($r) {
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        flash("Results are successfull");
+        flash("The results are successfull");
     }
     else {
         flash("There was a problem listing your transactions");
@@ -57,7 +57,6 @@ if (isset($user) && !empty($user)) {
             <p>No results</p>
         <?php endif; ?>
 </div>
-
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>

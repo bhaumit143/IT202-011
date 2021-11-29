@@ -1,14 +1,10 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
-
-
 if (!is_logged_in()) {
-    //this will redirect to login and kill the rest of this script (prevent it from executing)
-    flash("You must be signed in to access this page");
+    flash("You have to signed in to access this page");
     die(header("Location: login.php"));
 }
 ?>
-
 <?php
 if (isset($_SESSION["user"])) {
 	$email = $_SESSION["user"]["email"];
@@ -45,26 +41,20 @@ if (!empty($email)) {
 	<input type="text" name="memo"  placeholder=" Sending a Message"/>
         <input type="submit" name="save" value="Create"/>
     </form>
-
 <?php
 if (isset($_POST["save"])) {
     $src = $_POST["accountsrc"];
-    $dest = $_POST["accountdest"]; //world account
+    $dest = $_POST["accountdest"]; 
     $amount = $_POST["amount"];
     $type = "Transfer";
     $memo = $_POST["memo"];
     $user = get_user_id();
     $created = date('Y-m-d H:i:s');
-
     $db = getDB();
-
-    //Checking if accounts are the same
     if ($src == $dest){
 	flash("Please select differet accounts");
 	die(header("Location: transfer.php"));
     }
-
-    //calculating each total
     $stmt = $db->prepare("SELECT id, balance FROM Accounts WHERE account_number = :acct");
     $r = $stmt->execute([":acct" => $src]);
     $resultSrc = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -73,13 +63,11 @@ if (isset($_POST["save"])) {
 	flash($e[2]);
     }
     $a1total = $resultSrc["balance"];
-    //checking for enough funds
     if ($amount > $a1total){
 	flash("Cannot transfer more funds than are available in the source account. Please try again.");
 	die(header("Location: transfer.php"));
     }
     $src = $resultSrc["id"]; 
-
     $r = $stmt->execute([":acct" => $dest]);
     $resultDest = $stmt->fetch(PDO::FETCH_ASSOC);
     if (!$resultDest){
@@ -88,12 +76,10 @@ if (isset($_POST["save"])) {
     }
     $a2total = $resultDest["balance"];
     $dest = $resultDest["id"];
-
     $a1total -= $amount;
     $a2total += $amount;
     $amount = $amount * -1;
-
-    $stmt = $db->prepare("INSERT INTO Transactions (act_src_id, act_dest_id, amount, action_type, memo, expected_total, created) VALUES(:p1a1, :p1a2, :p1amount, :type, :memo, :a1total, :created), (:p2a1, :p2a2, :p2amount, :type, :memo, :a2total, :created)"); // TODO insert both transactions into table (p1 to p2 and p2 to p1)
+    $stmt = $db->prepare("INSERT INTO Transactions (act_src_id, act_dest_id, amount, action_type, memo, expected_total, created) VALUES(:p1a1, :p1a2, :p1amount, :type, :memo, :a1total, :created), (:p2a1, :p2a2, :p2amount, :type, :memo, :a2total, :created)"); 
     $r = $stmt->execute([
         ":p1a1" => $src,
         ":p1a2" => $dest,
@@ -111,21 +97,17 @@ if (isset($_POST["save"])) {
 	":a2total" => $a2total,
 	":created" => $created
     ]);
-    if ($r) {
-       
+    if ($r) {  
     }
     else {
         $e = $stmt->errorInfo();
         flash("Error creating: " . var_export($e, true));
     }
-
-   
     $stmt = $db->prepare("UPDATE Accounts set balance=:balance WHERE id=:id");
     $r = $stmt->execute([
 	":balance" => $a1total,
 	":id" => $src
     ]);
-
     $r2 = $stmt->execute([
 	":balance" => $a2total, 
 	"id" => $dest
@@ -139,7 +121,6 @@ if (isset($_POST["save"])) {
     }
 }
 ?>
-
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>

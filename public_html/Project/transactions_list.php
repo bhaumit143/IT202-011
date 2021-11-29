@@ -11,18 +11,12 @@ $results = [];
 $results2 = [];
 if (isset($_POST["query"])) {
     $query = $_POST["query"];
-
-
-
     $db = getDB();
     $stmt=$db->prepare("SELECT id as acc_id FROM Accounts WHERE account_number like :q");
         $r = $stmt->execute([":q" => "%$query%"]);
         $results = $stmt->fetch(PDO::FETCH_ASSOC);
         $query = $results["acc_id"]; 
         echo var_export($query, true);
-
-
-    //$stmt = $db->prepare("SELECT * FROM `Transactions` JOIN `Accounts` ON Transactions.act_src_id = Accounts.id WHERE act_src_id = :q LIMIT 10");
     $stmt = $db->prepare("SELECT account_number, action_type, act_src_id, act_dest_id, amount, Transactions.id as tranID FROM `Transactions` JOIN `Accounts` ON Transactions.act_src_id = Accounts.id WHERE act_src_id = :q AND `Transactions`.`act_src_id` =:q");
     $r = $stmt->execute([":q" => "$query"]);
     if ($r) {
@@ -36,11 +30,9 @@ if (isset($_POST["query"])) {
     }
 }
 ?>
-
-
 <h3>List Transcations</h3>
 <form method="POST">
-    <input name="query" placeholder="Search" value="<?php se($query); ?>"/>
+    <input name="query" placeholder="Search" value="<?php flash($query); ?>"/>
     <input type="submit" value="Search" name="search"/>
 </form>
 <div class="results">
@@ -51,31 +43,31 @@ if (isset($_POST["query"])) {
                 <div class="list-group-item">
                     <div>
                         <div>Account Number:</div>
-                        <div><?php se($r["account_number"]); ?></div>
+                        <div><?php flash($r["account_number"]); ?></div>
                     </div> 
                     <div>
                         <div>Action Type:</div>
-                        <div><?php se($r["action_type"]); ?></div>
+                        <div><?php flash($r["action_type"]); ?></div>
                     </div>
                     <div>
                         <div>Source:</div>
-                        <div><?php se($r["act_src_id"]); ?></div>
+                        <div><?php flash($r["act_src_id"]); ?></div>
                     </div>
                     <div>
                         <div>Destination:</div>
-                        <div><?php se($r["act_dest_id"]); ?></div>
+                        <div><?php flash($r["act_dest_id"]); ?></div>
                     </div>
                     <div>
                         <div>amount:</div>
-                        <div><?php se($r["amount"]); ?></div>
+                        <div><?php flash($r["amount"]); ?></div>
                     </div>
                     <div>
                         <div>Transaction ID:</div>
-                        <div><?php se($r["tranID"]); ?></div>
+                        <div><?php flash($r["tranID"]); ?></div>
                     </div>
                     <div>
-                        <a type="button" href="test_edit_transactions.php?id=<?php se($r['tranID']); ?>">Edit</a>
-                        <a type="button" href="test_view_transactions.php?id=<?php se($r['tranID']); ?>">View</a>
+                        <a type="button" href="test_edit_transactions.php?id=<?php flash($r['tranID']); ?>">Edit</a>
+                        <a type="button" href="test_view_transactions.php?id=<?php flash($r['tranID']); ?>">View</a>
                     </div>
                 </div>
             <?php endforeach; ?>
@@ -84,7 +76,6 @@ if (isset($_POST["query"])) {
         <p>No results test</p>
     <?php endif; ?>
 </div>
-
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>

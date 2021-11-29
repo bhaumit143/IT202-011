@@ -1,12 +1,10 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
-
 if (!has_role("Admin")) {
-    flash("You don't have permission to access this page");
+    flash("You cannot access this page");
     die(header("Location: login.php"));
 ?>
 <?php
-
 if (isset($_GET["id"])) {
     $id = $_GET["id"];
 }
@@ -19,14 +17,13 @@ if (isset($_POST["save"])) {
     $amount = $_POST("amount");
     $user = get_user_id();
     $db = getDB();
-
     if (isset($id)) { 
         $stmt = $db->prepare("UPDATE Transactions set amount where id=:id");
         $r = $stmt->execute([
             ":amount" => $amount,
         ]);
         if ($r) {
-            flash("Updated successfully with id: " . $id);
+            flash("update successfully with id: " . $id);
         }
         else {
             $e = $stmt->errorInfo();
@@ -34,7 +31,7 @@ if (isset($_POST["save"])) {
         }
     }
     else {
-        flash("ID isn't set, we need an ID in order to update");
+        flash("ID is not set yet, we need ID in order to update");
     }
 }
 ?>
@@ -57,7 +54,6 @@ if (isset($id)) {
         <input type="submit" name="save" value="Update"/>
 
     </form>
-
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>

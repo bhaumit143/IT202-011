@@ -1,7 +1,5 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
-
-
 if (!has_role("Admin")) {
     flash("You don't have permission to access this page");
     die(header("Location: login.php"));
@@ -15,7 +13,6 @@ if (isset($_GET["id"])) {
 <?php
 $accounts = getDropDown();
 ?>
-
 <?php
 $result = [];
 if (isset($id)) {
@@ -27,7 +24,6 @@ if (isset($id)) {
         $e = $stmt->errorInfo();
         flash($e[2]);
     }
-
     $stmt2 = $db->prepare("SELECT account_number FROM Accounts WHERE Accounts.id = id");
     $r2 = $stmt2->execute([":id" => $id]);
     $result2 = $stmt2->fetch(PDO::FETCH_ASSOC);
@@ -37,8 +33,6 @@ if (isset($id)) {
     }
 }
 ?>
-
-
 <h3>View Transaction</h3>
 <?php if (isset($result) && !empty($result)): ?>
     <div class="card">
@@ -54,9 +48,8 @@ if (isset($id)) {
         </div>
     </div>
 <?php else: ?>
-    <p>Error looking up id...</p>
+    <p>Error looking up id</p>
 <?php endif; ?>
-
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>

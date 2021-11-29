@@ -1,8 +1,7 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
-
 if (!has_role("Admin")) {
-  flash("You don't have permission to access this page");
+  flash("You cannot access this page");
   die(header("Location: login.php"));
 }
 ?>
@@ -54,14 +53,12 @@ if(isset($id)){
   <select name="account_type" value="<?php echo $result["account_type"];?>">
 		<option value="checking" <?php echo ($result["account_type"] == "0"?'selected="selected"':'');?>>checking</option>
                 <option value="saving" <?php echo ($result["account_type"] == "2"?'selected="selected"':'');?>>saving</option>
-                <option value="loan" <?php echo ($result["account_type"] == "3"?'selected="selected"':'');?>>loan</option>
                 <option value="world" <?php echo ($result["account_type"] == "4"?'selected="selected"':'');?>>world</option>
 	</select>
   <label>Balance</label> 
   <input type="number" min="10.00" name="balance" value="<?php echo $result["balance"];?>" />
-  <input type="submit" name="save" value="Update"/>
+  <input type="submit" name="save" value="update"/>
 </form>
-
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>

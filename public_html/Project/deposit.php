@@ -1,9 +1,8 @@
 <?php
 error_reporting(0);
 require(__DIR__ . "/../../partials/nav.php");
-
 if (!is_logged_in()) {
-    flash("You can signed in to access this page");
+    flash("You have signed in to access this page");
     die(header("Location: login.php"));
 }
 ?>
@@ -40,7 +39,6 @@ if (!empty($email)) {
 	<input type="text" name="memo" placeholder=" Sending a Message"/>
         <input type="submit" name="save" value="Create"/>
     </form>
-
 <?php
 if (isset($_POST["save"])) {
     $src = $_POST["account"];
@@ -60,7 +58,6 @@ if (isset($_POST["save"])) {
     }
     $a1total = $resultSrc["balance"];
     $src = $resultSrc["id"]; 
-
     $r = $stmt->execute([":acct" => $dest]);
     $resultDest = $stmt->fetch(PDO::FETCH_ASSOC);
     if (!$resultDest){
@@ -69,7 +66,6 @@ if (isset($_POST["save"])) {
     }
     $a2total = $resultDest["balance"];
     $dest = $resultDest["id"];
-
     switch($type){
 	case "Deposit":
 		$a1total += $amount;
@@ -90,7 +86,6 @@ if (isset($_POST["save"])) {
 		$amount = $amount * -1;
 		break;
     }
-
     $stmt = $db->prepare("INSERT INTO Transactions (act_src_id, act_dest_id, amount, action_type, memo, expected_total, created) VALUES(:p1a1, :p1a2, :p1amount, :type, :memo, :a1total, :created), (:p2a1, :p2a2, :p2amount, :type, :memo, :a2total, :created)"); 
     $r = $stmt->execute([
         ":p1a1" => $src,
