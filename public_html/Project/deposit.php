@@ -3,7 +3,7 @@ error_reporting(0);
 require(__DIR__ . "/../../partials/nav.php");
 
 if (!is_logged_in()) {
-    flash("You must be signed in to access this page");
+    flash("You can signed in to access this page");
     die(header("Location: login.php"));
 }
 ?>
@@ -24,7 +24,7 @@ if (!empty($email)) {
 }
 ?>
     <form method="POST">
-        <label>Transactions Type:</label>
+        <label>Transactions:</label>
         <select name="type">
 		<option value="saving">saving</option>
 	</select>
@@ -34,7 +34,7 @@ if (!empty($email)) {
 		<option value="<?php flash($ar["account_number"]); ?>"><?php flash($ar["account_number"]); ?></option>
 		<?php endforeach; ?>
 	</select>
-	<label>Amount</label>
+	<label>Total Amount</label>
         <input type="number" min="0.01" step="0.01" name="amount"/>
 	<label>Memo</label>
 	<input type="text" name="memo" placeholder=" Sending a Message"/>
@@ -126,7 +126,7 @@ if (isset($_POST["save"])) {
 	"id" => $dest
     ]);
     if($r && $r2) {
-	flash("succesfull complete your $type!");
+	flash("succesfull $type!");
     }
     else{
 	 flash("Account balance is updatind error");
