@@ -1,3 +1,5 @@
+Logout.php up to Milestone 1
+
 <?php
 session_start();
 session_unset();
@@ -16,5 +18,4 @@ setcookie("PHPESSID", "", time()-3600);
 die(header("Location: login.php"));
 
 ?> 
-
 

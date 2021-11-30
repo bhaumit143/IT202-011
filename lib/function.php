@@ -7,7 +7,9 @@ function se($v, $k = null, $default = "", $isEcho = true) {
     } else if (is_object($v) && isset($k) && isset($v->$k)) {
         $returnValue = $v->$k;
     } else {
-        $returnValue = $v;   
+        $returnValue = $v;
+    
+       
     }
     if (!isset($returnValue)) {
         $returnValue = $default;
@@ -15,6 +17,7 @@ function se($v, $k = null, $default = "", $isEcho = true) {
     if ($isEcho) {
         //https://www.php.net/manual/en/function.htmlspecialchars.php
         echo htmlspecialchars($returnValue, ENT_QUOTES);
+    
     } else {
         //https://www.php.net/manual/en/function.htmlspecialchars.php
         return htmlspecialchars($returnValue, ENT_QUOTES);
@@ -95,7 +98,7 @@ function getDropDown(){
         return $results; 
     }
     else{
-     flash("There was a problem in the accounts");
+     flash("There was a problem fetching the accounts");
     }
 
 }
@@ -103,26 +106,34 @@ function bank($acc1, $acc2, $amount, $action, $memo)
 {
     $db = getDB();
     $user = get_user_id();
+
     $stmt2 = $db ->prepare("SELECT IFNULL(SUM(Amount),0) AS Total FROM Transactions WHERE Transactions.act_src_id = :q");
     $results2 = $stmt2->execute([":q"=> $acc1]);
     $r2 = $stmt2->fetch(PDO::FETCH_ASSOC);
     $balanceAcc1 = $r2["Total"];
+
     $acc1NewBalance = $balanceAcc1 + $amount;
+
     $stmt3 = $db ->prepare("SELECT IFNULL(SUM(Amount),0) AS Total FROM Transactions WHERE Transactions.act_src_id = :q");
     $results3 = $stmt3->execute([":q"=> $acc2]);
     $r3 = $stmt3->fetch(PDO::FETCH_ASSOC);
     $balanceAcc2 = $r3["Total"];
     $acc2NewBalance = $balanceAcc2 + ($amount*-1);
+
+
     $stmt = $db ->prepare("INSERT INTO Transactions (act_src_id, act_dest_id, amount, action_type, memo, expected_total)
         VALUES (:s_id, :d_id, :amount, :action_type, :memo, :expected_total), (:s_id2, :d_id2, :amount2, :action_type2, :memo2, :expected_total2)" );
-
+        //called in create then it doesn't need to be called here
+            
                 $r = $stmt->execute([
+                    //first part
                     ":s_id" => $acc1,
                     ":d_id" => $acc2,
                     ":amount" => $amount,
                     ":action_type" => $action,
                     ":memo" => $memo,
                     ":expected_total" => $acc1NewBalance,
+                    //second part
                     ":s_id2" => $acc2,
                     ":d_id2" => $acc1,
                     ":amount2" => ($amount*-1),
@@ -139,6 +150,7 @@ function bank($acc1, $acc2, $amount, $action, $memo)
                     ]);
                     $results = $stmt->fetch(PDO::FETCH_ASSOC);
                     $source_total = $results["Total"]; 
+                
                     if ($source_total) {
                         flash("Check 1 Successfull");
                     }
@@ -146,24 +158,29 @@ function bank($acc1, $acc2, $amount, $action, $memo)
                         $e = $stmt->errorInfo();
                         flash("Error getting source total: " . var_export($e, true));
                     }
+
+
                     $stmt = $db ->prepare("SELECT IFNULL(SUM(Amount),0) AS Total FROM Transactions WHERE Transactions.act_src_id = :id");
                     $r = $stmt->execute([
                         ":id" => $acc2
                     ]);
                     $results = $stmt->fetch(PDO::FETCH_ASSOC);
                     $destination_total = $results["Total"]; 
+
                     if ($destination_total) {
-                        flash("Check second successfull");
+                        flash("Check 2 Successfull");
                     }
                     else {
                         $e = $stmt->errorInfo();
-                        flash("There was error getting path total: " . var_export($e, true));
+                        flash("Error getting destination total: " . var_export($e, true));
                     }
+
                             $stmt4=$db->prepare("UPDATE `Accounts` SET `balance` = :x WHERE id = :q");
                             $results4 = $stmt4->execute([":q"=> $acc1, ":x" => $source_total]);
 
                             $stmt4=$db->prepare("UPDATE `Accounts` SET `balance` = :x WHERE id = :q");
-                            $results4 = $stmt4->execute([":q"=> $acc2, ":x" => $destination_total]);                           
+                            $results4 = $stmt4->execute([":q"=> $acc2, ":x" => $destination_total]);
+                            
                         }
                         else {
                             $e = $stmt->errorInfo();
@@ -171,9 +188,12 @@ function bank($acc1, $acc2, $amount, $action, $memo)
                         }
         
 }
+
 function url($path) {
     if (substr($path, 0, 1) == "/") {
         return $path;
     }
 }
+
+// end flash message system
 ?> 
