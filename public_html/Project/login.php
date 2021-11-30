@@ -1,6 +1,3 @@
-
-Login.php edited up to Milestone-1 
-
 <?php
 require(__DIR__ . "/../../partials/nav.php");
 ?>
