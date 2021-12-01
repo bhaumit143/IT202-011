@@ -157,7 +157,7 @@
 
 
 
-- [x] \(mm/dd/yyyy of completion) User will be able to edit their profile (from the proposal bullet point, if it's a sub-point indent it properly)
+- [x] \(11/18/2021 of completion) User will be able to edit their profile (from the proposal bullet point, if it's a sub-point indent it properly)
   -  List of Evidence of Feature Completion
     - Status: Completed
     - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
@@ -169,7 +169,320 @@
 
 
 
+
+
+
+
 - Milestone 2
+- [x] \(11/28/2021 of completion) Create the Accounts table (id, account_number [unique, always 12 characters], user_id, balance (default 0), account_type, created, modified)
+  -  List of Evidence of Feature Completion
+    - Status: Completed
+    - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
+    - Pull Requests
+      - PR link #1 https://github.com/bhaumit143/IT202-011/pull/55
+    - Screenshots
+      - Screenshot #1 <img width="1238" alt="Screen Shot 2021-11-28 at 9 26 38 PM" src="https://user-images.githubusercontent.com/90281155/143982077-cf99e6a2-8380-4ffc-a0b3-edc7ab7e8630.png">
+        - Screenshot #1 description 
+      
+      - Screenshot #2 <img width="988" alt="Screen Shot 2021-11-28 at 10 24 27 PM" src="https://user-images.githubusercontent.com/90281155/143982717-5ca41a87-2594-4856-a692-b1a72c796873.png">
+        - Screenshot #2 description
+
+      - Screenshot #3 <img width="1019" alt="Screen Shot 2021-11-28 at 10 23 19 PM" src="https://user-images.githubusercontent.com/90281155/143983292-f602c76d-0a75-4161-aae2-d315e1644480.png">
+        - Screenshot #3 description
+  
+      - Screenshot #4 <img width="953" alt="Screen Shot 2021-11-28 at 10 22 36 PM" src="https://user-images.githubusercontent.com/90281155/143984139-cd37388d-2a7c-47df-9f1d-7c0c1e277cc1.png">
+        - Screenshot #4 description
+      
+      - Screenshot #5 <img width="957" alt="Screen Shot 2021-11-28 at 10 19 20 PM" src="https://user-images.githubusercontent.com/90281155/143984946-35ed32a6-57ca-4259-ae01-246c1c56acfa.png">
+        - Screenshot #5 description
+
+      - Screenshot #6 <img width="1064" alt="Screen Shot 2021-11-28 at 10 20 01 PM" src="https://user-images.githubusercontent.com/90281155/143985404-583a0328-12f0-4d77-a830-ac856de7edae.png">
+        - Screenshot #6 description
+
+      - Screenshot #7 <img width="1438" alt="Screen Shot 2021-11-28 at 9 13 12 PM" src="https://user-images.githubusercontent.com/90281155/143986147-1b64fc1c-17d5-4208-aef9-2f90d324baf7.png">
+        - Screenshot #7 description
+
+      - Screenshot #8 <img width="1425" alt="Screen Shot 2021-11-28 at 9 13 49 PM" src="https://user-images.githubusercontent.com/90281155/143986624-33a5f3f1-97ca-4ae2-bb6c-113abf208647.png">
+        - Screenshot #8 description
+
+      - Screenshot #9 <img width="1085" alt="Screen Shot 2021-11-28 at 10 18 09 PM" src="https://user-images.githubusercontent.com/90281155/143987089-83a109f1-69bd-4ce4-9578-145064e963c2.png">
+        - Screenshot #9 description 
+
+
+
+  - [x] \(11/28/2021 of completion) Project setup steps:
+  -  List of Evidence of Feature Completion
+    - Status: Completed
+    - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
+    - Pull Requests
+      - PR link #1 https://github.com/bhaumit143/IT202-011/pull/55
+    - Screenshots
+      - Screenshot #1 <img width="1238" alt="Screen Shot 2021-11-28 at 9 26 38 PM" src="https://user-images.githubusercontent.com/90281155/143982077-cf99e6a2-8380-4ffc-a0b3-edc7ab7e8630.png">
+        - Screenshot #1 description explaining what you're trying to show
+
+      - Screenshot #2 <img width="988" alt="Screen Shot 2021-11-28 at 10 24 27 PM" src="https://user-images.githubusercontent.com/90281155/143982717-5ca41a87-2594-4856-a692-b1a72c796873.png">
+        -  Screenhot #2 description
+
+      - Screenshot #3 <img width="1019" alt="Screen Shot 2021-11-28 at 10 23 19 PM" src="https://user-images.githubusercontent.com/90281155/143983292-f602c76d-0a75-4161-aae2-d315e1644480.png">
+        - Screenshot #3 description
+
+      - Screenshot #4 <img width="953" alt="Screen Shot 2021-11-28 at 10 22 36 PM" src="https://user-images.githubusercontent.com/90281155/143984139-cd37388d-2a7c-47df-9f1d-7c0c1e277cc1.png">
+        - Screenshot #4 description
+
+      - Screenshot #5 <img width="957" alt="Screen Shot 2021-11-28 at 10 19 20 PM" src="https://user-images.githubusercontent.com/90281155/143984946-35ed32a6-57ca-4259-ae01-246c1c56acfa.png">
+        - Screenshot #5 description
+
+      - Screenshot #6 <img width="1064" alt="Screen Shot 2021-11-28 at 10 20 01 PM" src="https://user-images.githubusercontent.com/90281155/143985404-583a0328-12f0-4d77-a830-ac856de7edae.png">  
+        - Screenshot #6 description
+
+      - Screenshot #7 <img width="1438" alt="Screen Shot 2021-11-28 at 9 13 12 PM" src="https://user-images.githubusercontent.com/90281155/143986147-1b64fc1c-17d5-4208-aef9-2f90d324baf7.png">
+        - Screenshot #7 description
+
+      - Screenshot #8 <img width="1425" alt="Screen Shot 2021-11-28 at 9 13 49 PM" src="https://user-images.githubusercontent.com/90281155/143986624-33a5f3f1-97ca-4ae2-bb6c-113abf208647.png">
+        - Screenshot #8 description
+
+      - Screenshot #9 <img width="1085" alt="Screen Shot 2021-11-28 at 10 18 09 PM" src="https://user-images.githubusercontent.com/90281155/143987089-83a109f1-69bd-4ce4-9578-145064e963c2.png">
+        - Screenshot #9 description
+
+
+
+
+  - [x] \(11/28/2021 of completion) Create the Transactions table (see reference below)
+  -  List of Evidence of Feature Completion
+    - Status: Completed
+    - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
+    - Pull Requests
+      - PR link #1 https://github.com/bhaumit143/IT202-011/pull/55
+    - Screenshots
+      - Screenshot #1 <img width="1238" alt="Screen Shot 2021-11-28 at 9 26 38 PM" src="https://user-images.githubusercontent.com/90281155/143982077-cf99e6a2-8380-4ffc-a0b3-edc7ab7e8630.png">
+        - Screenshot #1 description explaining what you're trying to show
+
+      - Screenshot #2 <img width="988" alt="Screen Shot 2021-11-28 at 10 24 27 PM" src="https://user-images.githubusercontent.com/90281155/143982717-5ca41a87-2594-4856-a692-b1a72c796873.png">
+        - Screenshot #2 description
+      
+      - Screenshot #3 <img width="1019" alt="Screen Shot 2021-11-28 at 10 23 19 PM" src="https://user-images.githubusercontent.com/90281155/143983292-f602c76d-0a75-4161-aae2-d315e1644480.png">
+        - Screenshot #3 description   
+
+      - Screenshot #4 <img width="953" alt="Screen Shot 2021-11-28 at 10 22 36 PM" src="https://user-images.githubusercontent.com/90281155/143984139-cd37388d-2a7c-47df-9f1d-7c0c1e277cc1.png">
+        - Screenshot #4 description
+
+      - Screenshot #5 <img width="957" alt="Screen Shot 2021-11-28 at 10 19 20 PM" src="https://user-images.githubusercontent.com/90281155/143984946-35ed32a6-57ca-4259-ae01-246c1c56acfa.png">
+        - Screenshot #5 description
+
+      - Screenshot #6 <img width="1064" alt="Screen Shot 2021-11-28 at 10 20 01 PM" src="https://user-images.githubusercontent.com/90281155/143985404-583a0328-12f0-4d77-a830-ac856de7edae.png">
+        - Screenshot #6 description
+
+      - Screenshot #7 <img width="1438" alt="Screen Shot 2021-11-28 at 9 13 12 PM" src="https://user-images.githubusercontent.com/90281155/143986147-1b64fc1c-17d5-4208-aef9-2f90d324baf7.png">
+        - Screenshot #7 description
+
+      - Screenshot #8 <img width="1425" alt="Screen Shot 2021-11-28 at 9 13 49 PM" src="https://user-images.githubusercontent.com/90281155/143986624-33a5f3f1-97ca-4ae2-bb6c-113abf208647.png">
+        - Screenshot #8 description
+
+      - Screenshot #9 <img width="1085" alt="Screen Shot 2021-11-28 at 10 18 09 PM" src="https://user-images.githubusercontent.com/90281155/143987089-83a109f1-69bd-4ce4-9578-145064e963c2.png">
+        - Screenshot #9 description
+
+
+
+
+
+  - [x] \(11/28/2021 of completion) Dashboard page
+  -  List of Evidence of Feature Completion
+    - Status: Completed
+    - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
+    - Pull Requests
+      - PR link #1 https://github.com/bhaumit143/IT202-011/pull/55
+    - Screenshots
+      - Screenshot #1 <img width="1238" alt="Screen Shot 2021-11-28 at 9 26 38 PM" src="https://user-images.githubusercontent.com/90281155/143982077-cf99e6a2-8380-4ffc-a0b3-edc7ab7e8630.png">
+        - Screenshot #1 description explaining what you're trying to show
+
+      - Screenshot #2 <img width="988" alt="Screen Shot 2021-11-28 at 10 24 27 PM" src="https://user-images.githubusercontent.com/90281155/143982717-5ca41a87-2594-4856-a692-b1a72c796873.png">
+        - Screenshot #2 description
+
+      - Screenshot #3 <img width="1019" alt="Screen Shot 2021-11-28 at 10 23 19 PM" src="https://user-images.githubusercontent.com/90281155/143983292-f602c76d-0a75-4161-aae2-d315e1644480.png">
+        - Screenshot #3 description
+
+      - Screenshot #4 <img width="953" alt="Screen Shot 2021-11-28 at 10 22 36 PM" src="https://user-images.githubusercontent.com/90281155/143984139-cd37388d-2a7c-47df-9f1d-7c0c1e277cc1.png">
+        - Screenshot #4 description
+
+      - Screenshot #5 <img width="957" alt="Screen Shot 2021-11-28 at 10 19 20 PM" src="https://user-images.githubusercontent.com/90281155/143984946-35ed32a6-57ca-4259-ae01-246c1c56acfa.png">
+        - Screenshot #5 description
+
+      - Screenshot #6 <img width="1064" alt="Screen Shot 2021-11-28 at 10 20 01 PM" src="https://user-images.githubusercontent.com/90281155/143985404-583a0328-12f0-4d77-a830-ac856de7edae.png">
+        - Screenshot #6 description
+
+      - Screenshot #7 <img width="1438" alt="Screen Shot 2021-11-28 at 9 13 12 PM" src="https://user-images.githubusercontent.com/90281155/143986147-1b64fc1c-17d5-4208-aef9-2f90d324baf7.png">
+        - Screenshot #7 description
+
+      - Screenshot #8 <img width="1425" alt="Screen Shot 2021-11-28 at 9 13 49 PM" src="https://user-images.githubusercontent.com/90281155/143986624-33a5f3f1-97ca-4ae2-bb6c-113abf208647.png">
+        - Screesnhot #8 description
+
+      - Screenshot #9 <img width="1085" alt="Screen Shot 2021-11-28 at 10 18 09 PM" src="https://user-images.githubusercontent.com/90281155/143987089-83a109f1-69bd-4ce4-9578-145064e963c2.png">
+        - Screenshot #9 description
+
+
+
+
+  - [x] \(11/28/2021 of completion) User will be able to create a checking account
+  -  List of Evidence of Feature Completion
+    - Status: Completed
+    - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
+    - Pull Requests
+      - PR link #1 https://github.com/bhaumit143/IT202-011/pull/55
+    - Screenshots
+      - Screenshot #1 <img width="1238" alt="Screen Shot 2021-11-28 at 9 26 38 PM" src="https://user-images.githubusercontent.com/90281155/143982077-cf99e6a2-8380-4ffc-a0b3-edc7ab7e8630.png">
+        - Screenshot #1 description explaining what you're trying to show
+
+      - Screenshot #2 <img width="988" alt="Screen Shot 2021-11-28 at 10 24 27 PM" src="https://user-images.githubusercontent.com/90281155/143982717-5ca41a87-2594-4856-a692-b1a72c796873.png">
+        - Screenshot #2 description
+
+      - Screenshot #3 <img width="1019" alt="Screen Shot 2021-11-28 at 10 23 19 PM" src="https://user-images.githubusercontent.com/90281155/143983292-f602c76d-0a75-4161-aae2-d315e1644480.png">
+        - Screenshot #3 description
+
+      - Screenshot #4 <img width="953" alt="Screen Shot 2021-11-28 at 10 22 36 PM" src="https://user-images.githubusercontent.com/90281155/143984139-cd37388d-2a7c-47df-9f1d-7c0c1e277cc1.png">
+        - Screenshot #4 description
+
+      - Screenshot #5 <img width="957" alt="Screen Shot 2021-11-28 at 10 19 20 PM" src="https://user-images.githubusercontent.com/90281155/143984946-35ed32a6-57ca-4259-ae01-246c1c56acfa.png">
+        - Screenshot #5 description
+
+      - Screenshot #6 <img width="1064" alt="Screen Shot 2021-11-28 at 10 20 01 PM" src="https://user-images.githubusercontent.com/90281155/143985404-583a0328-12f0-4d77-a830-ac856de7edae.png">
+        - Screenshot #6 description
+
+      - Screenshot #7 <img width="1438" alt="Screen Shot 2021-11-28 at 9 13 12 PM" src="https://user-images.githubusercontent.com/90281155/143986147-1b64fc1c-17d5-4208-aef9-2f90d324baf7.png">
+        - Screenshot #7 description
+
+      - Screenshot #8 <img width="1425" alt="Screen Shot 2021-11-28 at 9 13 49 PM" src="https://user-images.githubusercontent.com/90281155/143986624-33a5f3f1-97ca-4ae2-bb6c-113abf208647.png">
+        - Screenshot #8 description
+
+      - Screenshot #9 <img width="1085" alt="Screen Shot 2021-11-28 at 10 18 09 PM" src="https://user-images.githubusercontent.com/90281155/143987089-83a109f1-69bd-4ce4-9578-145064e963c2.png">
+        - Screenshot #9 description
+
+
+
+
+
+  - [x] \(11/28/2021 of completion) User will be able to list their accounts
+  -  List of Evidence of Feature Completion
+    - Status:Completed
+    - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
+    - Pull Requests
+      - PR link #1 https://github.com/bhaumit143/IT202-011/pull/55
+    - Screenshots
+      - Screenshot #1 <img width="1238" alt="Screen Shot 2021-11-28 at 9 26 38 PM" src="https://user-images.githubusercontent.com/90281155/143982077-cf99e6a2-8380-4ffc-a0b3-edc7ab7e8630.png">
+        - Screenshot #1 description explaining what you're trying to show
+
+      - Screenshot #2 <img width="988" alt="Screen Shot 2021-11-28 at 10 24 27 PM" src="https://user-images.githubusercontent.com/90281155/143982717-5ca41a87-2594-4856-a692-b1a72c796873.png">
+        - Screenshot #2 description
+
+      - Screenshot #3 <img width="1019" alt="Screen Shot 2021-11-28 at 10 23 19 PM" src="https://user-images.githubusercontent.com/90281155/143983292-f602c76d-0a75-4161-aae2-d315e1644480.png">
+        - Scription #3 description
+
+      - Screenshot #4 <img width="953" alt="Screen Shot 2021-11-28 at 10 22 36 PM" src="https://user-images.githubusercontent.com/90281155/143984139-cd37388d-2a7c-47df-9f1d-7c0c1e277cc1.png">
+        - Screenshot #4 description
+
+      - Screenshot #5 <img width="957" alt="Screen Shot 2021-11-28 at 10 19 20 PM" src="https://user-images.githubusercontent.com/90281155/143984946-35ed32a6-57ca-4259-ae01-246c1c56acfa.png">
+        - Screenshot #5 description
+
+      - Screenshot #6 <img width="1064" alt="Screen Shot 2021-11-28 at 10 20 01 PM" src="https://user-images.githubusercontent.com/90281155/143985404-583a0328-12f0-4d77-a830-ac856de7edae.png">
+        - Screenshot #6 description
+
+      - Screenshot #7 <img width="1438" alt="Screen Shot 2021-11-28 at 9 13 12 PM" src="https://user-images.githubusercontent.com/90281155/143986147-1b64fc1c-17d5-4208-aef9-2f90d324baf7.png">
+        - Screenshot #7 description
+
+      - Screenshot #8 <img width="1425" alt="Screen Shot 2021-11-28 at 9 13 49 PM" src="https://user-images.githubusercontent.com/90281155/143986624-33a5f3f1-97ca-4ae2-bb6c-113abf208647.png">
+        - Screenshot #8 description
+
+      - Screenshot #9 <img width="1085" alt="Screen Shot 2021-11-28 at 10 18 09 PM" src="https://user-images.githubusercontent.com/90281155/143987089-83a109f1-69bd-4ce4-9578-145064e963c2.png">
+        - Screenshot #9 description
+
+
+
+
+
+  - [x] \(11/28/2021 of completion) User will be able to click an account for more information (a.ka. Transaction History page)
+  -  List of Evidence of Feature Completion
+    - Status: Completed
+    - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
+    - Pull Requests
+      - PR link #1 https://github.com/bhaumit143/IT202-011/pull/55
+    - Screenshots
+      - Screenshot #1 <img width="1238" alt="Screen Shot 2021-11-28 at 9 26 38 PM" src="https://user-images.githubusercontent.com/90281155/143982077-cf99e6a2-8380-4ffc-a0b3-edc7ab7e8630.png">
+        - Screenshot #1 description explaining what you're trying to show
+
+      - Screenshot #2 <img width="988" alt="Screen Shot 2021-11-28 at 10 24 27 PM" src="https://user-images.githubusercontent.com/90281155/143982717-5ca41a87-2594-4856-a692-b1a72c796873.png">
+        - Screenshot #2 description
+
+      - Screenshot #3 <img width="1019" alt="Screen Shot 2021-11-28 at 10 23 19 PM" src="https://user-images.githubusercontent.com/90281155/143983292-f602c76d-0a75-4161-aae2-d315e1644480.png">
+        - Screenshot #3 description
+
+      - Screenshot #4 <img width="953" alt="Screen Shot 2021-11-28 at 10 22 36 PM" src="https://user-images.githubusercontent.com/90281155/143984139-cd37388d-2a7c-47df-9f1d-7c0c1e277cc1.png">
+        - Screenshot #4 description
+
+      - Screenshot #5 <img width="957" alt="Screen Shot 2021-11-28 at 10 19 20 PM" src="https://user-images.githubusercontent.com/90281155/143984946-35ed32a6-57ca-4259-ae01-246c1c56acfa.png">
+        - Screenshot #5 description
+
+      - Screenshot #6 <img width="1064" alt="Screen Shot 2021-11-28 at 10 20 01 PM" src="https://user-images.githubusercontent.com/90281155/143985404-583a0328-12f0-4d77-a830-ac856de7edae.png">
+        - Screenshot #6 description
+
+      - Screenshot #7 <img width="1438" alt="Screen Shot 2021-11-28 at 9 13 12 PM" src="https://user-images.githubusercontent.com/90281155/143986147-1b64fc1c-17d5-4208-aef9-2f90d324baf7.png">
+        - Screenshot #7 description
+
+      - Screenshot #8 <img width="1425" alt="Screen Shot 2021-11-28 at 9 13 49 PM" src="https://user-images.githubusercontent.com/90281155/143986624-33a5f3f1-97ca-4ae2-bb6c-113abf208647.png">
+        - Screenshot #8 description
+
+      - Screenshot #9 <img width="1085" alt="Screen Shot 2021-11-28 at 10 18 09 PM" src="https://user-images.githubusercontent.com/90281155/143987089-83a109f1-69bd-4ce4-9578-145064e963c2.png">
+        - Screenshot #9 description
+
+
+
+
+
+  - [x] \(11/28/2021 of completion) User will be able to deposit/withdraw from their account(s)
+  -  List of Evidence of Feature Completion
+    - Status: Completed
+    - Direct Link:  https://bpv6-prod.herokuapp.com/Project/login.php
+    - Pull Requests
+      - PR link #1 https://github.com/bhaumit143/IT202-011/pull/55
+    - Screenshots
+      - Screenshot #1 <img width="1238" alt="Screen Shot 2021-11-28 at 9 26 38 PM" src="https://user-images.githubusercontent.com/90281155/143982077-cf99e6a2-8380-4ffc-a0b3-edc7ab7e8630.png">
+        - Screenshot #1 description explaining what you're trying to show
+
+      - Screenshot #2 <img width="988" alt="Screen Shot 2021-11-28 at 10 24 27 PM" src="https://user-images.githubusercontent.com/90281155/143982717-5ca41a87-2594-4856-a692-b1a72c796873.png">
+        - Screenshot #2 description
+
+      - Screenshot #3 <img width="1019" alt="Screen Shot 2021-11-28 at 10 23 19 PM" src="https://user-images.githubusercontent.com/90281155/143983292-f602c76d-0a75-4161-aae2-d315e1644480.png">
+        - Screenshot #3 description
+
+      - Screenshot #4 <img width="953" alt="Screen Shot 2021-11-28 at 10 22 36 PM" src="https://user-images.githubusercontent.com/90281155/143984139-cd37388d-2a7c-47df-9f1d-7c0c1e277cc1.png">
+        - Screenshot #4 description
+
+      - Screenshot #5 <img width="957" alt="Screen Shot 2021-11-28 at 10 19 20 PM" src="https://user-images.githubusercontent.com/90281155/143984946-35ed32a6-57ca-4259-ae01-246c1c56acfa.png">
+        - Screenshot #5 description
+
+      - Screenshot #6 <img width="1064" alt="Screen Shot 2021-11-28 at 10 20 01 PM" src="https://user-images.githubusercontent.com/90281155/143985404-583a0328-12f0-4d77-a830-ac856de7edae.png">
+        - Screenshot #6 description
+
+      - Screenshot #7 <img width="1438" alt="Screen Shot 2021-11-28 at 9 13 12 PM" src="https://user-images.githubusercontent.com/90281155/143986147-1b64fc1c-17d5-4208-aef9-2f90d324baf7.png">
+        - Screenshot #7 description
+
+      - Screenshot #8 <img width="1425" alt="Screen Shot 2021-11-28 at 9 13 49 PM" src="https://user-images.githubusercontent.com/90281155/143986624-33a5f3f1-97ca-4ae2-bb6c-113abf208647.png">
+        - Screenshot #8 description
+
+      - Screenshot #9<img width="1085" alt="Screen Shot 2021-11-28 at 10 18 09 PM" src="https://user-images.githubusercontent.com/90281155/143987089-83a109f1-69bd-4ce4-9578-145064e963c2.png">
+        - Screenshot #9 description
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - Milestone 3
 - Milestone 4
 ### Intructions
