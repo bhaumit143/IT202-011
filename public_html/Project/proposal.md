@@ -194,7 +194,7 @@
         - Screenshot #4 description
       
       - Screenshot #5 <img width="957" alt="Screen Shot 2021-11-28 at 10 19 20 PM" src="https://user-images.githubusercontent.com/90281155/143984946-35ed32a6-57ca-4259-ae01-246c1c56acfa.png">
-        - Screenshot #5 description
+        - Screenshot #5 descriptions
 
       - Screenshot #6 <img width="1064" alt="Screen Shot 2021-11-28 at 10 20 01 PM" src="https://user-images.githubusercontent.com/90281155/143985404-583a0328-12f0-4d77-a830-ac856de7edae.png">
         - Screenshot #6 description
