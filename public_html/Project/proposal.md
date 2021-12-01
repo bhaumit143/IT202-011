@@ -182,7 +182,7 @@
       - PR link #1 https://github.com/bhaumit143/IT202-011/pull/55
     - Screenshots
       - Screenshot #1 <img width="1238" alt="Screen Shot 2021-11-28 at 9 26 38 PM" src="https://user-images.githubusercontent.com/90281155/143982077-cf99e6a2-8380-4ffc-a0b3-edc7ab7e8630.png">
-        - Screenshot #1 description 
+        - Screenshot #1 created the account table.
       
       - Screenshot #2 <img width="988" alt="Screen Shot 2021-11-28 at 10 24 27 PM" src="https://user-images.githubusercontent.com/90281155/143982717-5ca41a87-2594-4856-a692-b1a72c796873.png">
         - Screenshot #2 description
