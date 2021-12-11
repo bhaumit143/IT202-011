@@ -451,6 +451,7 @@
 
 
 
+
 - Milestone 3
   - [x] \(11/28/2021 of completion) User will be able to transfer between their accounts
     - Status: Completed
@@ -483,13 +484,12 @@
         - Screenshot #8 List transaction.
 
       - Screenshot #9<img width="1085" alt="Screen Shot 2021-11-28 at 10 18 09 PM" src="https://user-images.githubusercontent.com/90281155/143987089-83a109f1-69bd-4ce4-9578-145064e963c2.png">
-        - Screenshot #9 The amount must be greater than one dollar.
+        - Screenshot #9 It shows friendly error message. 
 
 
 
 
-
-  - [x] \(11/28/2021 of completion) Transaction History page
+ - [x] \(11/28/2021 of completion) Transaction History page
   -  List of Evidence of Feature Completion
     - Status: Completed
     - Direct Link:  https://bpv6-prod.herokuapp.com/Project/login.php
@@ -521,7 +521,7 @@
         - Screenshot #8 List transaction.
 
       - Screenshot #9<img width="1085" alt="Screen Shot 2021-11-28 at 10 18 09 PM" src="https://user-images.githubusercontent.com/90281155/143987089-83a109f1-69bd-4ce4-9578-145064e963c2.png">
-        - Screenshot #9 The amount must be greater than one dollar.
+        - Screenshot #9 It shows friendly error message. 
 
 
 
@@ -560,7 +560,7 @@
         - Screenshot #8 List transaction.
 
       - Screenshot #9<img width="1085" alt="Screen Shot 2021-11-28 at 10 18 09 PM" src="https://user-images.githubusercontent.com/90281155/143987089-83a109f1-69bd-4ce4-9578-145064e963c2.png">
-        - Screenshot #9 The amount must be greater than one dollar.
+        - Screenshot #9 It shows friendly error message. 
 
 
 
@@ -598,8 +598,7 @@
         - Screenshot #8 List transaction.
 
       - Screenshot #9<img width="1085" alt="Screen Shot 2021-11-28 at 10 18 09 PM" src="https://user-images.githubusercontent.com/90281155/143987089-83a109f1-69bd-4ce4-9578-145064e963c2.png">
-        - Screenshot #9 The amount must be greater than one dollar.
-
+        - Screenshot #9 It shows friendly error message. 
 
 
 
