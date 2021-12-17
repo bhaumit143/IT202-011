@@ -64,7 +64,7 @@ if (isset($_POST["save"])) {
     }
     $a1total = $resultSrc["balance"];
     if ($amount > $a1total){
-	flash("Cannot transfer more funds than are available in the source account. Please try again.");
+	flash("Cannot transfer more funds than are available in the source account.Please try again.");
 	die(header("Location: transfer.php"));
     }
     $src = $resultSrc["id"]; 

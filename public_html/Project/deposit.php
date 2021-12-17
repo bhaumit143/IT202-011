@@ -25,7 +25,7 @@ if (!empty($email)) {
     <form method="POST">
         <label>Transactions:</label>
         <select name="type">
-		<option value="saving">saving</option>
+		
 	</select>
         <label>Account</label>
         <select name="account">

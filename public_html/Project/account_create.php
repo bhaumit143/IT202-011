@@ -11,7 +11,7 @@ require(__DIR__ . "/../../partials/nav.php");
   <label>Account Type</label>
   <select name="account_type">
     <option value = "checking">checking</option>
-    <option value =  "saving">saving</option>
+    
   </select>
   <label> Account Balance</label>
   <input type="number" min="10.00" name="balance" value="<?php echo $result["balance"];?>" />

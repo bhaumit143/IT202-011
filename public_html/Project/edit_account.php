@@ -51,9 +51,9 @@ if(isset($id)){
   <input type="number" name="account_number" value="<?php echo $result["account_number"];?>"/>
   <label>Account Type</label>
   <select name="account_type" value="<?php echo $result["account_type"];?>">
-		<option value="checking" <?php echo ($result["account_type"] == "0"?'selected="selected"':'');?>>checking</option>
-                <option value="saving" <?php echo ($result["account_type"] == "2"?'selected="selected"':'');?>>saving</option>
-                <option value="world" <?php echo ($result["account_type"] == "4"?'selected="selected"':'');?>>world</option>
+		<option value="checking" <?php se ($result["account_type"] == "0"?'selected="selected"':'');?>>checking</option>
+               
+                <option value="world" <?php se ($result["account_type"] == "4"?'selected="selected"':'');?>>world</option>
 	</select>
   <label>Balance</label> 
   <input type="number" min="10.00" name="balance" value="<?php echo $result["balance"];?>" />
