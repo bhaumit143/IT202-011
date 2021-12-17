@@ -1,5 +1,6 @@
 <?php
 
+
 //Note: this is to resolve cookie issues with port numbers
 $domain = $_SERVER["HTTP_HOST"];
 if (strpos($domain, ":")) {
@@ -22,12 +23,15 @@ if (($localWorks && $domain == "localhost") || $domain != "localhost") {
 }
 
 //Note: this is resolve cookieissues with port numbers
+
+//Note: this is resolve cookieissues with port numberscg safs
+
 $domain =  $_SERVER["HTTP_HOST"];
 if(strpos($domain, ":")){
     $domain = explode(":", $domain)[0];
 }
 session_set_cookie_params([
-    "lifetime" => 60 * 60,
+    "lifetime" => 60 * 60, 
     "path" => "/Project",
     //"domain" => $_SERVER["HTTP_HOST"],
     "domain"=> $domain,
@@ -64,10 +68,10 @@ require_once(__DIR__ . "/../lib/function.php");
         <?php endif; ?>
     </ul>
 </nav>
-=======
+
 <nav>
     <u1>
-        <?php if (is_logged_in()) :?>
+        <?php if (is_logged_in()) :?> 
             <li><a href="home.php">Home</a></li>
         <?php endif; ?>
         <?php if (!is_logged_in()) : ?>
