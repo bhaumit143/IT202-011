@@ -2,6 +2,7 @@
 require(__DIR__ . "/../../partials/nav.php");
 ?>
 <form onsubmit="return validate(this)" method="POST"> 
+
 </style> 
 
     <div>
@@ -27,7 +28,15 @@ height: 25px;
     <div>
         <label for="pw"><br/>Password</label>
         <input type="password" id="pw" name="password" required minlength="8"/><br/>
-        
+
+    <div>
+        <label for="email"><br/>Email</label>
+        <input type="email" name="email" required />
+    </div>
+    <div>
+        <label for="pw">Password</label>
+        <input type="password" id="pw" name="password" required minlength="8" />
+
     </div><br/>
     <br/><input type="submit" value="Login"/>
 </form>
@@ -96,6 +105,9 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
 ?>
 
 
+
+
+
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>
@@ -141,6 +153,11 @@ echo $p="#ffffff";
 <br/>
 <input type="submit" name="btn" value="Submit">
 </form>
-
 </body>
+
 </html>
+
+</html>
+
+
+
