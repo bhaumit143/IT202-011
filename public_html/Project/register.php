@@ -19,6 +19,7 @@ require(__DIR__ . "/../../partials/nav.php");
         <input type="password" id ="cpw" name="confirm" required minlength="8" />
     </div> <br/>
     <input type="submit" name = "submit" value="Register" />
+    
 </form>
 <script>
     function validate(form) { 
@@ -52,6 +53,7 @@ require(__DIR__ . "/../../partials/nav.php");
         //ensure it returns false for an error and true for success
 
         return true;
+        
     }
 </script>
 <?php
@@ -115,6 +117,23 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>
 
+
+<style>
+form {
+width:100%;
+height:300px;
+font-size:15px;
+margin:auto;
+position:relative;
+}
+input {
+width:100%;
+size:2000px;
+height: 23px;
+}
+</style> 
+
+
 <html>
 
 <head>
@@ -157,6 +176,5 @@ echo $p="#ffffff";
 <br/>
 <input type="submit" name="btn" value="Submit">
 </form>
-
 </body>
 </html>

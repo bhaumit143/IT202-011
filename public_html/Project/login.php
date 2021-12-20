@@ -2,6 +2,33 @@
 require(__DIR__ . "/../../partials/nav.php");
 ?>
 <form onsubmit="return validate(this)" method="POST"> 
+
+</style> 
+
+    <div>
+        <label for="email"><br/>Email</label>
+        <input type="email" name="email" required/><br/>
+        
+<style>
+form {
+width:100%;
+height:280px;
+font-size:20px;
+margin:auto;
+position:relative;
+}
+input {
+width:100%;
+size:1000px;
+height: 25px;
+}
+</style> 
+    
+</div>
+    <div>
+        <label for="pw"><br/>Password</label>
+        <input type="password" id="pw" name="password" required minlength="8"/><br/>
+
     <div>
         <label for="email"><br/>Email</label>
         <input type="email" name="email" required />
@@ -9,8 +36,9 @@ require(__DIR__ . "/../../partials/nav.php");
     <div>
         <label for="pw">Password</label>
         <input type="password" id="pw" name="password" required minlength="8" />
+
     </div><br/>
-    <input type="submit" value="Login" />
+    <br/><input type="submit" value="Login"/>
 </form>
 <script>
     function validate(form) {
@@ -75,14 +103,18 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
     }
 }
 ?>
+
+
+
+
+
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>
 
+
 <html>
-
 <head>
-
 </head>
 <body bgcolor="<?php
 if (isset($_POST['btn']))
@@ -122,6 +154,10 @@ echo $p="#ffffff";
 <input type="submit" name="btn" value="Submit">
 </form>
 </body>
+
 </html>
+
+</html>
+
 
 
