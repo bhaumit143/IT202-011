@@ -21,7 +21,7 @@ if (isset($_POST["save"])) {
             ":amount" => $amount,
         ]);
         if ($r) {
-            flash("update successfully with id: " . $id);
+            flash("Modified: " . $id);
         }
         else {
             $e = $stmt->errorInfo();

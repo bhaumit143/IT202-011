@@ -134,7 +134,7 @@ function bank($acc1, $acc2, $amount, $action, $memo)
                     ":expected_total2" => $acc2NewBalance
                 ]);
                 if ($r) {
-                    flash("Transaction Complete!");
+                    flash("Transaction Done");
 
                     $stmt = $db ->prepare("SELECT IFNULL(SUM(Amount),0) AS Total FROM Transactions WHERE Transactions.act_src_id = :id");
                     $r = $stmt->execute([
@@ -144,7 +144,7 @@ function bank($acc1, $acc2, $amount, $action, $memo)
                     $source_total = $results["Total"]; 
                 
                     if ($source_total) {
-                        flash("Check 1 Successfull");
+                        flash("");
                     }
                     else {
                         $e = $stmt->errorInfo();
@@ -160,7 +160,7 @@ function bank($acc1, $acc2, $amount, $action, $memo)
                     $destination_total = $results["Total"]; 
 
                     if ($destination_total) {
-                        flash("Check 2 Successfull");
+                        flash("");
                     }
                     else {
                         $e = $stmt->errorInfo();
