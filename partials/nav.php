@@ -30,7 +30,7 @@ require_once(__DIR__ . "/../lib/function.php");
             <li><a href="AccCre.php">Create Account</a></li>
         <?php endif; ?>
         <?php if (is_logged_in()) : ?>
-            <li><a href="MyAccounts.php">My Account</a></li>
+            <li><a href="myAccounts.php">My Account</a></li>
         <?php endif; ?>
         <?php if (is_logged_in()) : ?>
             <li><a href="TransCre.php">Create Transaction</a></li>

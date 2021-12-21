@@ -40,6 +40,26 @@ function get_username(){
     }
     return "";
 }
+function getDropDown(){
+    $user = get_user_id();
+    $db = getDB();
+    $stmt = $db->prepare("SELECT id, account_number FROM Accounts WHERE Accounts.user_id = :id");
+    $r = $stmt->execute([
+        ":id"=>$user
+    ]);  
+
+    if($r){
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $results; 
+    }
+
+}
+function getURL($path) {
+    if (substr($path, 0, 1) == "/") {
+        return $path;
+    }
+    return $_SERVER["CONTEXT_PREFIX"] . "/public_html/project/$path";
+}
 function get_user_email(){
     if (is_logged_in()){//we need to check for login first because "user" key may not exist
         return se($_SESSION["user"], "email", "", false);
