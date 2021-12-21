@@ -1,17 +1,17 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
 ?>
-<form method="POST">
-  <label> Account Number </label>
+<form method="POST"><br/>
+  <label> Account Number </label><br/>
   <input type="number" name="account_number" value="<?php echo $result["account_number"];?>" />
-  <label>Account Type</label>
-  <select name="account_type">
-    <option value = "checking">checking</option>
+  <br/><br/><label>Account Type</label><br/>
+  <select name="account_type"><br/>
+  <option value = "checking">checking</option>
   </select>
-  <label> Account Balance</label>
+  <br/><br/><label> Account Balance</label><br/>
   <input type="number" min="10.00" name="balance" value="<?php echo $result["balance"];?>" />
 	<input type="submit" name="save" value="Create"/>
-</form>
+</form><br/>
 <?php 
 if(isset($_POST["save"])){
     $account_number = $_POST["account_number"];
@@ -37,3 +37,55 @@ if(isset($_POST["save"])){
 }   
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>
+
+<html>
+<head>
+</head>
+<body bgcolor="<?php
+if (isset($_POST['btn']))
+{
+$col=$_POST['t1'];
+if(isset($col))
+{
+echo $p=$col;
+}
+else
+{
+echo $p="#ffffff";
+}
+}
+?>">
+
+<form action="" method="post" >
+<strong> Choose Color to Change Background :- </strong>
+<select name="t1">
+<option value="">Choose Color </option>
+<option value="#000000"> Black </option>
+<option value="#0000ff"> Blue </option>
+<option value="#a52a2a"> Brown </option>
+<option value="#00ffff"> Cyan </option>
+<option value="#006400"> Dark Green </option>
+<option value="#808080"> Grey </option>
+<option value="#008000"> Green </option>
+<option value="#ffa500"> Orange </option>
+<option value="#ffc0cb"> Pink </option>
+<option value="#800080"> Purple </option>
+<option value="#ff0000"> Red </option>
+<option value="#ffffff"> White </option>
+<option value="#ffff00"> Yellow </option>
+</select>
+<br>
+<br/>
+<input type="submit" name="btn" value="Submit">
+</form>
+
+
+</body>
+
+</html>
+
+</html>
+
+
+</body>
+</html>
