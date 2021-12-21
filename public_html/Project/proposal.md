@@ -171,6 +171,29 @@
     - Screenshots
       - Screenshot #1 <img width="924" alt="Screen Shot 2021-11-11 at 7 19 11 PM" src="https://user-images.githubusercontent.com/90281155/141387718-964eb0a4-5dea-4eda-b12d-562273bd29a8.png">
 
+
+
+        - Screenshot #1 User can edit their profile after login, they can log out and login again. Also, they can change the color of background. They also can registernew user. 
+
+
+- Milestone 2
+- Milestone 3
+- Milestone 4
+- [ ] \(mm/dd/yyyy of completion) User can set their profile to be public or private (will need another column in Users table) (default 0), account_type, created, modified)
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+      
+  - [ ] \(mm/dd/yyyy of completion) User will be able open a savings account
+
+        - Screenshot #1 User can edit their profile after login, they can log out and login again. Also, they can change the color of background. They also can register new user. 
+
+
         - Screenshot #1 User can edit their profile after login, they can log out and login again. Also, they can change the color of background. They also can registernew user. 
 
 - Milestone 2
@@ -191,6 +214,7 @@
   
 - Milestone 3
   - [ ] \(mm/dd/yyyy of completion) User will be able to transfer between their accounts
+
 
   -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
@@ -213,6 +237,8 @@
         - Screenshot #1 description explaining what you're trying to show
       
   - [ ] \(mm/dd/yyyy of completion) Dashboard page
+
+
   -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
@@ -224,6 +250,18 @@
 
   - [ ] \(mm/dd/yyyy of completion) User will be able to create a checking account
 
+
+  - [ ] \(mm/dd/yyyy of completion) User will be able to take out a loan
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+      
+  - [ ] \(mm/dd/yyyy of completion) Listing accounts and/or viewing Account Details should show any applicable APY or “-” if none is set for the particular account (may alternatively just hide the display for these types)
 
   - [ ] \(mm/dd/yyyy of completion) Transaction History page
 
@@ -237,6 +275,7 @@
         - Screenshot #1 description explaining what you're trying to show
 
 
+
   - [ ] \(mm/dd/yyyy of completion) User will be able to list their accounts
   -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
@@ -248,6 +287,9 @@
         - Screenshot #1 description explaining what you're trying to show
   
   - [ ] \(mm/dd/yyyy of completion) User will be able to click an account for more information (a.ka. Transaction History page)
+
+  - [ ] \(mm/dd/yyyy of completion) User will be able to close an account
+
   -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
@@ -257,7 +299,11 @@
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
 
+
   - [ ] \(mm/dd/yyyy of completion) User will be able to deposit/withdraw from their account(s)
+
+  - [ ] \(mm/dd/yyyy of completion) Admin role (leave this section for last)
+
 
 
   - [ ] \(mm/dd/yyyy of completion) User’s profile page should record/show First and Last name
@@ -282,8 +328,8 @@
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
 
-
 - Milestone 4
+
 ### Intructions
 #### Don't delete this
 1. Pick one project type
