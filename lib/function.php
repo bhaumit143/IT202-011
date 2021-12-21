@@ -1,7 +1,7 @@
 <?php 
 require_once(__DIR__ ."/db.php");
 function se($v, $k = null, $default = "", $isEcho = true) {
-    
+
     if (is_array($v) && isset($k) && isset($v[$k])) {
         $returnValue = $v[$k];
     } else if (is_object($v) && isset($k) && isset($v->$k)) {
@@ -84,6 +84,7 @@ function getMessage(){
     }
     return array();
 }
+
 
 function getDropDown(){
     $user = get_user_id();

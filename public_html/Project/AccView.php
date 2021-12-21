@@ -1,65 +1,178 @@
 <?php
-require(__DIR__ . "/../../partials/nav.php");
-if (!has_role("Admin")) {
-    flash("You don't have permission to access this page");
-    die(header("Location: login.php"));
-}
+require(__DIR__ . "/../../partials/nav.php"); 
 ?>
+<form onsubmit="return validate(this)" method="POST">
+    <div>
+        <label for="email"><br/>Email: </label>
+        <input type="email" id = "email" name="email" required />
+    </div> 
+    <div> 
+        <label for="username"><br/>Username: </label>
+        <input type="text" id = "username" name="username" required maxlength="30" />
+    </div>
+    <div>
+        <label for="pw"><br/>Password: </label>
+        <input type="password" id="pw" name="password" required minlength="8" />
+    </div> 
+    <div>
+        <label for="cpw"><br/>Confirm Password: </label>
+        <input type="password" id ="cpw" name="confirm" required minlength="8" />
+    </div> <br/>
+    <input type="submit" name = "submit" value="Register" />
+    
+</form>
+<script>
+    function validate(form) { 
+        let email = form.email 
+        let username = form.username.value;
+        let password = form.password.value;
+        let confirm = form.confirm.value;
+        let isValid = true;
+        if (email) {
+            email = email.trim();
+        }
+        if (username) {
+            username = username.trim();
+        }
+        if (password) {
+            password = password.trim();
+        }
+        if (confirm){
+            confirm = confirm.trim();
+        }
+        if (!username || username.length === 0){
+        isValid = false;
+        alert("Must provide a username");
+        }
+
+        if (email.indexOf("@") === -1){
+            isValid = false;
+            alert("Invalid email");
+        }
+        //TODO 1: implement JavaScript validation
+        //ensure it returns false for an error and true for success
+
+        return true;
+        
+    }
+</script>
 <?php
-if (isset($_GET["id"])) {
-    $id = $_GET["id"];
-}
-?>
-<?php
-$result = [];
-if (isset($id)) {
-    $db = getDB();
-    $stmt = $db->prepare("SELECT Accounts.id,account_number,user_id,account_type,opened_date,last_updated,balance, Users.username FROM Accounts as Accounts JOIN Users on Accounts.user_id = Users.id where Accounts.id = :id");
-    $stmt2 = $db->prepare("SELECT id,act_src_id,act_dest_id,amount,action_type,expected_total,created FROM Transactions where act_src_id=:id limit 10");
-    $r = $stmt->execute([":id" => $id]);
-    $r2 = $stmt2->execute([":id" => $id]);
-    $result = $stmt->fetch(PDO::FETCH_ASSOC);
-    $result2=$stmt2->fetch(PDO::FETCH_ASSOC);
-    if (!$result) {
-        $e = $stmt->errorInfo();
-        flash($e[2]);
+//TODO 2: add PHP Code
+if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm"])) {
+    $email = se($_POST, "email", null, false);
+    $password = trim(se($_POST, "password", "", false));
+    $confirm = trim(se($_POST,"confirm", "",false));
+    $username = trim(se($_POST, "username", null, false));
+    //TODO 3
+    $hasError = false;
+    if (empty($email)) {
+        flash("Email must not be empty", "danger");
+        $hasError = true;
+    }
+    //sanitize
+    $email = sanitize_email($email);
+    //validate
+    if (!is_valid_email($email)) {
+        flash("Invalid email address", "danger");
+        $hasError = true;
+    }
+    if (!preg_match('/^[a-z0-9_-]{3,16}$/i', $username)) {
+        flash("Username must only be alphanumeric and can only contain - or _", "danger");
+        $hasError = true;
+    }
+    if (empty($password)) {
+        flash("password must not be empty", "danger");
+        $hasError = true;
+    }
+    if (empty($confirm)) {
+        flash("Confirm password must not be empty", "danger");
+        $hasError = true;
+    }
+    if (strlen($password) < 8) {
+        flash("Password too short", "danger");
+        $hasError = true;
+    }
+    if (
+        strlen($password) > 0 && $password !== $confirm
+    ) {
+        flash("Passwords must match", "danger");
+        $hasError = true;
+    }
+    if (!$hasError) {  
+        //TODO 4
+        $hash = password_hash($password, PASSWORD_BCRYPT); 
+        $db = getDB();
+        $stmt = $db->prepare("INSERT INTO Users (email, password, username) VALUES(:email, :password, :username)");
+        try {
+            $stmt->execute([":email" => $email, ":password" => $hash, ":username" => $username]);
+            flash("You registered!"); 
+        } catch (Exception $e) {
+            flash("There was a problem registering", "danger");
+            flash("<pre>" . var_export($e, true) . "</pre>", "danger");
+        } 
     }
 }
 ?>
-<?php if (isset($result) && !empty($result)): ?>
-    <div class="card">
-            <div class="card-body">
-            <div>
-                <p>Stats</p>
-                <div> ID: <?php flash($result["id"]); ?></div>
-                <div>Account Number: <?php flash($result["account_number"]); ?></div>
-                <div>Balance: <?php flash($result["balance"]); ?></div>
-                <div>Owned by: <?php flash($result["username"]); ?></div>
-            </div>
-        </div>
-    </div>
-<?php else: ?>
-<p>Error looking up for ID</p>
-<?php endif; ?>
-<?php if (isset($result2) && !empty($result2)): ?>
-    <br/>
-    <div class ="card">
-       <div class="card-title">
-           <div> Transaction History: </div>
-       </div>
-              <div class="card-body">
-                     <div>
-                        <div> Transaction Type: <?php flash($result2["action_type"]); ?></div>
-                        <div> SourceID: <?php flash($result2["act_src_id"]); ?></div>
-                        <div> ID: <?php flash($result2["act_dest_id"]); ?></div>
-                        <div> Created: <?php flash($result2["created"]); ?></div>
-                    </div>
-              </div>
-       </div>
-    </div>
-<?php else: ?>
-<p>No transaction history</p>
-<?php endif; ?>
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>
+
+<style>
+form {
+width:100%;
+height:300px;
+font-size:15px;
+margin:auto;
+position:relative;
+}
+input {
+width:100%;
+size:2000px;
+height: 23px;
+}
+</style> 
+
+<html>
+
+<head>
+
+</head>
+<body bgcolor="<?php
+if (isset($_POST['btn']))
+{
+$col=$_POST['t1'];
+if(isset($col))
+{
+echo $p=$col;
+}
+else
+{
+echo $p="#ffffff";
+}
+}
+?>">
+
+<form action="" method="post" >
+<strong> Choose Color to Change Background :- </strong>
+<select name="t1">
+<option value="">Choose Color </option>
+<option value="#000000"> Black </option>
+<option value="#0000ff"> Blue </option>
+<option value="#a52a2a"> Brown </option>
+<option value="#00ffff"> Cyan </option>
+<option value="#006400"> Dark Green </option>
+<option value="#808080"> Grey </option>
+<option value="#008000"> Green </option>
+<option value="#ffa500"> Orange </option>
+<option value="#ffc0cb"> Pink </option>
+<option value="#800080"> Purple </option>
+<option value="#ff0000"> Red </option>
+<option value="#ffffff"> White </option>
+<option value="#ffff00"> Yellow </option>
+</select>
+<br>
+<br/>
+<input type="submit" name="btn" value="Submit">
+</form>
+</body>
+</html>
