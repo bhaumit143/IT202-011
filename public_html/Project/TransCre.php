@@ -5,7 +5,7 @@ $accounts = getDropDown();
    <h3 class="text-center"><strong>Bank Transaction</strong></h3> 
     <hr>
     <form method="POST">     
-        <label>Source Account</label placeholder="0"><br/>
+        <label>From</label placeholder="0"><br/>
             <select name="s_id"><br/>
             <?php foreach($accounts as $row):?><br/>
                 <option value="<?php echo $row["id"];?>"> 

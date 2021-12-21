@@ -11,7 +11,6 @@ require(__DIR__ . "/../../partials/nav.php");
   <label>Account Type</label>
   <select name="account_type">
     <option value = "checking">checking</option>
-    
   </select>
   <label> Account Balance</label>
   <input type="number" min="10.00" name="balance" value="<?php echo $result["balance"];?>" />
@@ -31,7 +30,6 @@ if(isset($_POST["save"])){
         ":user" => $user,
         ":balance" => $balance
     ]);
-
     if($r){
       flash("Created successfully with id: " . $db->lastInsertId());
     }

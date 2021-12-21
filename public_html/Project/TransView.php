@@ -33,23 +33,7 @@ if (isset($id)) {
     }
 }
 ?>
-<h3>View Transaction</h3>
-<?php if (isset($result) && !empty($result)): ?>
-    <div class="card">
-        <div class="card-title">
-        </div>
-        <div class="card-body">
-            <div>
-                <p><b>Information</b></p> 
-                <div>Account Number: <?php flash($result2["account_number"]); ?> </div>
-                <div>Amount:<?php flash($result["amount"]); ?></div>
-                <div>Action: Type <?php flash($result["action_type"]); ?> </div>
-            </div>
-        </div>
-    </div>
-<?php else: ?>
-    <p>Error looking up id</p>
-<?php endif; ?>
+
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>

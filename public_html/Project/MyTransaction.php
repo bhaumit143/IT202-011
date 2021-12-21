@@ -48,7 +48,7 @@ if (isset($user) && !empty($user)) {
                             <div><?php flash($r["amount"]); ?></div>
                         </div>
                         <div>
-                            <a type="button" href="<?php url("accounts/view_transactions.php?id=" . $r["tranID"]); ?>">Details</a>
+                            <a type="button" href="<?php url("AccView.php?id=" . $r["tranID"]); ?>">Details</a>
                         </div>
                     </div>
                 <?php endforeach; ?>

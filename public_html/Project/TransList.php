@@ -65,10 +65,6 @@ if (isset($_POST["query"])) {
                         <div>Transaction ID:</div>
                         <div><?php flash($r["tranID"]); ?></div>
                     </div>
-                    <div>
-                        <a type="button" href="test_edit_transactions.php?id=<?php flash($r['tranID']); ?>">Edit</a>
-                        <a type="button" href="test_view_transactions.php?id=<?php flash($r['tranID']); ?>">View</a>
-                    </div>
                 </div>
             <?php endforeach; ?>
         </div>
