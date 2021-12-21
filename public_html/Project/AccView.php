@@ -117,7 +117,6 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>
 
-
 <style>
 form {
 width:100%;
@@ -132,7 +131,6 @@ size:2000px;
 height: 23px;
 }
 </style> 
-
 
 <html>
 
@@ -177,5 +175,4 @@ echo $p="#ffffff";
 <input type="submit" name="btn" value="Submit">
 </form>
 </body>
-
 </html>

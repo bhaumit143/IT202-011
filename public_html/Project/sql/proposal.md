@@ -10,7 +10,7 @@
 ### Line item / Feature template (use this for each bullet point)
 #### Don't delete this
 
-- [ ] \(mm/dd/yyyy of completion) Feature Titles (from the proposal bullet point, if it's a sub-point indent it properly)
+- [ ] \(mm/dd/yyyy of completion) Feature Title (from the proposal bullet point, if it's a sub-point indent it properly)
   -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
@@ -19,7 +19,7 @@
     - Screenshots
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
-### End Line item / Features Templates
+### End Line item / Feature Template
 --> 
 ### Proposal Checklist and Evidence
 
@@ -158,11 +158,7 @@
 
 
 
-
 - [ ] \(mm/dd/yyyy of completion) User will be able to edit their profile (from the proposal bullet point, if it's a sub-point indent it properly)
-
-- [ ] \(mm/dd/yyyy of completion) Users will be able to edit their profile (from the proposal bullet point, if it's a sub-point indent it properly)
-
   -  List of Evidence of Feature Completion
     - Status: Completed
     - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
@@ -170,166 +166,33 @@
       - PR link #1 https://github.com/bhaumit143/IT202-011/pull/20
     - Screenshots
       - Screenshot #1 <img width="924" alt="Screen Shot 2021-11-11 at 7 19 11 PM" src="https://user-images.githubusercontent.com/90281155/141387718-964eb0a4-5dea-4eda-b12d-562273bd29a8.png">
-
-
-
         - Screenshot #1 User can edit their profile after login, they can log out and login again. Also, they can change the color of background. They also can registernew user. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 - Milestone 2
 - Milestone 3
 - Milestone 4
-- [ ] \(mm/dd/yyyy of completion) User can set their profile to be public or private (will need another column in Users table) (default 0), account_type, created, modified)
-  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-    - Pull Requests
-      - PR link #1 (repeat as necessary)
-    - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-      
-  - [ ] \(mm/dd/yyyy of completion) User will be able open a savings account
-
-        - Screenshot #1 User can edit their profile after login, they can log out and login again. Also, they can change the color of background. They also can register new user. 
-
-
-        - Screenshot #1 User can edit their profile after login, they can log out and login again. Also, they can change the color of background. They also can registernew user. 
-
-- Milestone 2
-  - [ ] \(mm/dd/yyyy of completion) Create the Accounts table (id, account_number [unique, always 12 characters], user_id, balance (default 0), account_type, created, modified)
-  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-    - Pull Requests
-      - PR link #1 (repeat as necessary)
-    - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-      
-  - [ ] \(mm/dd/yyyy of completion) Project setup steps:
-
-        - Screenshot #1 User can edit their profile after login, they can log out and login again. Also, they can change the color of background. They also can register new user. 
-
-  
-- Milestone 3
-  - [ ] \(mm/dd/yyyy of completion) User will be able to transfer between their accounts
-
-
-  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-    - Pull Requests
-      - PR link #1 (repeat as necessary)
-    - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-
-
-  - [ ] \(mm/dd/yyyy of completion) Create the Transactions table (see reference below)
-  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-    - Pull Requests
-      - PR link #1 (repeat as necessary)
-    - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-      
-  - [ ] \(mm/dd/yyyy of completion) Dashboard page
-
-
-  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-    - Pull Requests
-      - PR link #1 (repeat as necessary)
-    - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-
-  - [ ] \(mm/dd/yyyy of completion) User will be able to create a checking account
-
-
-  - [ ] \(mm/dd/yyyy of completion) User will be able to take out a loan
-  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-    - Pull Requests
-      - PR link #1 (repeat as necessary)
-    - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-      
-  - [ ] \(mm/dd/yyyy of completion) Listing accounts and/or viewing Account Details should show any applicable APY or “-” if none is set for the particular account (may alternatively just hide the display for these types)
-
-  - [ ] \(mm/dd/yyyy of completion) Transaction History page
-
-  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-    - Pull Requests
-      - PR link #1 (repeat as necessary)
-    - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-
-
-
-  - [ ] \(mm/dd/yyyy of completion) User will be able to list their accounts
-  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-    - Pull Requests
-      - PR link #1 (repeat as necessary)
-    - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-  
-  - [ ] \(mm/dd/yyyy of completion) User will be able to click an account for more information (a.ka. Transaction History page)
-
-  - [ ] \(mm/dd/yyyy of completion) User will be able to close an account
-
-  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-    - Pull Requests
-      - PR link #1 (repeat as necessary)
-    - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-
-
-  - [ ] \(mm/dd/yyyy of completion) User will be able to deposit/withdraw from their account(s)
-
-  - [ ] \(mm/dd/yyyy of completion) Admin role (leave this section for last)
-
-
-
-  - [ ] \(mm/dd/yyyy of completion) User’s profile page should record/show First and Last name
-  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the files or files in heroku prod for quick testing (even if it's a protected page))
-    - Pull Requests
-      - PR link #1 (repeat as necessary)
-    - Screenshots
-      - Screenshot #1 (paste the images so it uploads to github) (repeats as necessary)
-        - Screenshot #1 description explaining what you're trying to shows
-
-
-  - [ ] \(mm/dd/yyyy of completion) User will be able to transfer funds to another user’s account
-
-  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-    - Pull Requests
-      - PR link #1 (repeat as necessary)
-    - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-
-- Milestone 4
-
 ### Intructions
 #### Don't delete this
 1. Pick one project type
@@ -363,4 +226,4 @@
   7. If the attached issues don't close wait until the next step
   8. Merge the updated dev branch into your production branch via a pull request
   9. Close any related issues that didn't auto close
-    - You can edit the dropdown on the issue or drag/drop it to the proper column on the project board.
+    - You can edit the dropdown on the issue or drag/drop it to the proper column on the project board

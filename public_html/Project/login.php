@@ -5,6 +5,7 @@ require(__DIR__ . "/../../partials/nav.php");
 
 </style> 
 
+
     <div>
         <label for="email"><br/>Email</label>
         <input type="email" name="email" required/><br/>
@@ -29,13 +30,36 @@ height: 25px;
         <label for="pw"><br/>Password</label>
         <input type="password" id="pw" name="password" required minlength="8"/><br/>
 
+
     <div>
         <label for="email"><br/>Email</label>
-        <input type="email" name="email" required />
-    </div>
+        <input type="email" name="email" required/><br/>
+        
+<style>
+form {
+width:100%;
+height:280px;
+font-size:20px;
+margin:auto;
+position:relative;
+}
+input {
+width:100%;
+size:1000px;
+height: 25px;
+}
+</style> 
+    
+</div>
     <div>
+
+        <label for="pw"><br/>Password</label>
+        <input type="password" id="pw" name="password" required minlength="8"/><br/>
+        
+
         <label for="pw">Password</label>
         <input type="password" id="pw" name="password" required minlength="8" />
+
 
     </div><br/>
     <br/><input type="submit" value="Login"/>
@@ -105,9 +129,6 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
 ?>
 
 
-
-
-
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>
@@ -153,6 +174,8 @@ echo $p="#ffffff";
 <br/>
 <input type="submit" name="btn" value="Submit">
 </form>
+
+
 </body>
 
 </html>
@@ -160,4 +183,5 @@ echo $p="#ffffff";
 </html>
 
 
-
+</body>
+</html>
