@@ -1,9 +1,5 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
-  if (!has_role("Admin")) {
-    flash("You cannot access this page");
-    die(header("Location: login.php"));  
-}
 ?>
 <form method="POST">
   <label> Account Number </label>

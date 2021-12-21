@@ -26,14 +26,8 @@ height: 25px;
 </style> 
     
 </div>
-    <div>
-        <label for="pw"><br/>Password</label>
-        <input type="password" id="pw" name="password" required minlength="8"/><br/>
 
 
-    <div>
-        <label for="email"><br/>Email</label>
-        <input type="email" name="email" required/><br/>
         
 <style>
 form {
@@ -56,9 +50,6 @@ height: 25px;
         <label for="pw"><br/>Password</label>
         <input type="password" id="pw" name="password" required minlength="8"/><br/>
         
-
-        <label for="pw">Password</label>
-        <input type="password" id="pw" name="password" required minlength="8" />
 
 
     </div><br/>

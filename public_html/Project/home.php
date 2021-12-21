@@ -56,7 +56,9 @@ echo $p="#ffffff";
 
 </html>
 
- 
+<?php
+require(__DIR__ . "/../../partials/flash.php");
+?>
 
     
 
