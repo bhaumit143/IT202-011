@@ -495,7 +495,7 @@ Final deliverable Link: https://youtu.be/gmiGSOaiQaU
     - Status: Incomplete
     - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
     - Pull Requests
-      - PR link #1 
+      - PR link #1 https://github.com/bhaumit143/IT202-011/pull/71
     - Screenshots
       - Screenshot #1 
         - Screenshot 
@@ -505,7 +505,7 @@ Final deliverable Link: https://youtu.be/gmiGSOaiQaU
     - Status: Incomplete
     - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
     - Pull Requests
-      - PR link #1 
+      - PR link #1 https://github.com/bhaumit143/IT202-011/pull/71
     - Screenshots
       - Screenshot #1 
         - Screenshot
@@ -515,7 +515,7 @@ Final deliverable Link: https://youtu.be/gmiGSOaiQaU
     - Status: Incomplete
     - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
     - Pull Requests
-      - PR link #1 
+      - PR link #1 https://github.com/bhaumit143/IT202-011/pull/71
     - Screenshots
       - Screenshot #1 
         - Screenshot
@@ -545,7 +545,7 @@ Final deliverable Link: https://youtu.be/gmiGSOaiQaU
    - Status: Incomplete
    - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
    - Pull Requests
-     - PR link #1 
+     - PR link #1 https://github.com/bhaumit143/IT202-011/pull/71
    - Screenshots
      - Screenshot #1 
        - Screenshot #1 
