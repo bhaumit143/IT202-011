@@ -451,6 +451,8 @@
     - Screenshots
       - Screenshot #1 <img width="1361" alt="Screen Shot 2021-12-21 at 9 19 22 PM" src="https://user-images.githubusercontent.com/90281155/147023964-eb7d802f-f96f-4b1d-a8d2-d86a8a36540a.png">
         - Screenshot #1 user can transfer the account. 
+      - Screenshot #2 <img width="1103" alt="Screen Shot 2021-12-21 at 10 02 48 PM" src="https://user-images.githubusercontent.com/90281155/147028433-6acb8426-528c-43af-b7be-3cda5d08c115.png">
+        - Screenshot #2 User can transfer the account. 
 
   - [x] \(12/4/2021 of completion) Transaction History page
    -  List of Evidence of Feature Completion
