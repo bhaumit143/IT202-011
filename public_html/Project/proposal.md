@@ -488,7 +488,7 @@
 - Milestone 4
   - [x] \(12/15/2021 of completion) User can set their profile to be public or private (will need another column in Users table)
    -  List of Evidence of Feature Completion
-    - Status: InCompleted
+    - Status: Incomplete
     - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
     - Pull Requests
       - PR link #1 
@@ -508,7 +508,7 @@
 
  - [x] \(12/16/2021 of completion) User will be able to take out a loan
    -  List of Evidence of Feature Completion
-    - Status: InCompleted
+    - Status: Incomplete
     - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
     - Pull Requests
       - PR link #1 
@@ -527,7 +527,7 @@
         - Screenshot #1 User can see listing accounts and viewing account detail.
 
  - [x] \(12/18/2021 of completion) User will be able to close an account
-   -  List of Evidence of Feature Completion
+   -  List of Completed
     - Status: Partial Completed
     - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
     - Pull Requests
