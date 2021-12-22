@@ -50,13 +50,15 @@ echo $p="#ffffff";
 <option value="#ffffff"> White </option>
 <option value="#ffff00"> Yellow </option>
 </select>
-<br>
-<input type="submit" name="btn" value="Submit">
+<br/>
+<br/><input type="submit" name="btn" value="Submit">
 </form>
 
 </html>
 
- 
+<?php
+require(__DIR__ . "/../../partials/flash.php");
+?>
 
     
 

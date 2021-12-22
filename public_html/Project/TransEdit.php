@@ -1,8 +1,6 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
-if (!has_role("Admin")) {
-    flash("You cannot access this page");
-    die(header("Location: login.php"));
+
 ?>
 <?php
 if (isset($_GET["id"])) {
@@ -23,7 +21,7 @@ if (isset($_POST["save"])) {
             ":amount" => $amount,
         ]);
         if ($r) {
-            flash("update successfully with id: " . $id);
+            flash("Modified: " . $id);
         }
         else {
             $e = $stmt->errorInfo();
@@ -43,7 +41,6 @@ if (isset($id)) {
     $stmt = $db->prepare("SELECT * FROM TRANSACTIONS where id = :id");
     $r = $stmt->execute([":id" => $id]);
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
-}
 }
 ?>
     <h3>Edit Transaction</h3>

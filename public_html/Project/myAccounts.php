@@ -33,9 +33,7 @@ require(__DIR__ . "/../../partials/nav.php");
                         <div><strong>Balance:</strong></div>
                         <div><?php flash($r["balance"]); ?></div>
                     </div>
-                    <div>
-                        <a type="button" href="<?php url("myTransactions.php?id=" . $r["AccID"]); ?>">Transaction History</a>
-                    </div>
+                    
                 </div>
             <?php endforeach; ?>
         </div>
