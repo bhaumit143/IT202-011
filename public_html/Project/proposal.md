@@ -1,6 +1,8 @@
 # Project Name: Simple Bank
 ## Project Summary: This project will create a bank simulation for users. They’ll be able to have various accounts, do standard bank functions like deposit, withdraw, internal (user’s accounts)/external(other user’s accounts) transfers, and creating/closing accounts.
 
+Final deliverable Link: https://youtu.be/gmiGSOaiQaU
+
 ## Github Link: https://github.com/bhaumit143/IT202-011/blob/bpv6-prod/public_html/Project/proposal.md
 ## Project Board Link: https://github.com/bhaumit143/IT202-011/projects/1
 ## Website Link: (https://bpv6-prod.herokuapp.com)
