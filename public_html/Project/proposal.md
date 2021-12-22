@@ -444,12 +444,12 @@
 - Milestone 3
   - [x] \(12/2/2021 of completion) User will be able to transfer between their accounts
    -  List of Evidence of Feature Completion 
-   - Status: Partial Completed
-   - Direct Link:  https://bpv6-prod.herokuapp.com/Project/login.php
+   - Status: Completed
+   - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
     - Pull Requests
-      - PR link #1 https://github.com/bhaumit143/IT202-011/pull/55
+      - PR link #1 https://github.com/bhaumit143/IT202-011/pull/71
     - Screenshots
-      - Screenshot #1 <img width="1019" alt="Screen Shot 2021-11-28 at 10 23 19 PM" src="https://user-images.githubusercontent.com/90281155/146603517-13c8fdab-fb11-408b-a172-1b097326110f.png">
+      - Screenshot #1 <img width="1361" alt="Screen Shot 2021-12-21 at 9 19 22 PM" src="https://user-images.githubusercontent.com/90281155/147023964-eb7d802f-f96f-4b1d-a8d2-d86a8a36540a.png">
         - Screenshot #1 user can transfer the account. 
 
   - [x] \(12/4/2021 of completion) Transaction History page
@@ -457,96 +457,94 @@
     - Status: Completed
     - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
     - Pull Requests
-      - PR link #1 https://github.com/bhaumit143/IT202-011/pull/55
+      - PR link #1 https://github.com/bhaumit143/IT202-011/pull/71
     - Screenshots
-      - Screenshot #1 <img width="942" alt="Screen Shot 2021-12-17 at 3 44 23 PM" src="https://user-images.githubusercontent.com/90281155/146605623-9fcec86d-763d-4867-874a-5e2e10de5535.png">
-        - Screenshot #1 10 transcations. 
+      - Screenshot #1 <img width="968" alt="Screen Shot 2021-12-21 at 9 28 48 PM" src="https://user-images.githubusercontent.com/90281155/147024894-ffad06e9-cc97-40c4-94c6-03613da34a39.png">
+        - Screenshot #1 10 successful transcations. 
 
   - [x] \(11/5/2021 of completion) User’s profile page should record/show First and Last name
    -  List of Evidence of Feature Completion
-     - Status: Partial Completed
+     - Status: Incomplete
      - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
      - Pull Requests
-       - PR link #1 https://github.com/bhaumit143/IT202-011/pull/55
+       - PR link #1 
     - Screenshots
-      - Screenshot #1 <img width="770" alt="Screen Shot 2021-12-17 at 4 42 00 PM" src="https://user-images.githubusercontent.com/90281155/146611306-02f7ff4f-ffb4-4484-a75e-198ea44f4467.png">
-        - Screenshot #1 User's first and last name
+      - Screenshot #1 
+        - Screenshot #1
 
   - [x] \(11/7/2021 of completion) User will be able to transfer funds to another user’s account
    -  List of Evidence of Feature Completion
      - Status: Partial Completed
      - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
      - Pull Requests
-       - PR link #1 https://github.com/bhaumit143/IT202-011/pull/55
+       - PR link #1 https://github.com/bhaumit143/IT202-011/pull/71
      - Screenshots
-       - Screenshot #1 <img width="1019" alt="Screen Shot 2021-11-28 at 10 23 19 PM" src="https://user-images.githubusercontent.com/90281155/146612382-6ad30ab4-0da4-4e75-9644-3fe230d71c1e.png">
-         - Screenshot #1 User can transfer the amount into to the other user account.
+       - Screenshot #1 <img width="1191" alt="Screen Shot 2021-12-21 at 9 21 13 PM" src="https://user-images.githubusercontent.com/90281155/147024156-cdfcf306-b6a4-4321-874f-e981f327565f.png">
+         - Screenshot #1 User can transfer the amount into to the other user's account.
+       - Screenshot #2 <img width="1191" alt="Screen Shot 2021-12-21 at 9 21 13 PM" src="https://user-images.githubusercontent.com/90281155/147024260-ae9d1810-9a68-42d8-9157-236202547dd2.png"> 
+         - Screenshot #2 "Transaction Done" User sucessfully did the transaction. 
 
 
 - Milestone 4
   - [x] \(12/15/2021 of completion) User can set their profile to be public or private (will need another column in Users table)
    -  List of Evidence of Feature Completion
-    - Status: Partial Completed
+    - Status: InCompleted
     - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
     - Pull Requests
-      - PR link #1 https://github.com/bhaumit143/IT202-011/pull/55
+      - PR link #1 
     - Screenshots
-      - Screenshot #1 <img width="1200" alt="Screen Shot 2021-11-11 at 4 08 07 PM" src="https://user-images.githubusercontent.com/90281155/146809367-9ffe2fac-56b5-4dc4-b928-c5d69353bc8a.png">
-        - Screenshot #1 User can set their profile private or public
-      - Screenshot #2 <img width="1440" alt="Screen Shot 2021-12-20 at 2 04 57 PM" src="https://user-images.githubusercontent.com/90281155/146819316-c20a3e4f-af95-4b97-8846-e7e1af7342a5.png">
-        - Screenshot #2 User cannot access to the profile without logged in.
+      - Screenshot #1 
+        - Screenshot 
   
   - [x] \(12/16/2021 of completion) User will be able to open a saving account
    -  List of Evidence of Feature Completion
-    - Status: Partial Completed
+    - Status: Incomplete
     - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
     - Pull Requests
-      - PR link #1 https://github.com/bhaumit143/IT202-011/pull/55
+      - PR link #1 
     - Screenshots
-      - Screenshot #1 <img width="1438" alt="Screen Shot 2021-11-28 at 9 13 12 PM" src="https://user-images.githubusercontent.com/90281155/146811941-cb18fe9c-7499-46fa-89a3-03d38634a820.png">
-        - Screenshot #1 User will be open a saving account by login.
-      - Screenshot #2 <img width="953" alt="Screen Shot 2021-11-28 at 10 22 36 PM" src="https://user-images.githubusercontent.com/90281155/146815584-74985772-0fb1-4c56-ad63-e3c67123d448.png">
-        - Screenshot #2 It requires minimum $5 deposit into the savings accounts.
+      - Screenshot #1 
+        - Screenshot
 
  - [x] \(12/16/2021 of completion) User will be able to take out a loan
    -  List of Evidence of Feature Completion
     - Status: Partial Completed
     - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
     - Pull Requests
-      - PR link #1 https://github.com/bhaumit143/IT202-011/pull/55
+      - PR link #1 
     - Screenshots
-      - Screenshot #1 <img width="1019" alt="Screen Shot 2021-11-28 at 10 23 19 PM" src="https://user-images.githubusercontent.com/90281155/146612382-6ad30ab4-0da4-4e75-9644-3fe230d71c1e.png">
-        - Screenshot #1 User can transfer the amount into to the other user account.
+      - Screenshot #1 
+        - Screenshot
 
  - [x] \(12/17/2021 of completion) Listing accounts and/or viewing Account Details should show any applicable APY or “-” if none is set for the particular account (may alternatively just hide the display for these types)
    -  List of Evidence of Feature Completion
     - Status: Partial Completed
     - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
     - Pull Requests
-      - PR link #1 https://github.com/bhaumit143/IT202-011/pull/55
+      - PR link #1 https://github.com/bhaumit143/IT202-011/pull/71
     - Screenshots
-      - Screenshot #1 <img width="1019" alt="Screen Shot 2021-11-28 at 10 23 19 PM" src="https://user-images.githubusercontent.com/90281155/146612382-6ad30ab4-0da4-4e75-9644-3fe230d71c1e.png">
-        - Screenshot #1 User can transfer the amount into to the other user account.
+      - Screenshot #1 <img width="909" alt="Screen Shot 2021-12-21 at 9 43 20 PM" src="https://user-images.githubusercontent.com/90281155/147026389-268c7117-7676-43d6-922f-9a770753f570.png">
+        - Screenshot #1 User can see listing accounts and viewing account detail.
 
  - [x] \(12/18/2021 of completion) User will be able to close an account
    -  List of Evidence of Feature Completion
     - Status: Partial Completed
     - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
     - Pull Requests
-      - PR link #1 https://github.com/bhaumit143/IT202-011/pull/55
+      - PR link #1 https://github.com/bhaumit143/IT202-011/pull/71
     - Screenshots
-      - Screenshot #1 <img width="1019" alt="Screen Shot 2021-11-28 at 10 23 19 PM" src="https://user-images.githubusercontent.com/90281155/146612382-6ad30ab4-0da4-4e75-9644-3fe230d71c1e.png">
-        - Screenshot #1 User can transfer the amount into to the other user account.
+      - Screenshot #1 <img width="1440" alt="Screen Shot 2021-12-21 at 9 41 04 PM" src="https://user-images.githubusercontent.com/90281155/147026100-f019f87e-3d3d-4512-a882-18a4599f61c7.png">
+        - Screenshot #1 User can succesufully close the account. 
 
 - [x] \(12/19/2021 of completion) Admin role (leave this section for last)
   -  List of Evidence of Feature Completion
-   - Status: Partial Completed
+   - Status: Incomplete
    - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
    - Pull Requests
-     - PR link #1 https://github.com/bhaumit143/IT202-011/pull/55
+     - PR link #1 
    - Screenshots
-     - Screenshot #1 <img width="1019" alt="Screen Shot 2021-11-28 at 10 23 19 PM" src="https://user-images.githubusercontent.com/90281155/146612382-6ad30ab4-0da4-4e75-9644-3fe230d71c1e.png">
-       - Screenshot #1 User can transfer the amount into to the other user account.
+     - Screenshot #1 
+       - Screenshot #1 
 
 
 
