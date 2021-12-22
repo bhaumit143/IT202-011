@@ -479,9 +479,9 @@
      - Pull Requests
        - PR link #1 https://github.com/bhaumit143/IT202-011/pull/71
      - Screenshots
-       - Screenshot #1 <img width="1191" alt="Screen Shot 2021-12-21 at 9 21 13 PM" src="https://user-images.githubusercontent.com/90281155/147024156-cdfcf306-b6a4-4321-874f-e981f327565f.png">
+       - Screenshot #1 <img width="1386" alt="Screen Shot 2021-12-21 at 9 52 32 PM" src="https://user-images.githubusercontent.com/90281155/147027445-c27c1942-3416-4169-912d-5f9c760e652d.png">
          - Screenshot #1 User can transfer the amount into to the other user's account.
-       - Screenshot #2 <img width="1191" alt="Screen Shot 2021-12-21 at 9 21 13 PM" src="https://user-images.githubusercontent.com/90281155/147024260-ae9d1810-9a68-42d8-9157-236202547dd2.png"> 
+       - Screenshot #2 <img width="1418" alt="Screen Shot 2021-12-21 at 9 53 40 PM" src="https://user-images.githubusercontent.com/90281155/147027537-d5aecae7-5e93-4052-9a1a-ddf77a2dd186.png">
          - Screenshot #2 "Transaction Done" User sucessfully did the transaction. 
 
 
@@ -508,7 +508,7 @@
 
  - [x] \(12/16/2021 of completion) User will be able to take out a loan
    -  List of Evidence of Feature Completion
-    - Status: Partial Completed
+    - Status: InCompleted
     - Direct Link: https://bpv6-prod.herokuapp.com/Project/login.php
     - Pull Requests
       - PR link #1 
