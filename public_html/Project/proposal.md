@@ -479,9 +479,9 @@
      - Pull Requests
        - PR link #1 https://github.com/bhaumit143/IT202-011/pull/71
      - Screenshots
-       - Screenshot #1 <img width="1386" alt="Screen Shot 2021-12-21 at 9 52 32 PM" src="https://user-images.githubusercontent.com/90281155/147027445-c27c1942-3416-4169-912d-5f9c760e652d.png">
+       - Screenshot #1 <img width="1223" alt="Screen Shot 2021-12-21 at 9 57 34 PM" src="https://user-images.githubusercontent.com/90281155/147028009-2f27e5e8-13b6-4571-97c5-7a8ab60460df.png">
          - Screenshot #1 User can transfer the amount into to the other user's account.
-       - Screenshot #2 <img width="1418" alt="Screen Shot 2021-12-21 at 9 53 40 PM" src="https://user-images.githubusercontent.com/90281155/147027537-d5aecae7-5e93-4052-9a1a-ddf77a2dd186.png">
+       - Screenshot #2 <img width="1417" alt="Screen Shot 2021-12-21 at 9 56 45 PM" src="https://user-images.githubusercontent.com/90281155/147028034-d42e54ec-af8f-4d04-8f11-7eb46a65e320.png">
          - Screenshot #2 "Transaction Done" User sucessfully did the transaction. 
 
 
@@ -545,18 +545,6 @@
    - Screenshots
      - Screenshot #1 
        - Screenshot #1 
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### Intructions
 #### Don't delete this
